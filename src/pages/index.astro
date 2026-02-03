@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CaseGrid from "../components/CaseGrid.jsx";
+---
+<BaseLayout title="Ben Taylor · Portfolio">
+  <section>
+    <span class="chip">Product design studio</span>
+    <h1 class="hero-title">Designing bold, practical digital products for teams that move fast.</h1>
+    <p class="hero-lead">
+      BRT Studio partners with founders and product teams to shape interfaces, systems, and brands that feel
+      inevitable. From early concept to launch, we blend strategy with hands-on making.
+    </p>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 28px;">
+      <a class="button primary" href="/case-studies">View case studies</a>
+      <a class="button" href="/contact">Start a project</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="split">
+      <div class="card">
+        <h2>What we do</h2>
+        <p>We turn ambiguity into systems your team can ship.</p>
+        <div class="tag-list">
+          <span class="tag">Product UX</span>
+          <span class="tag">Design Systems</span>
+          <span class="tag">Brand Refresh</span>
+          <span class="tag">Prototyping</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2>How we work</h2>
+        <p>Lean engagements, tight feedback loops, and clear milestones.</p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <strong>Discover</strong>
+            <span>Workshops, research, and product audits.</span>
+          </div>
+          <div class="timeline-item">
+            <strong>Shape</strong>
+            <span>Flows, systems, and rapid prototyping.</span>
+          </div>
+          <div class="timeline-item">
+            <strong>Launch</strong>
+            <span>Implementation support and QA.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Featured case studies</h2>
+    <p class="hero-lead">A quick pulse check on three recent engagements.</p>
+    <CaseGrid client:load />
+  </section>
+</BaseLayout>

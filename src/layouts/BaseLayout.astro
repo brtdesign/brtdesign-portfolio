@@ -1,0 +1,47 @@
+---
+import "../styles/global.css";
+
+const { title = "BRT Studio" } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio of work from BRT Studio." />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a href="/" class="chip">BRT Studio</a>
+        <nav class="nav-links">
+          <a href="/case-studies">Case Studies</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <slot />
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container split">
+        <div>
+          <strong>Based in London.</strong>
+          <p>Designing product experiences that feel inevitable.</p>
+        </div>
+        <div>
+          <div class="tag-list">
+            <span class="tag">Product Design</span>
+            <span class="tag">Web Systems</span>
+            <span class="tag">Brand Direction</span>
+            <span class="tag">Prototyping</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
