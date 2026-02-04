@@ -9,18 +9,25 @@ const CASES = [
     year: "2025"
   },
   {
-    slug: "cascade",
-    title: "Cascade Capital",
-    summary: "Crafted a calm, trustworthy wealth experience for first-time investors.",
-    focus: ["Brand", "Design Systems", "Web"],
+    slug: "owtv",
+    title: "OWTV",
+    summary: "Refreshed product and brand touchpoints for a growing media network.",
+    focus: ["Brand", "Product UX", "Web"],
     year: "2024"
   },
   {
-    slug: "lumen",
-    title: "Lumen Health",
-    summary: "Built a patient onboarding flow that cut drop-off in half.",
-    focus: ["Service Design", "Prototyping", "Growth"],
+    slug: "tag-your-bag",
+    title: "Tag Your Bag",
+    summary: "Simplified onboarding flows for busy operations teams.",
+    focus: ["Service Design", "Prototyping", "Operations UX"],
     year: "2023"
+  },
+  {
+    slug: "xpress-weigh",
+    title: "Xpress Weigh",
+    summary: "Streamlined weigh-in workflows for logistics teams.",
+    focus: ["Systems", "Product UI", "Design Systems"],
+    year: "2022"
   }
 ];
 
