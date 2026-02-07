@@ -4,23 +4,26 @@ import CaseGrid from "../components/CaseGrid.jsx";
 ---
 <BaseLayout title="Ben Taylor · Portfolio">
   <section>
-    <span class="chip">Product design studio</span>
-    <h1 class="hero-title">Designing bold, practical digital products for teams that move fast.</h1>
+
+    <h1 class="hero-title">
+      <span class="hero-soft">Strategic thinking. Practical design.</span>
+      Thoughtful design for complex problems <span class="flourish-ampersand">&amp;</span> fast-moving teams.
+    </h1>
     <p class="hero-lead">
-      BRT Studio partners with founders and product teams to shape interfaces, systems, and brands that feel
-      inevitable. From early concept to launch, we blend strategy with hands-on making.
+      I partner with founders and product teams to shape interfaces, systems, and brands that feel inevitable.
+      From early concept to launch, I blend strategy with hands-on making.
     </p>
-    <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 28px;">
+    <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px;">
       <a class="button primary" href="/case-studies">View case studies</a>
-      <a class="button" href="/contact">Start a project</a>
+      <a class="button" href="/contact">Let’s talk</a>
     </div>
   </section>
 
   <section>
     <div class="split">
       <div class="card">
-        <h2>What we do</h2>
-        <p>We turn ambiguity into systems your team can ship.</p>
+        <h2>What I do</h2>
+        <p>I turn ambiguity into systems your team can ship.</p>
         <div class="tag-list">
           <span class="tag">Product UX</span>
           <span class="tag">Design Systems</span>
@@ -29,7 +32,7 @@ import CaseGrid from "../components/CaseGrid.jsx";
         </div>
       </div>
       <div class="card">
-        <h2>How we work</h2>
+        <h2>How I work</h2>
         <p>Lean engagements, tight feedback loops, and clear milestones.</p>
         <div class="timeline">
           <div class="timeline-item">
@@ -51,7 +54,7 @@ import CaseGrid from "../components/CaseGrid.jsx";
 
   <section>
     <h2>Featured case studies</h2>
-    <p class="hero-lead">A quick pulse check on three recent engagements.</p>
+    <p class="hero-lead">A quick pulse check on four recent engagements.</p>
     <CaseGrid client:load />
   </section>
 </BaseLayout>
