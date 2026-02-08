@@ -84,6 +84,10 @@ h6 {
   font-size: 80%;
 }
 
+.flourish-period {
+  font-family: serif; /*  helvetica square period looks terible at this scale.  */
+  font-size: 80%;
+}
 /* Supporting hero paragraph */
 .hero-lead {
   font-size: var(--text-lg);
@@ -109,6 +113,39 @@ h6 {
 /* Meta list sizing */
 .meta-list {
   font-size: var(--text-sm);
+}
+
+/* Larger metadata for case study headers */
+.meta-list--casestudy {
+  font-size: var(--text-md);
+}
+
+/* Breadcrumb trail */
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  font-size: var(--text-md);
+  color: var(--muted);
+  margin-bottom: var(--space-2);
+}
+
+.breadcrumb a {
+  color: inherit;
+}
+
+.breadcrumb [aria-current="page"] {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* CTA text inside clickable cards */
+.card-link__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+  font-weight: 600;
 }
 
 /* Timeline button text */

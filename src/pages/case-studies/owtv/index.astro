@@ -1,21 +1,35 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 ---
+
 <BaseLayout title="OWTV · Case Study">
   <section>
-    <span class="chip">OWTV</span>
-    <h1 class="hero-title">A product and brand refresh for a growing media network.</h1>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="/case-studies">Case Studies</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">OWTV</span>
+    </nav>
+    <h1 class="hero-title">
+      A product and brand refresh for a growing media network.
+    </h1>
     <p class="hero-lead">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat orci in lorem imperdiet,
-      vel aliquet elit placerat.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat
+      orci in lorem imperdiet, vel aliquet elit placerat.
     </p>
+    <ul class="meta-list meta-list--casestudy">
+      <li>Slimming World</li>
+      <li>2023</li>
+    </ul>
   </section>
 
   <section class="card">
     <h2>Overview</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat nisl vitae arcu vehicula,
-      vitae vulputate justo consequat. Integer vel metus at turpis sollicitudin tincidunt.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+      feugiat nisl vitae arcu vehicula, vitae vulputate justo consequat. Integer
+      vel metus at turpis sollicitudin tincidunt.
     </p>
     <div class="tag-list">
       <span class="tag">Role: Lorem ipsum</span>
@@ -27,40 +41,45 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
   <section class="card">
     <h2>Problem</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere, augue id gravida aliquam, nibh
-      neque commodo purus, at pharetra metus nibh in ipsum.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere,
+      augue id gravida aliquam, nibh neque commodo purus, at pharetra metus nibh
+      in ipsum.
     </p>
   </section>
 
   <section class="card">
     <h2>Approach</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Mauris luctus, orci sed
-      vulputate congue, lorem nulla volutpat libero, nec porta nisl justo a metus.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
+      Mauris luctus, orci sed vulputate congue, lorem nulla volutpat libero, nec
+      porta nisl justo a metus.
     </p>
   </section>
 
   <section class="card">
     <h2>Design</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in ipsum ac justo scelerisque
-      convallis a a risus. Aenean malesuada eros sit amet est luctus, non commodo nisi sagittis.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in
+      ipsum ac justo scelerisque convallis a a risus. Aenean malesuada eros sit
+      amet est luctus, non commodo nisi sagittis.
     </p>
   </section>
 
   <section class="card">
     <h2>Outcome</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel mi sit amet dolor interdum
-      tincidunt. Integer ac ex sed justo laoreet sagittis.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel mi
+      sit amet dolor interdum tincidunt. Integer ac ex sed justo laoreet
+      sagittis.
     </p>
   </section>
 
   <section class="card">
     <h2>Reflection</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel leo in nisi vehicula fermentum.
-      Suspendisse potenti. Phasellus et magna at risus bibendum interdum.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel leo in
+      nisi vehicula fermentum. Suspendisse potenti. Phasellus et magna at risus
+      bibendum interdum.
     </p>
   </section>
 </BaseLayout>

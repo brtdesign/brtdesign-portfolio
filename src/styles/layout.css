@@ -71,6 +71,21 @@ section {
   border: 1px solid var(--border);
 }
 
+/* Clickable card variant */
+.card-link {
+  display: block;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.card-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(27, 27, 31, 0.15);
+  border-color: rgba(27, 27, 31, 0.2);
+}
+
 /* Responsive card grid */
 .grid {
   display: grid;
@@ -95,7 +110,7 @@ section {
   justify-content: space-between;
   padding: var(--space-2) 6vw;
   /* max-width: 1100px; */
-  outline: 2px solid red;
+
   margin: 0 auto;
 }
 
@@ -127,6 +142,7 @@ section {
   padding: 0;
   margin: var(--space-2) 0;
   color: var(--muted);
+  align-items: center;
 }
 
 .meta-list li + li {
@@ -140,7 +156,7 @@ section {
   left: calc(var(--space-2) / 2);
   top: 50%;
   width: 1px;
-  height: 0.9em;
+  height: 1em;
   transform: translateY(-50%);
   background: var(--border);
 }

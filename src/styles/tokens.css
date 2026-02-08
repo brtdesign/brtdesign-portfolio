@@ -33,8 +33,9 @@
 :root {
   --font-body: "Nunito", "Helvetica Neue", sans-serif;
   --font-display: "Helvetica Neue", sans-serif;
-  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, "URW Palladio L", "Book Antiqua", Georgia,
-    "Times New Roman", serif;
+  --font-serif:
+    "Iowan Old Style", "Palatino Linotype", Palatino, "URW Palladio L",
+    "Book Antiqua", Georgia, "Times New Roman", serif;
 }
 
 /* Type scale (Perfect Fifth, 1.5 ratio) */

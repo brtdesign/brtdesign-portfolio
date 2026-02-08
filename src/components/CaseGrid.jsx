@@ -4,31 +4,33 @@ const CASES = [
   {
     slug: "cadence",
     title: "Cadence Fitness",
-    summary: "Built a unified member hub to keep fitness communities engaged between sessions.",
+    summary:
+      "Built a unified member hub to keep fitness communities engaged between sessions.",
     focus: ["Member Experience", "Product UI", "Research"],
-    year: "2025"
+    year: "2025",
   },
   {
     slug: "owtv",
     title: "OWTV",
-    summary: "Refreshed product and brand touchpoints for a growing media network.",
+    summary:
+      "Refreshed product and brand touchpoints for a growing media network.",
     focus: ["Brand", "Product UX", "Web"],
-    year: "2024"
+    year: "2024",
   },
   {
     slug: "tag-your-bag",
     title: "Tag Your Bag",
     summary: "Simplified onboarding flows for busy operations teams.",
     focus: ["Service Design", "Prototyping", "Operations UX"],
-    year: "2023"
+    year: "2023",
   },
   {
     slug: "xpress-weigh",
     title: "Xpress Weigh",
     summary: "Streamlined weigh-in workflows for logistics teams.",
     focus: ["Systems", "Product UI", "Design Systems"],
-    year: "2022"
-  }
+    year: "2022",
+  },
 ];
 
 export default function CaseGrid() {
@@ -64,7 +66,7 @@ export default function CaseGrid() {
               style={{
                 textAlign: "left",
                 cursor: "pointer",
-                borderColor: active === item.slug ? "var(--accent)" : undefined
+                borderColor: active === item.slug ? "var(--accent)" : undefined,
               }}
             >
               <strong>{item.title}</strong>

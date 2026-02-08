@@ -1,28 +1,39 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
+
 <BaseLayout title="Case Studies · BRT Design">
   <section>
-    <span class="chip">Case Studies</span>
-    <h1 class="hero-title">Four examples of user-centred work with impact.</h1>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Case Studies</span>
+    </nav>
+    <h1 class="hero-title">
+      Human centred design <span
+        style="whitespace:no-wrap; display:inline-block"
+        >with <em>impact</em><span class="flourish-period">.</span></span>
+    </h1>
     <!-- <p class="hero-lead">Each engagement blends strategy, UI craft, and implementation support.</p> -->
   </section>
 
   <section class="grid">
-    <article class="card">
+    <a class="card card-link" href="/case-studies/cadence">
       <h2>Cadence Fitness</h2>
       <ul class="meta-list">
         <li>Self-initiated</li>
         <li>2026</li>
       </ul>
-      <p>Connected coaching, progress, and community for modern fitness teams.</p>
+      <p>
+        Connected coaching, progress, and community for modern fitness teams.
+      </p>
       <div class="tag-list">
         <span class="tag">Member Experience</span>
         <span class="tag">Service Design</span>
       </div>
-      <a class="button" href="/case-studies/cadence">Read case study</a>
-    </article>
-    <article class="card">
+      <span class="card-link__cta">Read case study</span>
+    </a>
+    <a class="card card-link" href="/case-studies/owtv">
       <h2>OWTV</h2>
       <ul class="meta-list">
         <li>Slimming World</li>
@@ -33,25 +44,27 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         <span class="tag">Brand</span>
         <span class="tag">Product UX</span>
       </div>
-      <a class="button" href="/case-studies/owtv">Read case study</a>
-    </article>
-    <article class="card">
+      <span class="card-link__cta">Read case study</span>
+    </a>
+    <a class="card card-link" href="/case-studies/tag-your-bag">
       <h2>Tag Your Bag</h2>
       <ul class="meta-list">
         <li>Oxfam</li>
         <li>2018</li>
       </ul>
-      <p>Improving Gift-Aid sign up to increase donation revenue across the estate</p>
+      <p>
+        Improving Gift-Aid sign up to increase donation revenue across the
+        estate
+      </p>
       <div class="tag-list">
         <span class="tag">Discovery</span>
         <span class="tag">Prototyping</span>
-                <span class="tag">In-situ usability evaluation</span>
+        <span class="tag">In-situ usability evaluation</span>
         <span class="tag">Implementation</span>
-   
       </div>
-      <a class="button" href="/case-studies/tag-your-bag">Read case study</a>
-    </article>
-    <article class="card">
+      <span class="card-link__cta">Read case study</span>
+    </a>
+    <a class="card card-link" href="/case-studies/xpress-weigh">
       <h2>Xpress Weigh</h2>
       <ul class="meta-list">
         <li>Slimming World</li>
@@ -62,7 +75,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         <span class="tag">Systems</span>
         <span class="tag">Operations UX</span>
       </div>
-      <a class="button" href="/case-studies/xpress-weigh">Read case study</a>
-    </article>
+      <span class="card-link__cta">Read case study</span>
+    </a>
   </section>
 </BaseLayout>

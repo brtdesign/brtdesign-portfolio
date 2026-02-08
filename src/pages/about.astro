@@ -1,13 +1,21 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
+
 <BaseLayout title="About · Ben Taylor">
   <section>
-    <span class="chip">About</span>
-    <h1 class="hero-title">A design partner for teams navigating complexity.</h1>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">About</span>
+    </nav>
+    <h1 class="hero-title">
+      A design partner for teams navigating complexity.
+    </h1>
     <p class="hero-lead">
-      I help early-stage and scaling teams build products that feel cohesive, credible, and human. My work spans
-      product design, brand systems, and front-end collaboration.
+      I help early-stage and scaling teams build products that feel cohesive,
+      credible, and human. My work spans product design, brand systems, and
+      front-end collaboration.
     </p>
   </section>
 
@@ -40,8 +48,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <span class="tag">User Testing</span>
       </div>
       <p style="margin-top: 16px;">
-        I collaborate with engineering to keep design intent intact. My outputs are lean, documented, and ready to
-        ship.
+        I collaborate with engineering to keep design intent intact. My outputs
+        are lean, documented, and ready to ship.
       </p>
     </div>
   </section>
@@ -49,7 +57,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <section class="card">
     <h2>Team</h2>
     <p>
-      I run a solo practice and bring in trusted collaborators when needed, keeping leadership hands-on.
+      I run a solo practice and bring in trusted collaborators when needed,
+      keeping leadership hands-on.
     </p>
   </section>
 </BaseLayout>
