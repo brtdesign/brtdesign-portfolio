@@ -44,6 +44,7 @@
   --text-xs: calc(var(--text-base) / 2.25);
   --text-sm: calc(var(--text-base) / 1.5);
   --text-md: var(--text-base);
+  --text-ml: calc(var(--text-base) * 1.25);
   --text-lg: calc(var(--text-base) * 1.5);
   --text-xl: calc(var(--text-base) * 2.25);
   --text-2xl: calc(var(--text-base) * 3.375);

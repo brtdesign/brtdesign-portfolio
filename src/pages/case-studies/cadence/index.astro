@@ -12,72 +12,142 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
       <span aria-current="page">Cadence Fitness</span>
     </nav>
     <h1 class="hero-title">
-      A fitness platform that keeps members motivated between sessions.
+      Workout logging that tracks <span
+        style="whitespace:no-wrap; display:inline-block"
+        >the full picture<span class="flourish-period">.</span></span
+      >
     </h1>
-    <p class="hero-lead">
-      Cadence is a workout trac ker built for lifters who need more than rep
-      counts. The app captures the contextual details that actually
-      matter—equipment, technique variations, rest periods, and training methods
-      like drop-sets and clusters—without slowing down between-set logging. The
-      core challenge was designing a logging flow fast enough for gym use while
-      preserving the granularity that makes training data useful. Every set
-      keeps its context, so progress tracking shows not just what you lifted,
-      but how and why it worked.
-    </p>
-    <ul class="meta-list meta-list--casestudy">
+    <ul class="meta-list meta-list--casestudy meta-list--pills">
       <li>Self-initiated</li>
       <li>2026</li>
     </ul>
+
+    <div class="hero-wrapper">
+      <section class="hero-lead">
+        <p>
+          <strong>
+            A strength training app that captures the context behind each set —
+            equipment, variations, rest, and training methods — without slowing
+            down logging.
+          </strong>
+        </p>
+        <p>
+          This project allowed me to develop my use of AI-augmented prototyping
+          and development as I worked to solve a real personal pain point.
+        </p>
+        <p>
+          <em
+            >The app is currently enrolled in the Android store closed test
+            programme.</em
+          >
+        </p>
+      </section>
+      <section class="card card--role card--compact">
+        <h2>Role</h2>
+        <ul class="role-list">
+          <li>Research</li>
+          <li>Design</li>
+          <li>Content</li>
+          <li>Development</li>
+          <li>
+            Testing <br /><em class="small">(moderated + unmoderated)</em>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <ul class="tools-list">
+      <li>
+        <img class="tools-list__icon" src="/images/figma.png" alt="Figma" />
+      </li>
+      <li>
+        <img class="tools-list__icon" src="/images/miro.png" alt="Miro" />
+      </li>
+      <li>
+        <img class="tools-list__icon" src="/images/vscode.png" alt="VS Code" />
+      </li>
+      <li>
+        <img class="tools-list__icon" src="/images/react.png" alt="React" />
+      </li>
+      <li>
+        <img class="tools-list__icon" src="/images/codex.png" alt="Codex" />
+      </li>
+      <li>
+        <img class="tools-list__icon" src="/images/trello.png" alt="Trello" />
+      </li>
+    </ul>
   </section>
 
-  <section class="card">
-    <h2>Overview</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-      feugiat nisl vitae arcu vehicula, vitae vulputate justo consequat. Integer
-      vel metus at turpis sollicitudin tincidunt.
-    </p>
-    <div class="tag-list">
-      <span class="tag">Role: Lorem ipsum</span>
-      <span class="tag">Timeframe: Lorem ipsum</span>
-      <span class="tag">Tools: Lorem ipsum</span>
+  <section class="card card-split card-split--2-3 content-block">
+    <div>
+      <h2>Problem</h2>
+      <p>
+        Regular gym-goers want to track progress consistently, but variations in
+        machine setup and personal settings — even when performing the same
+        exercise — make like-for-like comparison unreliable.
+      </p><p>
+        While the market is saturated with gym trackers and fitness loggers,
+        many are expensive and bury basic exercise logging inside bloated,
+        non-contextual feature sets. This makes it harder, not easier, to
+        understand real progress.
+      </p>
+      <h3>Validation</h3>
+      <ul>
+        <li>Input from personal trainers and regular gym users.</li>
+        <li>
+          A short survey shared within fitness-focused social communities.
+        </li>
+      </ul>
+    </div>
+    <div>
+      <img src="/case-studies/cadence/exercises.png" alt="Exercise" />
+      <p class="caption">
+        Equipment calibration and settings can significantly impact exercise
+        work rate across sessions. <br /><strong>Image: ChatGPT</strong>
+      </p>
     </div>
   </section>
+  <section class="card content-block">
+    <h2>Project goals</h2>
+    <ul>
+      <li>Flexible & efficient logging</li>
+      <li>Like-for-like, contextual comparison</li>
+      <li>In-the-moment progress indicators</li>
+      <li>Focused - no fluff</li>
+      <li>Offline first</li>
+      <li>Cost effective</li>
+      <li>Immediate value</li>
+    </ul>
+  </section>
+  <section class="card-split">
+    <section class="card">
+      <h2>Process</h2>
 
-  <section class="card">
-    <h2>Problem</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere,
-      augue id gravida aliquam, nibh neque commodo purus, at pharetra metus nibh
-      in ipsum.
-    </p>
+      <p>A simple process of prototype, refine, test, and iterate.</p>
+      <p>
+        High-level process flows were defined in Miro, then prototyped and
+        refined in Figma.
+      </p>
+
+      <p>
+        Because the product is offline-first, all data lives on the device. This
+        enabled rapid development of an installable proof of concept and
+        immediate testing in real workouts with myself and close friends.
+      </p>
+    </section>
   </section>
 
-  <section class="card">
-    <h2>Approach</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
-      Mauris luctus, orci sed vulputate congue, lorem nulla volutpat libero, nec
-      porta nisl justo a metus.
-    </p>
-  </section>
+  <section class="card card--transparent">
+    <!-- <h2>Assets</h2> -->
+    <h3>Initial concept development</h3>
+    <section class="full-bleed">
+      <img
+        class="full-width-image"
+        src="/images/cadence/flowchart.png"
+        alt="Flowchart"
+      />
+    </section>
 
-  <section class="card">
-    <h2>Design</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in
-      ipsum ac justo scelerisque convallis a a risus. Aenean malesuada eros sit
-      amet est luctus, non commodo nisi sagittis.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>Outcome</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel mi
-      sit amet dolor interdum tincidunt. Integer ac ex sed justo laoreet
-      sagittis.
-    </p>
+    figma prototypes VS code protypes figma UI VS code UI In gym test Current UI
   </section>
 
   <section class="card">

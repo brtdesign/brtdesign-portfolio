@@ -2,7 +2,7 @@
 body {
   font-family: var(--font-body);
   color: var(--ink);
-  font-size: var(--text-md);
+  font-size: clamp(var(--text-sm), 1.2vw + 0.8rem, var(--text-ml));
 }
 
 /* Neutral link styling to match text */
@@ -34,19 +34,26 @@ h2 {
 }
 
 h3 {
-  font-size: var(--text-md);
+  font-size: var(--text-ml);
 }
 
 h4 {
-  font-size: var(--text-sm);
+  font-size: var(--text-ml);
 }
 
-h5 {
-  font-size: var(--text-sm);
+h5,
+.small {
+  font-size: var(--text-md);
 }
 
 h6 {
   font-size: var(--text-sm);
+}
+
+.caption {
+  font-size: var(--text-md);
+  font-style: italic;
+  font-weight: "900";
 }
 
 /* Pill-style label text */
@@ -90,11 +97,19 @@ h6 {
 }
 /* Supporting hero paragraph */
 .hero-lead {
-  font-size: var(--text-lg);
+  font-size: clamp(var(--text-sm), 1.4vw + 0.7rem, var(--text-ml));
   color: var(--muted);
-  max-width: 540px;
+  /* max-width: 540px; */
+  max-width: 720px;
+  padding-left: var(--space-1);
+}
+.hero-lead strong {
+  font-weight: 700;
 }
 
+.hero-lead em {
+  font-size: var(--text-md);
+}
 /* Emphasize nav links */
 .nav a {
   font-weight: 600;
@@ -118,6 +133,11 @@ h6 {
 /* Larger metadata for case study headers */
 .meta-list--casestudy {
   font-size: var(--text-md);
+}
+
+/* Tools list sizing */
+.tools-list {
+  font-size: var(--text-sm);
 }
 
 /* Breadcrumb trail */
