@@ -42,7 +42,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
           >
         </p>
       </section>
-      <section class="card card--role card--compact">
+      <section class="card card--role card--compact card--transparent">
         <h2>Role</h2>
         <ul class="role-list">
           <li>Research</li>
@@ -97,6 +97,17 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
           A short survey shared within fitness-focused social communities.
         </li>
       </ul>
+      <hr class="divider" />
+      <h3>Project goals</h3>
+      <ul>
+        <li>Flexible & efficient logging</li>
+        <li>Like-for-like, contextual comparison</li>
+        <li>In-the-moment progress indicators</li>
+        <li>Focused - no fluff</li>
+        <li>Offline first</li>
+        <li>Cost effective</li>
+        <li>Immediate value</li>
+      </ul>
     </div>
     <div>
       <img src="/case-studies/cadence/exercises.png" alt="Exercise" />
@@ -106,56 +117,109 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
       </p>
     </div>
   </section>
-  <section class="card content-block">
-    <h2>Project goals</h2>
-    <ul>
-      <li>Flexible & efficient logging</li>
-      <li>Like-for-like, contextual comparison</li>
-      <li>In-the-moment progress indicators</li>
-      <li>Focused - no fluff</li>
-      <li>Offline first</li>
-      <li>Cost effective</li>
-      <li>Immediate value</li>
-    </ul>
+  <section class="full-bleed">
+    <img
+      class="full-width-image"
+      src="/images/cadence/flowchart.png"
+      alt="Flowchart"
+    />
+    <p class="image-row--caption">Core flows mapped in Miro.</p>
   </section>
-  <section class="card-split">
+  <section class="card-split card-split--2-3">
     <section class="card">
       <h2>Process</h2>
 
-      <p>A simple process of prototype, refine, test, and iterate.</p>
       <p>
-        High-level process flows were defined in Miro, then prototyped and
-        refined in Figma.
+        <strong
+          >I followed a deliberately lightweight, iterative process focused on
+          learning through use rather than documentation.</strong
+        >
+      </p><p>
+        High-level flows were first mapped in Miro to validate the core logging
+        and review journeys. These flows were then translated into Figma, where
+        interaction details were prototyped, refined, and simplified through
+        repeated passes.
       </p>
-
       <p>
-        Because the product is offline-first, all data lives on the device. This
-        enabled rapid development of an installable proof of concept and
-        immediate testing in real workouts with myself and close friends.
+        An offline-first architecture means all data lived on the device. This
+        allowed me to quickly build an installable proof of concept and test it
+        in real gym sessions — both personally and with a small group of
+        friends. Feedback from real workouts directly informed each iteration,
+        keeping the work grounded in practical, in-the-moment use rather than
+        theoretical scenarios.
       </p>
     </section>
+
+    <div class="process-image">
+      <img src="/images/cadence/screen1.png" alt="App development" />
+    </div>
   </section>
 
   <section class="card card--transparent">
     <!-- <h2>Assets</h2> -->
     <h3>Initial concept development</h3>
-    <section class="full-bleed">
-      <img
-        class="full-width-image"
-        src="/images/cadence/flowchart.png"
-        alt="Flowchart"
-      />
-    </section>
+    <div class="image-row">
+      <img src="/images/cadence/drawing1.jpg" alt="Process sketch 1" />
+      <img src="/images/cadence/drawing2.jpg" alt="Process sketch 2" />
+      <!-- <img src="/images/cadence/drawing3.jpg" alt="Process sketch 3" /> -->
+      <img src="/images/cadence/drawing5.jpg" alt="Process sketch 3" />
+    </div>
+    <p class="image-row--caption">
+      Initial concepts were roughed out on paper. I designed a tagging system to
+      capture the nuance of any given exercise.
+    </p>
 
-    figma prototypes VS code protypes figma UI VS code UI In gym test Current UI
+    <div class="image-row" style="height:400px">
+      <img src="/images/cadence/figma-1.png" alt="UX" />
+      <img src="/images/cadence/figma-2.png" alt="UX" />
+      <img src="/images/cadence/figma-3.png" alt="UX" />
+      <img src="/images/cadence/figma-4.png" alt="UX" />
+      <img src="/images/cadence/figma-5.png" alt="UX" />
+    </div>
+    <p class="image-row--caption">Initial wireframes in Figma.</p>
+
+    <div class="image-row" style="height:320px">
+      <img src="/images/cadence/figma-ui1.jpg" alt="UX" />
+      <img src="/images/cadence/figma-ui2.jpg" alt="UX" />
+    </div>
+
+    <p class="image-row--caption">
+      Early-flow interactive prototypes built in Figma.
+    </p>
+    <div class="image-row" style="height:380px">
+      <img src="/images/cadence/development.jpg" alt="App development" />
+      <img src="/images/cadence/testing.jpg" alt="App testing" />
+    </div>
+    <p class="image-row--caption">
+      Storing data on the device and using AI-augmented development allowed me
+      to rapidly test and iterate in real conditions.
+    </p>
+
+    <div class="image-row" style="height:400px">
+      <img src="/images/cadence/final1.png" alt="UX" />
+      <img src="/images/cadence/final2.png" alt="UX" />
+      <img src="/images/cadence/final3.png" alt="UX" />
+      <img src="/images/cadence/final4.png" alt="UX" />
+      <img src="/images/cadence/final5.png" alt="UX" />
+    </div>
+    <p class="image-row--caption">
+      Screens from the beta release - in Google Play Store closed testing (as of
+      February 2026)
+    </p>
   </section>
-
   <section class="card">
-    <h2>Reflection</h2>
+    <h2>Reflection <span class="flourish-ampersand">&</span> next steps</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel leo in
-      nisi vehicula fermentum. Suspendisse potenti. Phasellus et magna at risus
-      bibendum interdum.
+      This project proved highly valuable as a self-directed exploration of
+      rapid, high-fidelity prototyping. The potential to move quickly from idea
+      to working product using tools such as ChatGPT Codex was particularly
+      clear.
+    </p><p></p> While defining user flows and refining interactions came naturally,
+    mapping underlying code structures and maintaining data integrity presented a
+    new and worthwhile challenge. <p>
+      There are multiple directions this product could evolve in, and the next
+      step is learning from a broader user base once a wider release becomes
+      possible.
     </p>
   </section>
 </BaseLayout>

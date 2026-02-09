@@ -42,11 +42,69 @@ img {
   transform: translateX(-50%);
   margin-top: var(--space-10);
   margin-bottom: var(--space-10);
-  box-shadow: var(--shadow);
 }
 
 .full-bleed .full-width-image {
   margin: 0;
+}
+
+/* Process image stack */
+.process-images {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.process-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.process-images img:first-child {
+  grid-column: 1 / -1;
+}
+
+/* Concept row images */
+.image-row {
+  display: flex;
+  flex-wrap: nowrap;
+  column-gap: var(--space-3);
+  row-gap: var(--space-3);
+  margin: var(--space-2) 0;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+}
+
+.image-row img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  display: block;
+  flex: 0 0 auto;
+  outline: 1px solid var(--border);
+}
+
+.image-row--tall img {
+  /* height: 380px; */
+}
+
+.image-row--caption {
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-8);
+}
+
+@media (max-width: 900px) {
+  .image-row {
+    overflow-x: auto;
+    padding-bottom: var(--space-2);
+    scroll-snap-type: x mandatory;
+  }
+
+  .image-row img {
+    scroll-snap-align: start;
+  }
 }
 
 /* Main content padding and rhythm */
@@ -106,6 +164,22 @@ section {
 .card--role {
   height: auto;
   padding-bottom: 0;
+
+  border-radius: 0;
+}
+
+@media (min-width: 900px) {
+  .card--role {
+    /* //border-left: 1px solid var(--border); */
+    background:
+      linear-gradient(
+        90deg,
+        rgba(27, 27, 31, 0.03) 0,
+        rgba(27, 27, 31, 0) 24px
+      ),
+      transparent;
+    padding-left: var(--space-4);
+  }
 }
 /* Role card tweaks */
 .card--role h2 {
@@ -279,6 +353,10 @@ section {
 /* * {
   outline: 1px solid red;
 } */
+
+.divider {
+  margin: var(--space-6) 0;
+}
 
 .tools-list li {
   display: inline-flex;
