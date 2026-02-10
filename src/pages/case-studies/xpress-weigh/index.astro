@@ -42,18 +42,11 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
           of the platform, developing the same area from scratch as part of a
           redefined product ecosystem.
         </p>
-
-        <!-- <p>
-            The system was designed to give consultants the tools and prompts
-            needed to instigate positive behaviour change in members, supporting
-            accountability, habit formation, and encourage weekly engagement.
-          </p>
-        </p> -->
       </section>
       <section class="card card--role card--compact card--transparent">
         <h2>Role</h2>
         <ul class="role-list">
-          <li>Deep longitudnal research</li>
+          <li>Immersive longitudinal research</li>
           <li>Stakeholder management</li>
           <li>Design & prototyping</li>
           <li>Moderated usability testing</li>
@@ -89,60 +82,125 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
       </li>
     </ul>
   </section>
+
+  <!-- <section class="card">
+    <h2>'Xpress Weigh'</h2>
+    <p>
+      The system was designed to give consultants the tools and prompts needed
+      to instigate positive behaviour change in members, supporting
+      accountability, habit formation, and encourage weekly engagement.
+    </p>
+  </section> -->
+
   <h1 class="phase-title"><span>Phase 1</span></h1>
-
-  <h1 class="phase-title"><span>Phase 2</span></h1>
-  <section class="full-bleed">
-    <button
-      class="lightbox-trigger"
-      type="button"
-      data-lightbox-target="journey-map"
-      aria-label="Open journey map full size"
-    >
-      <img
-        class="full-width-image"
-        src="/images/xpress-weigh/journeymap-photo.jpg"
-        alt="Journey map"
-      />
-    </button>
-  </section>
-  <dialog class="lightbox" data-lightbox="journey-map" aria-label="Journey map">
-    <div class="lightbox__actions">
-      <button class="lightbox__toggle" type="button" aria-pressed="false">
-        Fit height
-      </button>
-      <button class="lightbox__close" type="button" aria-label="Close">
-        ×
-      </button>
-    </div>
-    <div class="lightbox__inner">
-      <div class="lightbox__image">
-        <img
-          src="/images/xpress-weigh/journey-map.jpeg"
-          alt="Journey map"
-          draggable="false"
-        />
-      </div>
-    </div>
-  </dialog>
-
   <section class="card content-block">
-    <h2>Impact & reflections</h2>
+    <h2>Problem</h2>
     <p>
-      This was a challenging project for a number of reasons, not least of which
-      the emotional attachment felt at the highest levels of the business
-      coupled with a change of direction mid-way through.
-    </p>
+      &lsquo;Xpress Weigh&rsquo; is a legacy suite of tools used by Consultants
+      to run weekly member groups. The software runs on Windows tablets and
+      supports enrolment, payments, weight recording, and access to member data
+      during live sessions.
 
-    <p>
-      Thgeorugh consistent stakeholder collaboration and user research, I was
-      able to successfully design an early beta that played a notable part in
-      <strong> qulity of service improvments</strong>, and navigate a path
-      through numerous iterations, conflicting opinions and the business leads
-      inherent urge to take a kitchen sink approach, to poduce a tested and
-      proven design to push in to development.
+      <p>
+        Accumulated technical and design debt left the system difficult to use
+        and maintain, and misaligned with the goals of group delivery. As
+        Slimming World began exploring wider digital transformation, the member
+        support experience came under particular scrutiny.
+      </p>
+
+      <p>
+        <strong>
+          I was tasked with delivering targeted, interim usability improvements,
+          with a specific focus on reducing friction and protecting the human
+          connection that underpins a successful group experience.
+        </strong>
+      </p>
     </p>
   </section>
+  <div class="image-row image-row--full" style="height:354px">
+    <img src="/images/xpress-weigh/orig1.png" alt="Existing screen designs" />
+    <img src="/images/xpress-weigh/orig2.png" alt="Existing screen designs" />
+  </div>
+  <p class="image-row--caption">
+    Consultants were required to navigate two complex tablet screens to access
+    and record data whilst maintaining a natural and supportive conversation
+    with each member.
+  </p>
+  <section class="card content-block">
+    <h2>Approach</h2>
+    <p>
+      Building on deep knowledge gained through long-term ethnographic study —
+      particpating in group as both a member and assistant over several years —
+      I conducted one-to-one research interviews with Consultants across a range
+      of backgrounds and experience levels to round out my understanding of the
+      issues.
+    </p><p>
+      I worked closely with the Directors of the field and training functions,
+      maintaining focus on essential data and being disciplined about removing
+      periphery or 'just-in-case' information.
+    </p><p>
+      The design emphasised simpler interactions and ergonomics suited to the
+      live, in-group context of use.
+    </p>
+  </section>
+
+  <h1 class="phase-title">
+    <span>Phase 2</span>
+  </h1>
 </BaseLayout>
+<section class="full-bleed">
+  <button
+    class="lightbox-trigger"
+    type="button"
+    data-lightbox-target="journey-map"
+    aria-label="Open journey map full size"
+  >
+    <img
+      class="full-width-image"
+      src="/images/xpress-weigh/journeymap-photo.jpg"
+      alt="Journey map"
+    />
+  </button>
+</section>
+<dialog class="lightbox" data-lightbox="journey-map" aria-label="Journey map">
+  <div class="lightbox__actions">
+    <button class="lightbox__toggle" type="button" aria-pressed="false">
+      Fit height
+    </button>
+    <button class="lightbox__close" type="button" aria-label="Close">
+      ×
+    </button>
+  </div>
+  <div class="lightbox__inner">
+    <div class="lightbox__image">
+      <img
+        src="/images/xpress-weigh/journey-map.jpeg"
+        alt="Journey map"
+        draggable="false"
+      />
+    </div>
+  </div>
+</dialog>
+<p class="image-row--caption">
+  I mapped the entire Consultant lifecycle as part of the eco-system
+  re-development (Tap to view full map)
+</p>
+<section class="card content-block">
+  <h2>Impact & reflections</h2>
+  <p>
+    This was a challenging project for a number of reasons, not least of which
+    the emotional attachment felt at the highest levels of the business coupled
+    with a change of direction mid-way through.
+  </p>
+
+  <p>
+    Thgeorugh consistent stakeholder collaboration and user research, I was able
+    to successfully design an early beta that played a notable part in
+    <strong> qulity of service improvments</strong>, and navigate a path through
+    numerous iterations, conflicting opinions and the business leads inherent
+    urge to take a kitchen sink approach, to poduce a design that was test and
+    proven, derisking development.
+  </p>
+</section>
 
 <script type="module" src="/scripts/lightbox.js"></script>

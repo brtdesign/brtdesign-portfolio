@@ -7,6 +7,7 @@ triggers.forEach((trigger) => {
     const dialog = document.querySelector(`[data-lightbox="${target}"]`);
     if (dialog && typeof dialog.showModal === "function") {
       dialog.showModal();
+      dialog.dispatchEvent(new Event("lightbox:open"));
     }
   });
 });
@@ -41,19 +42,49 @@ lightboxes.forEach((dialog) => {
     const wrapStyles = getComputedStyle(imageWrap);
     const padTop = parseFloat(wrapStyles.paddingTop) || 0;
     const padBottom = parseFloat(wrapStyles.paddingBottom) || 0;
-    const available = Math.max(0, innerHeight - actionsHeight - padTop - padBottom);
+    const available = Math.max(
+      0,
+      innerHeight - actionsHeight - padTop - padBottom,
+    );
     image.style.maxHeight = `${available}px`;
   };
+
+  dialog.addEventListener("lightbox:open", () => {
+    if (!inner) return;
+    inner.classList.add("is-fit");
+    if (toggleButton) {
+      toggleButton.setAttribute("aria-pressed", "true");
+      toggleButton.textContent = "Show full size";
+    }
+    updateFitHeight();
+  });
 
   if (toggleButton && inner) {
     toggleButton.addEventListener("click", () => {
       const isFit = inner.classList.toggle("is-fit");
       toggleButton.setAttribute("aria-pressed", String(isFit));
-      toggleButton.textContent = isFit ? "Full size" : "Fit height";
+      toggleButton.textContent = isFit ? "Show full size" : "Fit height";
       if (isFit) {
         updateFitHeight();
       } else if (image) {
         image.style.removeProperty("max-height");
+        const maxScrollTop = inner.scrollHeight - inner.clientHeight;
+        const target = Math.max(0, maxScrollTop * 0.445);
+        const start = inner.scrollTop;
+        const duration = 1500;
+        let startTime = 0;
+        const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+        const step = (timestamp) => {
+          if (!startTime) startTime = timestamp;
+          const elapsed = timestamp - startTime;
+          const progress = Math.min(1, elapsed / duration);
+          const eased = easeOut(progress);
+          inner.scrollTop = start + (target - start) * eased;
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          }
+        };
+        requestAnimationFrame(step);
       }
     });
   }
