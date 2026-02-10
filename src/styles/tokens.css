@@ -12,6 +12,7 @@
   --card: #ffffff;
   --border: rgba(27, 27, 31, 0.12);
   --shadow: 0 12px 32px rgba(27, 27, 31, 0.12);
+  --shadow-sml: 0 2px 8px rgba(27, 27, 31, 0.25);
   --radius: 18px;
 }
 

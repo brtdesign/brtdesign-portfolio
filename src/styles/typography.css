@@ -84,16 +84,55 @@ h6 {
   margin-bottom: var(--space-1);
 }
 
-.flourish-ampersand {
+.flourish-ampersand,
+.flourish-quote {
   font-family: var(--font-serif);
   font-weight: 600;
   font-style: italic;
   font-size: 80%;
 }
 
+.flourish-quote {
+  font-style: normal;
+  font-size: 100%;
+  display: inline-block;
+  padding: 0 2px;
+  position: relative;
+  top: -4px;
+}
+
 .flourish-period {
   font-family: serif; /*  helvetica square period looks terible at this scale.  */
   font-size: 80%;
+}
+
+.phase-title {
+  position: relative;
+  margin: var(--space-10) 0 var(--space-4);
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  color: var(--muted);
+}
+
+.phase-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 55%;
+  height: 1px;
+  background: var(--muted);
+}
+
+.phase-title span {
+  position: relative;
+  z-index: 1;
+  padding: 0 var(--space-2);
+  background: var(--bg);
 }
 /* Supporting hero paragraph */
 .hero-lead {
@@ -172,4 +211,14 @@ h6 {
 button.timeline-item {
   font: inherit;
   color: inherit;
+}
+
+/* Blockquote styling (match flourish-ampersand) */
+blockquote {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-style: italic;
+  font-size: var(--text-lg);
+  color: var(--ink);
+  margin: var(--space-3) 0;
 }

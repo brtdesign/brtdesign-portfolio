@@ -20,6 +20,8 @@ body {
     ), */ var(
     --bg
   );
+
+  overflow-x: hidden;
 }
 
 /* Make images responsive by default */
@@ -38,18 +40,30 @@ img {
 /* Full-bleed section that breaks out of the content width */
 .full-bleed {
   width: 100vw;
+
   margin-left: 50%;
   transform: translateX(-50%);
   margin-top: var(--space-10);
-  margin-bottom: var(--space-10);
 }
 
 .full-bleed .full-width-image {
   margin: 0;
 }
 
+
+@media (max-width: 900px) {
+  .full-bleed--scroll {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .full-bleed--scroll .full-width-image {
+    min-width: 240vw;
+  }
+}
+
 /* Process image stack */
-.process-images {
+/* .process-images {
   display: grid;
   gap: var(--space-3);
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -63,6 +77,12 @@ img {
 
 .process-images img:first-child {
   grid-column: 1 / -1;
+} */
+/*full height screenshot on a 66/33 card */
+.process-image img {
+  border-radius: var(--space-2);
+
+  border: 1px solid white;
 }
 
 /* Concept row images */
@@ -75,6 +95,7 @@ img {
   justify-content: center;
   align-items: center;
   height: 220px;
+  max-width: 100%;
 }
 
 .image-row img {
@@ -83,7 +104,16 @@ img {
   object-fit: cover;
   display: block;
   flex: 0 0 auto;
-  outline: 1px solid var(--border);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sml);
+}
+
+.image-row--desaturated img {
+  filter: saturate(0); /* 0 = grayscale */
+}
+
+.image-row--desaturated img:hover {
+  filter: saturate(0.5); /* 0 = grayscale */
 }
 
 .image-row--tall img {
@@ -95,11 +125,18 @@ img {
   margin-bottom: var(--space-8);
 }
 
+/* Centered logo */
+.centered-logo {
+  display: block;
+  margin: var(--space-1) auto var(--space-8);
+  max-width: 220px;
+}
+
 @media (max-width: 900px) {
   .image-row {
     overflow-x: auto;
-    padding-bottom: var(--space-2);
     scroll-snap-type: x mandatory;
+    padding-bottom: var(--space-2);
   }
 
   .image-row img {
@@ -109,9 +146,14 @@ img {
 
 /* Main content padding and rhythm */
 main {
-  padding: var(--space-4) 6vw var(--space-10);
+  padding: var(--space-4) 2vw var(--space-6);
 }
 
+@media (min-width: 900px) {
+  main {
+    padding: var(--space-4) 6vw var(--space-10);
+  }
+}
 /* Vertical spacing between sections */
 section {
   margin: 0;
@@ -148,13 +190,13 @@ section {
 .card {
   background: var(--card);
   border-radius: var(--radius);
-  padding: var(--space-6);
+  padding: var(--space-3) var(--space-2);
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
   align-items: start;
 }
 .card--compact {
-  padding: var(--space-3);
+  padding: var(--space-2);
 }
 .card--transparent {
   background: transparent;
@@ -168,13 +210,24 @@ section {
   border-radius: 0;
 }
 
+.card--role li {
+  margin-bottom: var(--space-1);
+}
+
 @media (min-width: 900px) {
+  .card {
+    padding: var(--space-6);
+  }
+  .card--compact {
+    padding: var(--space-3);
+  }
+
   .card--role {
     /* //border-left: 1px solid var(--border); */
     background:
       linear-gradient(
         90deg,
-        rgba(27, 27, 31, 0.03) 0,
+        rgba(27, 27, 31, 0.05) 0,
         rgba(27, 27, 31, 0) 24px
       ),
       transparent;
@@ -318,15 +371,13 @@ section {
 
 .meta-list--pills li {
   padding: 2px var(--space-2);
-  font-size: var(--text-md);
+  font-size: var(--text-sm);
   border-radius: 999px;
   border: 1px solid var(--border);
   background: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
   letter-spacing: 1px;
-}
-
-.meta-list--pills li + li::before {
-  display: none;
 }
 
 /* Single tag/pill layout */
@@ -344,7 +395,7 @@ section {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: var(--space-10);
+  margin-top: var(--space-8);
   justify-content: center;
   /* border-top: 1px solid var(--border);
   padding-top: var(--space-3); */

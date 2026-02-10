@@ -12,74 +12,137 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
       <span aria-current="page">Xpress Weigh</span>
     </nav>
     <h1 class="hero-title">
-      A clearer weigh-in experience for logistics teams.
+      Empowering Consultants to support members on <span
+        style="whitespace:no-wrap; display:inline-block"
+      >
+        their weight-loss journey<span class="flourish-period">.</span></span
+      >
     </h1>
-    <p class="hero-lead">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at
-      metus sed nisl tempus iaculis non sed nibh.
-    </p>
-    <ul class="meta-list meta-list--casestudy">
+    <ul class="meta-list meta-list--casestudy meta-list--pills">
       <li>Slimming World</li>
       <li>2025</li>
     </ul>
-  </section>
 
-  <section class="card">
-    <h2>Overview</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-      feugiat nisl vitae arcu vehicula, vitae vulputate justo consequat. Integer
-      vel metus at turpis sollicitudin tincidunt.
-    </p>
-    <div class="tag-list">
-      <span class="tag">Role: Lorem ipsum</span>
-      <span class="tag">Timeframe: Lorem ipsum</span>
-      <span class="tag">Tools: Lorem ipsum</span>
+    <div class="hero-wrapper">
+      <section class="hero-lead">
+        <p>
+          <strong
+            >A multi-phase project to redesign Slimming World’s flagship member
+            support tool from the ground up.</strong
+          >
+        </p>
+        <p>
+          <strong> The first phase</strong> focused on a rapid redesign of the existing
+          screens, improving usability while working within the constraints of the
+          existing technology.
+        </p>
+
+        <p>
+          <strong>The second phase </strong>was part of a broader transformation
+          of the platform, developing the same area from scratch as part of a
+          redefined product ecosystem.
+        </p>
+
+        <!-- <p>
+            The system was designed to give consultants the tools and prompts
+            needed to instigate positive behaviour change in members, supporting
+            accountability, habit formation, and encourage weekly engagement.
+          </p>
+        </p> -->
+      </section>
+      <section class="card card--role card--compact card--transparent">
+        <h2>Role</h2>
+        <ul class="role-list">
+          <li>Deep longitudnal research</li>
+          <li>Stakeholder management</li>
+          <li>Design & prototyping</li>
+          <li>Moderated usability testing</li>
+          <li>Developer liaison</li>
+        </ul>
+      </section>
     </div>
-  </section>
+    <ul class="tools-list">
+      <li>
+        <img
+          class="tools-list__icon"
+          src="/images/tools/figma.png"
+          alt="Figma"
+        />
+      </li>
 
-  <section class="card">
-    <h2>Problem</h2>
+      <li>
+        <img
+          class="tools-list__icon"
+          src="/images/tools/figma-make.png"
+          alt="Figma make"
+        />
+      </li>
+      <li>
+        <img class="tools-list__icon" src="/images/tools/miro.png" alt="Miro" />
+      </li>
+      <li>
+        <img
+          class="tools-list__icon"
+          src="/images/tools/azuredevops.png"
+          alt="Azure dev ops"
+        />
+      </li>
+    </ul>
+  </section>
+  <h1 class="phase-title"><span>Phase 1</span></h1>
+
+  <h1 class="phase-title"><span>Phase 2</span></h1>
+  <section class="full-bleed">
+    <button
+      class="lightbox-trigger"
+      type="button"
+      data-lightbox-target="journey-map"
+      aria-label="Open journey map full size"
+    >
+      <img
+        class="full-width-image"
+        src="/images/xpress-weigh/journeymap-photo.jpg"
+        alt="Journey map"
+      />
+    </button>
+  </section>
+  <dialog class="lightbox" data-lightbox="journey-map" aria-label="Journey map">
+    <div class="lightbox__actions">
+      <button class="lightbox__toggle" type="button" aria-pressed="false">
+        Fit height
+      </button>
+      <button class="lightbox__close" type="button" aria-label="Close">
+        ×
+      </button>
+    </div>
+    <div class="lightbox__inner">
+      <div class="lightbox__image">
+        <img
+          src="/images/xpress-weigh/journey-map.jpeg"
+          alt="Journey map"
+          draggable="false"
+        />
+      </div>
+    </div>
+  </dialog>
+
+  <section class="card content-block">
+    <h2>Impact & reflections</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere,
-      augue id gravida aliquam, nibh neque commodo purus, at pharetra metus nibh
-      in ipsum.
+      This was a challenging project for a number of reasons, not least of which
+      the emotional attachment felt at the highest levels of the business
+      coupled with a change of direction mid-way through.
     </p>
-  </section>
 
-  <section class="card">
-    <h2>Approach</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
-      Mauris luctus, orci sed vulputate congue, lorem nulla volutpat libero, nec
-      porta nisl justo a metus.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>Design</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in
-      ipsum ac justo scelerisque convallis a a risus. Aenean malesuada eros sit
-      amet est luctus, non commodo nisi sagittis.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>Outcome</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel mi
-      sit amet dolor interdum tincidunt. Integer ac ex sed justo laoreet
-      sagittis.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>Reflection</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel leo in
-      nisi vehicula fermentum. Suspendisse potenti. Phasellus et magna at risus
-      bibendum interdum.
+      Thgeorugh consistent stakeholder collaboration and user research, I was
+      able to successfully design an early beta that played a notable part in
+      <strong> qulity of service improvments</strong>, and navigate a path
+      through numerous iterations, conflicting opinions and the business leads
+      inherent urge to take a kitchen sink approach, to poduce a tested and
+      proven design to push in to development.
     </p>
   </section>
 </BaseLayout>
+
+<script type="module" src="/scripts/lightbox.js"></script>

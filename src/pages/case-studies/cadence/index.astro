@@ -35,12 +35,6 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
           This project allowed me to develop my use of AI-augmented prototyping
           and development as I worked to solve a real personal pain point.
         </p>
-        <p>
-          <em
-            >The app is currently enrolled in the Android store closed test
-            programme.</em
-          >
-        </p>
       </section>
       <section class="card card--role card--compact card--transparent">
         <h2>Role</h2>
@@ -55,40 +49,78 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
         </ul>
       </section>
     </div>
+    <!-- <section class="card">
+      <h2>TL;DR</h2>
+      <ul>
+        <li>Strength training app for context-aware workout logging</li>
+        <li>
+          Solves unreliable progress tracking caused by setup & calibration
+          differences
+        </li>
+        <li>Offline-first, low-friction, no feature bloat</li>
+        <li>Built using AI-augmented development</li>
+        <li>Android closed test (2026)</li>
+      </ul>
+    </section> -->
     <ul class="tools-list">
       <li>
-        <img class="tools-list__icon" src="/images/figma.png" alt="Figma" />
+        <img
+          class="tools-list__icon"
+          src="/images/tools/figma.png"
+          alt="Figma"
+        />
       </li>
       <li>
-        <img class="tools-list__icon" src="/images/miro.png" alt="Miro" />
+        <img class="tools-list__icon" src="/images/tools/miro.png" alt="Miro" />
       </li>
       <li>
-        <img class="tools-list__icon" src="/images/vscode.png" alt="VS Code" />
+        <img
+          class="tools-list__icon"
+          src="/images/tools/vscode.png"
+          alt="VS Code"
+        />
       </li>
       <li>
-        <img class="tools-list__icon" src="/images/react.png" alt="React" />
+        <img
+          class="tools-list__icon"
+          src="/images/tools/react.png"
+          alt="React"
+        />
       </li>
       <li>
-        <img class="tools-list__icon" src="/images/codex.png" alt="Codex" />
+        <img
+          class="tools-list__icon"
+          src="/images/tools/codex.png"
+          alt="Codex"
+        />
       </li>
       <li>
-        <img class="tools-list__icon" src="/images/trello.png" alt="Trello" />
+        <img
+          class="tools-list__icon"
+          src="/images/tools/trello.png"
+          alt="Trello"
+        />
       </li>
     </ul>
   </section>
 
   <section class="card card-split card-split--2-3 content-block">
     <div>
-      <h2>Problem</h2>
+      <h2 class="small">Problem</h2>
+      <h2>
+        <span class="flourish-quote">&ldquo;</span>Why does this feel harder
+        than last time?<span class="flourish-quote">&rdquo;</span>
+      </h2>
       <p>
-        Regular gym-goers want to track progress consistently, but variations in
-        machine setup and personal settings — even when performing the same
-        exercise — make like-for-like comparison unreliable.
-      </p><p>
-        While the market is saturated with gym trackers and fitness loggers,
-        many are expensive and bury basic exercise logging inside bloated,
-        non-contextual feature sets. This makes it harder, not easier, to
-        understand real progress.
+        Regular gym-goers often want to track progress consistently, but
+        variations in machine callibration, setup, and personal settings — even
+        on the same exercise — make like-for-like comparison unreliable. Without
+        context, numbers alone don’t tell the full story.
+      </p>
+      <p>
+        Additionally, many existing gym trackers add friction rather than
+        clarity. Basic logging is often buried inside bloated feature sets,
+        making it harder to understand real progress.
       </p>
       <h3>Validation</h3>
       <ul>
@@ -101,7 +133,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
       <h3>Project goals</h3>
       <ul>
         <li>Flexible & efficient logging</li>
-        <li>Like-for-like, contextual comparison</li>
+        <li>Like-for-like, <strong>contextual comparison</strong></li>
         <li>In-the-moment progress indicators</li>
         <li>Focused - no fluff</li>
         <li>Offline first</li>
@@ -117,14 +149,14 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
       </p>
     </div>
   </section>
-  <section class="full-bleed">
+  <section class="full-bleed full-bleed--scroll">
     <img
       class="full-width-image"
       src="/images/cadence/flowchart.png"
       alt="Flowchart"
     />
-    <p class="image-row--caption">Core flows mapped in Miro.</p>
   </section>
+  <p class="image-row--caption">Core flows mapped in Miro.</p>
   <section class="card-split card-split--2-3">
     <section class="card">
       <h2>Process</h2>
@@ -141,12 +173,12 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
         repeated passes.
       </p>
       <p>
-        An offline-first architecture means all data lived on the device. This
+        An offline-first architecture means all data lives on the device. This
         allowed me to quickly build an installable proof of concept and test it
         in real gym sessions — both personally and with a small group of
-        friends. Feedback from real workouts directly informed each iteration,
-        keeping the work grounded in practical, in-the-moment use rather than
-        theoretical scenarios.
+        friends. Observation and feedback from real workouts directly informed
+        each iteration, keeping the work grounded in practical, in-the-moment
+        use rather than theoretical scenarios.
       </p>
     </section>
 
@@ -157,42 +189,42 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 
   <section class="card card--transparent">
     <!-- <h2>Assets</h2> -->
-    <h3>Initial concept development</h3>
-    <div class="image-row">
+    <h3>Concept development</h3>
+    <div class="image-row image-row--desaturated">
       <img src="/images/cadence/drawing1.jpg" alt="Process sketch 1" />
       <img src="/images/cadence/drawing2.jpg" alt="Process sketch 2" />
       <!-- <img src="/images/cadence/drawing3.jpg" alt="Process sketch 3" /> -->
       <img src="/images/cadence/drawing5.jpg" alt="Process sketch 3" />
     </div>
     <p class="image-row--caption">
-      Initial concepts were roughed out on paper. I designed a tagging system to
-      capture the nuance of any given exercise.
+      Early concepts were roughed out on paper.<br /> I designed a tagging system
+      to capture the nuance of any given exercise&hellip;
     </p>
 
-    <div class="image-row" style="height:400px">
+    <div class="image-row image-row--bg" style="height:400px">
       <img src="/images/cadence/figma-1.png" alt="UX" />
       <img src="/images/cadence/figma-2.png" alt="UX" />
       <img src="/images/cadence/figma-3.png" alt="UX" />
       <img src="/images/cadence/figma-4.png" alt="UX" />
       <img src="/images/cadence/figma-5.png" alt="UX" />
     </div>
-    <p class="image-row--caption">Initial wireframes in Figma.</p>
+    <p class="image-row--caption">
+      &hellip;and developed the idea as part of the inital wireframes in Figma.
+    </p>
 
-    <div class="image-row" style="height:320px">
+    <div class="image-row image-row--full" style="height:320px">
       <img src="/images/cadence/figma-ui1.jpg" alt="UX" />
       <img src="/images/cadence/figma-ui2.jpg" alt="UX" />
     </div>
 
-    <p class="image-row--caption">
-      Early-flow interactive prototypes built in Figma.
-    </p>
+    <p class="image-row--caption">Early-flow interactive prototypes.</p>
     <div class="image-row" style="height:380px">
       <img src="/images/cadence/development.jpg" alt="App development" />
       <img src="/images/cadence/testing.jpg" alt="App testing" />
     </div>
     <p class="image-row--caption">
       Storing data on the device and using AI-augmented development allowed me
-      to rapidly test and iterate in real conditions.
+      to rapidly iterate and test in real conditions with real users.
     </p>
 
     <div class="image-row" style="height:400px">
@@ -207,19 +239,44 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
       February 2026)
     </p>
   </section>
+
+  <img
+    class="centered-logo"
+    src="/images/cadence/cadence-logo.png"
+    alt="Cadence logo"
+  />
   <section class="card">
     <h2>Reflection <span class="flourish-ampersand">&</span> next steps</h2>
     <p>
-      This project proved highly valuable as a self-directed exploration of
-      rapid, high-fidelity prototyping. The potential to move quickly from idea
-      to working product using tools such as ChatGPT Codex was particularly
-      clear.
-    </p><p></p> While defining user flows and refining interactions came naturally,
-    mapping underlying code structures and maintaining data integrity presented a
-    new and worthwhile challenge. <p>
-      There are multiple directions this product could evolve in, and the next
-      step is learning from a broader user base once a wider release becomes
-      possible.
+      <strong>
+        Building on established prototyping practice, this project explored how
+        tools such as ChatGPT Codex can meaningfully accelerate the path from
+        idea to working product.
+      </strong>
+    </p>
+
+    <p>
+      Interaction design and flow definition were familiar territory, but the
+      work reinforced how early design decisions directly shape code structure,
+      data integrity, and long-term flexibility.
+    </p>
+
+    <p>
+      The key learning was the value of treating prototypes as structural
+      artefacts, not just interaction proofs. In future work, I would involve
+      technical constraints earlier and use prototyping to actively de-risk
+      architecture as well as UX.
+    </p>
+
+    <p>
+      From a training perspective, I have found seeing the accurate context - <em
+        >exactly what I did last time</em
+      > - has been a spur to work a little harder.
+    </p>
+    <p>
+      With a wider release, the focus shifts to learning from real usage and
+      evolving the product through measured iteration rather than feature
+      expansion.
     </p>
   </section>
 </BaseLayout>
