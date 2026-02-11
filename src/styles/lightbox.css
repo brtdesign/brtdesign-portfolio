@@ -116,3 +116,16 @@
   border: none;
   background-color: transparent;
 }
+
+.image-overlay {
+  background-color: var(--ink);
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: var(--text-sm);
+  margin: 2px;
+  transform: translateX(-50%);
+  padding: var(--space-1);
+  border-radius: 4px;
+}

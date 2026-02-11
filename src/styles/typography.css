@@ -101,6 +101,28 @@ h6 {
   top: -4px;
 }
 
+.full-bleed--text blockquote {
+  color: white;
+  font-style: normal;
+  text-align: center;
+
+  margin: 0 auto;
+  font-size: clamp(var(--text-xl), 5vw, var(--text-3xl));
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.1;
+}
+.full-bleed--text cite {
+  text-align: right;
+  width: 75%;
+  color: white;
+  display: block;
+  margin-top: var(--space-4);
+}
+.blockquote--small {
+  font-size: 40%;
+}
+
 .flourish-period {
   font-family: serif; /*  helvetica square period looks terible at this scale.  */
   font-size: 80%;

@@ -6,6 +6,7 @@
 /* Base page styling and background treatment */
 body {
   margin: 0;
+
   min-height: 100vh;
   background:
     /* radial-gradient(
@@ -50,6 +51,28 @@ img {
   margin: 0;
 }
 
+.full-bleed--text {
+  background-color: var(--ink);
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-4) var(--space-2);
+  box-shadow: inset 0 2px 80px rgba(0, 0, 0, 0.3);
+}
+.offset-left,
+.offset-right {
+  display: inline-block;
+}
+@media (min-width: 900px) {
+  .full-bleed--text {
+    padding: var(--space-8) var(--space-1);
+  }
+  .offset-left {
+    padding-left: 60px;
+  }
+  .offset-right {
+    padding-right: 78px;
+  }
+}
 
 @media (max-width: 900px) {
   .full-bleed--scroll {
@@ -62,23 +85,6 @@ img {
   }
 }
 
-/* Process image stack */
-/* .process-images {
-  display: grid;
-  gap: var(--space-3);
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.process-images img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.process-images img:first-child {
-  grid-column: 1 / -1;
-} */
-/*full height screenshot on a 66/33 card */
 .process-image img {
   border-radius: var(--space-2);
 
@@ -94,18 +100,25 @@ img {
   margin: var(--space-2) 0;
   justify-content: center;
   align-items: center;
-  height: 220px;
+  /* //height: 220px; */
+  height: auto;
   max-width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: var(--space-2);
+  padding: 0 var(--space-2) var(--space-2);
+  -webkit-overflow-scrolling: touch;
 }
 
 .image-row img {
   height: 100%;
   width: auto;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   flex: 0 0 auto;
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sml);
+  padding: 0;
 }
 
 .image-row--desaturated img {
@@ -116,13 +129,18 @@ img {
   filter: saturate(0.5); /* 0 = grayscale */
 }
 
-.image-row--tall img {
-  /* height: 380px; */
+.image-row--caption {
+  margin-top: var(--space-1);
+  margin-bottom: var(--space-8);
+  padding: 0 var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: bold;
 }
 
-.image-row--caption {
-  margin-top: var(--space-2);
-  margin-bottom: var(--space-8);
+@media (min-width: 900px) {
+  .image-row--caption {
+    font-size: var(--text-md);
+  }
 }
 
 /* Centered logo */
@@ -134,8 +152,6 @@ img {
 
 @media (max-width: 900px) {
   .image-row {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
     padding-bottom: var(--space-2);
   }
 
@@ -146,12 +162,16 @@ img {
 
 /* Main content padding and rhythm */
 main {
-  padding: var(--space-4) 2vw var(--space-6);
+  padding: var(--space-4) 0 var(--space-6);
 }
 
 @media (min-width: 900px) {
   main {
     padding: var(--space-4) 6vw var(--space-10);
+  }
+  .forced-block-text {
+    text-wrap: nowrap;
+    display: inline-block;
   }
 }
 /* Vertical spacing between sections */
@@ -187,12 +207,9 @@ section {
 }
 
 /* Elevated card container */
+
 .card {
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: var(--space-3) var(--space-2);
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
+  padding: var(--space-3);
   align-items: start;
 }
 .card--compact {
@@ -217,6 +234,10 @@ section {
 @media (min-width: 900px) {
   .card {
     padding: var(--space-6);
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    /* //  border: 1px solid var(--border); */
   }
   .card--compact {
     padding: var(--space-3);
@@ -232,6 +253,7 @@ section {
       ),
       transparent;
     padding-left: var(--space-4);
+    box-shadow: none;
   }
 }
 /* Role card tweaks */
@@ -397,13 +419,7 @@ section {
   margin: 0;
   margin-top: var(--space-8);
   justify-content: center;
-  /* border-top: 1px solid var(--border);
-  padding-top: var(--space-3); */
 }
-
-/* * {
-  outline: 1px solid red;
-} */
 
 .divider {
   margin: var(--space-6) 0;

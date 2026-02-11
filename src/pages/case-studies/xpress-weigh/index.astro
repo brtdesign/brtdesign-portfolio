@@ -13,7 +13,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     </nav>
     <h1 class="hero-title">
       Empowering Consultants to support members on <span
-        style="whitespace:no-wrap; display:inline-block"
+        class="forced-block-text"
       >
         their weight-loss journey<span class="flourish-period">.</span></span
       >
@@ -83,14 +83,10 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     </ul>
   </section>
 
-  <!-- <section class="card">
-    <h2>'Xpress Weigh'</h2>
-    <p>
-      The system was designed to give consultants the tools and prompts needed
-      to instigate positive behaviour change in members, supporting
-      accountability, habit formation, and encourage weekly engagement.
-    </p>
-  </section> -->
+  <section class="card content-block">
+    <h2>TL;DR</h2>
+    <p></p>
+  </section>
 
   <h1 class="phase-title"><span>Phase 1</span></h1>
   <section class="card content-block">
@@ -122,85 +118,169 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     <img src="/images/xpress-weigh/orig2.png" alt="Existing screen designs" />
   </div>
   <p class="image-row--caption">
-    Consultants were required to navigate two complex tablet screens to access
-    and record data whilst maintaining a natural and supportive conversation
-    with each member.
+    <em>Exisiting solution: </em>Two complex screens were a barrier to natural,
+    supportive member conversations.
   </p>
   <section class="card content-block">
     <h2>Approach</h2>
     <p>
-      Building on deep knowledge gained through long-term ethnographic study —
-      particpating in group as both a member and assistant over several years —
-      I conducted one-to-one research interviews with Consultants across a range
-      of backgrounds and experience levels to round out my understanding of the
-      issues.
-    </p><p>
-      I worked closely with the Directors of the field and training functions,
-      maintaining focus on essential data and being disciplined about removing
-      periphery or 'just-in-case' information.
-    </p><p>
-      The design emphasised simpler interactions and ergonomics suited to the
-      live, in-group context of use.
+      Years of embedded <strong>ethnographic exposure</strong> — participating in
+      groups as both a member and assistant — provided a grounded understanding of
+      real-world use. Targeted <strong>one-to-one research interviews</strong> with
+      Consultants across experience levels validated and sharpened those insights.
+    </p>
+
+    <p>
+      The findings were consistent: live sessions were slowed by <strong
+        >hunt-and-peck navigation</strong
+      >, most available data went untouched, and <strong
+        >workarounds had become normalised</strong
+      >. The problem wasn’t capability — it was <strong
+        >excess and friction</strong
+      > in a high-tempo environment.
+    </p>
+
+    <p>
+      In <strong
+        >close collaboration with the Directors of Field and Training</strong
+      >, I reframed the tool around <strong
+        >essential actions and essential data</strong
+      >. We removed peripheral information, reduced cognitive load, and designed
+      for <strong>standing, in-group use</strong>.
+    </p>
+
+    <p>
+      The outcome was a streamlined interface built around <strong
+        >single-click input</strong
+      > and <strong>faster information retrieval</strong> — a system that supports
+      Consultants in the moment, rather than competing for their attention.
+    </p>
+  </section>
+  <div class="image-row image-row--full">
+    <img src="/images/xpress-weigh/311-2.png" alt="Updated screen designs" />
+  </div>
+  <div class="image-row--caption">
+    <ul>
+      <li>
+        The resulting design is cleaner and more accessible while remaining
+        consistent with the wider application.
+      </li>
+      <li>
+        Key data points are prioritised visually and optimised for quick
+        glancing.
+      </li>
+      <li>Data entry happens in context rather than in a separate screen.</li>
+      <li>
+        Previous/next navigation spans almost the full height of the screen,
+        designed around the ergonomics of holding and operating a tablet while
+        standing.
+      </li>
+    </ul>
+  </div>
+
+  <section class="card content-block">
+    <h2>Impact</h2>
+    <p>
+      I rapidly produced, usability tested, and iterated — removing the risk of
+      costly changes during development.
+    </p>
+
+    <p>
+      Beta testing feedback indicated improvements in perceived quality of
+      service following the redesign.
+    </p>
+
+    <p>
+      Released as an optional setting (&lsquo;classic&rsquo; or
+      &lsquo;new&rsquo;), the redesign saw &gt;90% uptake within the first six
+      weeks — despite a typically change-resistant audience.
     </p>
   </section>
 
   <h1 class="phase-title">
     <span>Phase 2</span>
   </h1>
-</BaseLayout>
-<section class="full-bleed">
-  <button
-    class="lightbox-trigger"
-    type="button"
-    data-lightbox-target="journey-map"
-    aria-label="Open journey map full size"
-  >
-    <img
-      class="full-width-image"
-      src="/images/xpress-weigh/journeymap-photo.jpg"
-      alt="Journey map"
-    />
-  </button>
-</section>
-<dialog class="lightbox" data-lightbox="journey-map" aria-label="Journey map">
-  <div class="lightbox__actions">
-    <button class="lightbox__toggle" type="button" aria-pressed="false">
-      Fit height
-    </button>
-    <button class="lightbox__close" type="button" aria-label="Close">
-      ×
-    </button>
+
+  <section class="card content-block">
+    <h2>Problem</h2>
+    <p>
+      As Slimming World embarked on a full digital transformation,. I was tasked
+      with leading the Consultant redesign of the Suite of tools used to support
+      the Consulatnts across all aspects of runnign theior business'.
+    </p>
+  </section>
+  <div>
+    <img src="/images/xpress-weigh/ecosystem.png" />
   </div>
-  <div class="lightbox__inner">
-    <div class="lightbox__image">
+  <p class="image-row--caption">
+    My Consultant ecosystem map indicates the scale and scope of my role in the
+    business' digital transformation. <br />The red circle highlights the
+    subject of this article.
+  </p>
+  <section class="full-bleed">
+    <p class="image-overlay">Tap to view full map</p>
+    <button
+      class="lightbox-trigger"
+      type="button"
+      data-lightbox-target="journey-map"
+      aria-label="Open journey map full size"
+    >
       <img
-        src="/images/xpress-weigh/journey-map.jpeg"
+        class="full-width-image"
+        src="/images/xpress-weigh/journeymap-photo.jpg"
         alt="Journey map"
-        draggable="false"
       />
+    </button>
+  </section>
+  <dialog class="lightbox" data-lightbox="journey-map" aria-label="Journey map">
+    <div class="lightbox__actions">
+      <button class="lightbox__toggle" type="button" aria-pressed="false">
+        Fit height
+      </button>
+      <button class="lightbox__close" type="button" aria-label="Close">
+        ×
+      </button>
     </div>
-  </div>
-</dialog>
-<p class="image-row--caption">
-  I mapped the entire Consultant lifecycle as part of the eco-system
-  re-development (Tap to view full map)
-</p>
-<section class="card content-block">
-  <h2>Impact & reflections</h2>
-  <p>
-    This was a challenging project for a number of reasons, not least of which
-    the emotional attachment felt at the highest levels of the business coupled
-    with a change of direction mid-way through.
+    <div class="lightbox__inner">
+      <div class="lightbox__image">
+        <img
+          src="/images/xpress-weigh/journey-map.jpeg"
+          alt="Journey map"
+          draggable="false"
+        />
+      </div>
+    </div>
+  </dialog>
+  <p class="image-row--caption">
+    I mapped two years of the Consultant lifecycle as an anchor for the wider
+    ecosystem redevelopment.
   </p>
 
-  <p>
-    Thgeorugh consistent stakeholder collaboration and user research, I was able
-    to successfully design an early beta that played a notable part in
-    <strong> qulity of service improvments</strong>, and navigate a path through
-    numerous iterations, conflicting opinions and the business leads inherent
-    urge to take a kitchen sink approach, to poduce a design that was test and
-    proven, derisking development.
-  </p>
-</section>
+  <section class="full-bleed full-bleed--text">
+    <blockquote>
+      <span class="blockquote--small offset-right">
+        &ldquo;the information for stage one needs to
+      </span><span class="offset-left"> smack you in the face&rdquo;</span>
+    </blockquote>
+    <cite> - Director of the Field</cite>
+  </section>
 
+  <section class="card content-block">
+    <h2>Impact & reflections</h2>
+    <p>
+      This was a challenging project for a number of reasons, not least of which
+      the emotional attachment felt at the highest levels of the business
+      coupled with a change of direction mid-way through.
+    </p>
+
+    <p>
+      Thgeorugh consistent stakeholder collaboration and user research, I was
+      able to successfully design an early beta that played a notable part in
+      <strong> qulity of service improvments</strong>, and navigate a path
+      through numerous iterations, conflicting opinions and the business leads
+      inherent urge to take a kitchen sink approach, to poduce a design that was
+      test and proven, derisking development.
+    </p>
+  </section>
+</BaseLayout>
 <script type="module" src="/scripts/lightbox.js"></script>
