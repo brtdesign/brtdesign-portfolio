@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import "../../../styles/letter-collapse.css";
 ---
 
 <BaseLayout title="Xpress Weigh · Case Study">
@@ -317,8 +318,6 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     I was ready to move to a simuatd group environemtn for stress testing.
   </p>
 
-  <blockquote>&rdquo; We're changing the group process.&rdquo;</blockquote>
-
   <section class="full-bleed full-bleed--text">
     <blockquote>
       <span class="blockquote--small offset-right">
@@ -354,6 +353,24 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
       and engineering.
     </p>
   </section>
+
+  images
+
+  <div class="scroll-quote-trigger" data-scroll-quote-trigger></div>
+  <section class="full-bleed full-bleed--quote-solo" data-scroll-quote>
+    <blockquote>
+      <span id="fallText" class="replacable-message"
+        >&ldquo; We're not changing the group process.&rdquo;</span
+      >
+      <span
+        id="fallTextMessage"
+        class="replacement-message"
+        hidden
+        aria-hidden="true">We are changing the group process.</span
+      >
+    </blockquote>
+  </section>
+  <section class="card content-block" id="scroll-target">conetnt</section>
   <section class="card content-block">
     <h2>Impact & reflections</h2>
     <p>
@@ -373,3 +390,5 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
   </section>
 </BaseLayout>
 <script type="module" src="/scripts/lightbox.js"></script>
+<script type="module" src="/scripts/letter-collapse.js"></script>
+<script type="module" src="/scripts/scroll-to-quote.js"></script>

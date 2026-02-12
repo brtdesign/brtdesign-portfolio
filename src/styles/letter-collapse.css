@@ -1,0 +1,32 @@
+#fallText {
+  /* display: inline-block;
+  font-size: 2rem;
+  font-family: sans-serif; */
+}
+
+.letter {
+  display: inline-block;
+  will-change: transform;
+}
+
+.replacement-message {
+  opacity: 0;
+}
+
+.replacement-message.is-visible {
+  animation: replacementFade 2.4s ease-in forwards;
+}
+
+/* falling animation */
+@keyframes fallAway {
+  to {
+    transform: translate(var(--x, 0px), var(--y, 100px)) rotate(var(--r, 0deg));
+    /* opacity: 0; */
+  }
+}
+
+@keyframes replacementFade {
+  to {
+    opacity: 1;
+  }
+}
