@@ -1,5 +1,5 @@
 /* Import body fonts */
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;900&family=Prata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;900&family=Playfair+Display:wght@300;900&display=swap");
 
 /* Design tokens: colors, type, and global radii/shadows */
 :root {
@@ -66,7 +66,7 @@
 :root {
   --font-body: "Nunito", sans-serif;
   --font-display: "Helvetica Neue", "FreeSans", sans-serif;
-  --font-serif: "prata", Georgia, "Times New Roman", serif;
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
 }
 
 /* Type scale (Perfect Fifth, 1.5 ratio) */

@@ -3,7 +3,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Cadence Fitness · Case Study">
-  <section>
+  <section class="introduction">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span aria-hidden="true">/</span>
@@ -149,7 +149,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
       </p>
     </div>
   </section>
-  <section class="full-bleed full-bleed--scroll">
+  <section class="image-row image-row--full-bleed">
     <img
       class="full-width-image"
       src="/images/cadence/flowchart.png"
@@ -187,58 +187,63 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <section class="card card--transparent">
-    <!-- <h2>Assets</h2> -->
-    <h3>Concept development</h3>
-    <div class="image-row image-row--desaturated">
-      <img src="/images/cadence/drawing1.jpg" alt="Process sketch 1" />
-      <img src="/images/cadence/drawing2.jpg" alt="Process sketch 2" />
-      <!-- <img src="/images/cadence/drawing3.jpg" alt="Process sketch 3" /> -->
-      <img src="/images/cadence/drawing5.jpg" alt="Process sketch 3" />
-    </div>
-    <p class="image-row--caption">
-      Early concepts were roughed out on paper.<br /> I designed a tagging system
-      to capture the nuance of any given exercise&hellip;
-    </p>
-
-    <div class="image-row" style="height:400px">
-      <img src="/images/cadence/figma-1.png" alt="UX" />
-      <img src="/images/cadence/figma-2.png" alt="UX" />
-      <img src="/images/cadence/figma-3.png" alt="UX" />
-      <img src="/images/cadence/figma-4.png" alt="UX" />
-      <img src="/images/cadence/figma-5.png" alt="UX" />
-    </div>
-    <p class="image-row--caption">
-      &hellip;and developed the idea as part of the inital wireframes in Figma.
-    </p>
-
-    <div class="image-row image-row--full" style="height:320px">
-      <img src="/images/cadence/figma-ui1.jpg" alt="UX" />
-      <img src="/images/cadence/figma-ui2.jpg" alt="UX" />
-    </div>
-
-    <p class="image-row--caption">Early-flow interactive prototypes.</p>
-    <div class="image-row" style="height:380px">
-      <img src="/images/cadence/development.jpg" alt="App development" />
-      <img src="/images/cadence/testing.jpg" alt="App testing" />
-    </div>
-    <p class="image-row--caption">
-      Storing data on the device and using AI-augmented development allowed me
-      to rapidly iterate and test in real conditions with real users.
-    </p>
-
-    <div class="image-row" style="height:400px">
-      <img src="/images/cadence/final1.png" alt="UX" />
-      <img src="/images/cadence/final2.png" alt="UX" />
-      <img src="/images/cadence/final3.png" alt="UX" />
-      <img src="/images/cadence/final4.png" alt="UX" />
-      <img src="/images/cadence/final5.png" alt="UX" />
-    </div>
-    <p class="image-row--caption">
-      Screens from the beta release - in Google Play Store closed testing (as of
-      February 2026)
-    </p>
+  <!-- <section class="card content-block card--transparent"> -->
+  <!-- <h2>Assets</h2> -->
+  <h3>Concept development</h3>
+  <section class="image-row image-row--desaturated image-row--3">
+    <img src="/images/cadence/drawing1.jpg" alt="Process sketch 1" />
+    <img
+      src="/images/cadence/drawing2.jpg"
+      alt="Process sketch 2"
+      style=" width:120px;"
+    />
+    <!-- <img src="/images/cadence/drawing3.jpg" alt="Process sketch 3" /> -->
+    <img src="/images/cadence/drawing5.jpg" alt="Process sketch 3" />
   </section>
+  <p class="image-row--caption">
+    Early concepts were roughed out on paper.<br /> I designed a tagging system to
+    capture the nuance of any given exercise&hellip;
+  </p>
+
+  <div class="image-row image-row--5">
+    <img src="/images/cadence/figma-1.png" alt="UX" />
+    <img src="/images/cadence/figma-2.png" alt="UX" />
+    <img src="/images/cadence/figma-3.png" alt="UX" />
+    <img src="/images/cadence/figma-4.png" alt="UX" />
+    <img src="/images/cadence/figma-5.png" alt="UX" />
+  </div>
+  <p class="image-row--caption">
+    &hellip;and developed the idea as part of the inital wireframes in Figma.
+  </p>
+
+  <section class="image-row image-row--full-bleed image-row--2">
+    <!-- <div class="image-row image-row--full" style="height:320px"> -->
+    <img src="/images/cadence/figma-ui1.jpg" alt="UX" />
+    <img src="/images/cadence/figma-ui2.jpg" alt="UX" />
+    <!-- </div> -->
+  </section>
+
+  <p class="image-row--caption">Early-flow interactive prototypes.</p>
+  <section class="image-row image-row--full-bleed image-row--2">
+    <img src="/images/cadence/development.jpg" alt="App development" />
+    <img src="/images/cadence/testing.jpg" alt="App testing" />
+  </section>
+  <p class="image-row--caption">
+    Storing data on the device and using AI-augmented development allowed me to
+    rapidly iterate and test in real conditions with real users.
+  </p>
+
+  <div class="image-row image-row--5">
+    <img src="/images/cadence/final1.png" alt="UX" />
+    <img src="/images/cadence/final2.png" alt="UX" />
+    <img src="/images/cadence/final3.png" alt="UX" />
+    <img src="/images/cadence/final4.png" alt="UX" />
+    <img src="/images/cadence/final5.png" alt="UX" />
+  </div>
+  <p class="image-row--caption">
+    Screens from the beta release - in Google Play Store closed testing (as of
+    February 2026)
+  </p>
 
   <img
     class="centered-logo"
@@ -278,5 +283,6 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
       evolving the product through measured iteration rather than feature
       expansion.
     </p>
+    <!-- </section> -->
   </section>
 </BaseLayout>

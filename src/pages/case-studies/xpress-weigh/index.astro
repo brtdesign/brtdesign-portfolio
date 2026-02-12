@@ -4,7 +4,7 @@ import "../../../styles/letter-collapse.css";
 ---
 
 <BaseLayout title="Xpress Weigh · Case Study">
-  <section>
+  <section class="introduction">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span aria-hidden="true">/</span>
@@ -116,7 +116,7 @@ import "../../../styles/letter-collapse.css";
       </p>
     </p>
   </section>
-  <div class="image-row image-row--full" style="height:354px">
+  <div class="image-row image-row--full image-row--2">
     <img src="/images/xpress-weigh/orig1.png" alt="Existing screen designs" />
     <img src="/images/xpress-weigh/orig2.png" alt="Existing screen designs" />
   </div>
@@ -239,7 +239,7 @@ import "../../../styles/letter-collapse.css";
       operating model — not compete with or redefine it.
     </p>
   </section>
-  <section class="full-bleed">
+  <section class="image-row image-row--full-bleed">
     <p class="image-overlay">Tap to view full map</p>
     <button
       class="lightbox-trigger"
@@ -247,11 +247,7 @@ import "../../../styles/letter-collapse.css";
       data-lightbox-target="journey-map"
       aria-label="Open journey map full size"
     >
-      <img
-        class="full-width-image"
-        src="/images/xpress-weigh/journeymap-photo.jpg"
-        alt="Journey map"
-      />
+      <img src="/images/xpress-weigh/journeymap-photo.jpg" alt="Journey map" />
     </button>
   </section>
   <dialog class="lightbox" data-lightbox="journey-map" aria-label="Journey map">
@@ -306,7 +302,7 @@ import "../../../styles/letter-collapse.css";
     </p>
   </section>
 
-  <section class="full-bleed full-bleed--text">
+  <section class="callout--full-bleed full-bleed--text">
     <blockquote>
       <span class="blockquote--small offset-right">
         &ldquo;&hellip;the information for stage one needs to
@@ -348,7 +344,7 @@ import "../../../styles/letter-collapse.css";
   images
 
   <div class="scroll-quote-trigger" data-scroll-quote-trigger></div>
-  <section class="full-bleed full-bleed--quote-solo" data-scroll-quote>
+  <section class="callout--full-bleed full-bleed--quote-solo" data-scroll-quote>
     <blockquote>
       <span id="fallText" class="replacable-message"
         >“We're not changing the group process.”</span
@@ -358,7 +354,8 @@ import "../../../styles/letter-collapse.css";
         class="replacement-message"
         hidden
         aria-hidden="true"
-        >&ldquo;We <span style="color:red">are</span> changing the group process.&rdquo;</span
+        >&ldquo;We <span style="color:red; text-decoration:underline;">are</span
+        > changing the group process.&rdquo;</span
       >
     </blockquote>
     <button
