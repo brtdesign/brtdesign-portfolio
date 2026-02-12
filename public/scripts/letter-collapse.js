@@ -22,20 +22,20 @@ function destroyLetters(el, message) {
     [letters[i], letters[j]] = [letters[j], letters[i]];
   }
   const total = letters.length;
-  const totalWindow = 3650;
+  const totalWindow = 3850;
   const firstDelay = 0;
-  const earlyGaps = [1200, 1000, 700, 500, 200, 160, 1250];
+  const earlyGaps = [1200, 1000, 1100, 700, 200, 160, 1450];
   const earlyDelays = [firstDelay];
   earlyGaps.forEach((gap) => {
     earlyDelays.push(earlyDelays[earlyDelays.length - 1] + gap);
   });
-  const tailStart = 2600;
+  const tailStart = 3000;
   const tailWindow = Math.max(0, totalWindow - tailStart);
-  const fallDurationMs = 500;
+  const fallDurationMs = 450;
   const fadeOutDelay = 400;
   const fadeOutDuration = 1200;
   const replacementDelay = 300;
-  const holdDuration = 7000;
+  const holdDuration = 2500;
   let maxDelay = 0;
 
   letters.forEach((letter, index) => {
@@ -53,7 +53,7 @@ function destroyLetters(el, message) {
     maxDelay = Math.max(maxDelay, delay);
 
     // random drift values
-    const x = (Math.random() - 0.5) * 40; // horizontal offset
+    const x = (Math.random() - 0.8) * 40; // horizontal offset
     // const y = 40 + Math.random() * fallheight; // fall distance
     const y = fallheight; // fall distance
     const r = (Math.random() - 0.5) * 45; // rotation
@@ -69,46 +69,91 @@ function destroyLetters(el, message) {
   });
 
   const fallCompleteAt = maxDelay + fallDurationMs;
-  window.setTimeout(() => {
-    el.style.transition = `opacity ${fadeOutDuration}ms ease`;
-    el.style.opacity = "0";
+  activeTimers.push(
     window.setTimeout(() => {
-      el.remove();
-      if (message) {
-        message.hidden = false;
-        message.setAttribute("aria-hidden", "false");
-        message.classList.add("is-visible");
-      }
-      const targetBlock = document.getElementById("scroll-target");
-      if (targetBlock) {
+      el.style.transition = `opacity ${fadeOutDuration}ms ease`;
+      el.style.opacity = "0";
+      activeTimers.push(
         window.setTimeout(() => {
-          const header = document.querySelector("header");
-          const headerHeight = header
-            ? header.getBoundingClientRect().height
-            : 0;
-          const start = window.pageYOffset;
-          const rect = targetBlock.getBoundingClientRect();
-          const targetY = start + rect.top - headerHeight - 12;
-          window.scrollTo({ top: targetY, behavior: "smooth" });
-        }, holdDuration);
-      }
-    }, fadeOutDuration + replacementDelay);
-  }, fallCompleteAt + fadeOutDelay);
+          el.remove();
+          if (message) {
+            message.hidden = false;
+            message.setAttribute("aria-hidden", "false");
+            message.classList.add("is-visible");
+          }
+          if (scrollChevron) {
+            activeTimers.push(
+              window.setTimeout(() => {
+                scrollChevron.style.opacity = "1";
+              }, holdDuration),
+            );
+          }
+        }, fadeOutDuration + replacementDelay),
+      );
+    }, fallCompleteAt + fadeOutDelay),
+  );
 }
 
-const textEl = document.getElementById("fallText");
 const messageEl = document.getElementById("fallTextMessage");
+const replayTrigger = document.getElementById("replayTrigger");
+const scrollChevron = document.getElementById("scrollChevron");
+let activeTimers = [];
 
 const startLetterCollapse = () => {
+  const textEl = document.getElementById("fallText");
   if (!textEl || !messageEl) return;
+  activeTimers.forEach((timer) => window.clearTimeout(timer));
+  activeTimers = [];
+  if (scrollChevron) {
+    scrollChevron.style.opacity = "0";
+  }
   messageEl.hidden = true;
   messageEl.setAttribute("aria-hidden", "true");
   messageEl.classList.remove("is-visible");
+  textEl.style.display = "inline";
+  textEl.style.opacity = "1";
   const delay = 1500;
-  window.setTimeout(() => {
-    splitLetters(textEl);
-    destroyLetters(textEl, messageEl);
-  }, delay);
+  activeTimers.push(
+    window.setTimeout(() => {
+      splitLetters(textEl);
+      destroyLetters(textEl, messageEl);
+    }, delay),
+  );
 };
 
 window.startLetterCollapse = startLetterCollapse;
+
+if (replayTrigger) {
+  replayTrigger.addEventListener("click", () => {
+    const currentText = document.getElementById("fallText");
+    if (!messageEl) return;
+    if (currentText) {
+      currentText.remove();
+    }
+    const span = document.createElement("span");
+    span.id = "fallText";
+    span.className = "replacable-message";
+    span.textContent = "“We're not changing the group process.”";
+    messageEl.hidden = true;
+    messageEl.setAttribute("aria-hidden", "true");
+    messageEl.classList.remove("is-visible");
+    const blockquote = messageEl.closest("blockquote");
+    if (blockquote) {
+      blockquote.insertBefore(span, messageEl);
+    }
+    startLetterCollapse();
+  });
+}
+
+if (scrollChevron) {
+  scrollChevron.addEventListener("click", () => {
+    const targetBlock = document.getElementById("scroll-target");
+    if (!targetBlock) return;
+    const header = document.querySelector("header");
+    const headerHeight = header ? header.getBoundingClientRect().height : 0;
+    const start = window.pageYOffset;
+    const rect = targetBlock.getBoundingClientRect();
+    const targetY = start + rect.top - headerHeight - 12;
+    window.scrollTo({ top: targetY, behavior: "smooth" });
+  });
+}
