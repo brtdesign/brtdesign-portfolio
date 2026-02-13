@@ -92,7 +92,8 @@ h6 {
 .flourish-ampersand,
 .flourish-quote {
   font-family: var(--font-serif);
-  font-weight: 300;
+  font-family: serif;
+  font-weight: 500;
 
   font-size: 80%;
 }
@@ -112,20 +113,45 @@ h6 {
   text-align: center;
 
   margin: 0 auto;
+
+  /* set font sie at the parent level so we can use a % to adapt it */
   font-size: clamp(var(--text-xl), 5vw, var(--text-3xl));
-  font-weight: 400;
+
   letter-spacing: 2px;
-  line-height: 1.1;
+  line-height: 1;
 }
+
+.blockquote--small {
+  font-size: 40%;
+  font-weight: 200;
+}
+
+.blockquote--large {
+  font-weight: 900;
+}
+
+.offset-left,
+.offset-right {
+  display: inline-block;
+}
+@media (min-width: 900px) {
+  .full-bleed--text {
+    padding: var(--space-8) var(--space-1);
+  }
+  .offset-left {
+    padding-left: 60px;
+  }
+  .offset-right {
+    padding-right: 180px;
+  }
+}
+
 .full-bleed--text cite {
   text-align: right;
   width: 75%;
   color: white;
   display: block;
   margin-top: var(--space-4);
-}
-.blockquote--small {
-  font-size: 40%;
 }
 
 .flourish-period {

@@ -50,8 +50,7 @@ we need to offset the gaps between the images
 }
 /* Full-bleed section that breaks out of the content width */
 
-.image-row--full-bleed,
-.callout--full-bleed {
+.image-row--full-bleed {
   width: 100vw;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -106,11 +105,11 @@ we need to offset the gaps between the images
 }
 
 .image-row--caption {
-  margin-top: var(--space-1);
-  margin-bottom: var(--space-8);
+  margin: var(--space-1) auto var(--space-8);
   padding: 0 var(--space-2);
   font-size: var(--text-sm);
   font-weight: bold;
+  max-width: 860px;
 }
 
 @media (min-width: 900px) {
