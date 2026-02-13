@@ -24,17 +24,17 @@ function destroyLetters(el, message) {
   const total = letters.length;
   const totalWindow = 3850;
   const firstDelay = 0;
-  const earlyGaps = [1200, 1000, 1100, 700, 200, 160, 1450];
+  const earlyGaps = [1200, 1000, 1100, 700, 200, 260, 1450];
   const earlyDelays = [firstDelay];
   earlyGaps.forEach((gap) => {
     earlyDelays.push(earlyDelays[earlyDelays.length - 1] + gap);
   });
-  const tailStart = 3000;
+  const tailStart = 3200;
   const tailWindow = Math.max(0, totalWindow - tailStart);
   const fallDurationMs = 450;
   const fadeOutDelay = 400;
-  const fadeOutDuration = 1200;
-  const replacementDelay = 300;
+  const fadeOutDuration = 800;
+  const replacementDelay = 200;
   const holdDuration = 2500;
   let maxDelay = 0;
 

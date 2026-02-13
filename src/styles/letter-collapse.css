@@ -3,6 +3,9 @@
   font-size: 2rem;
   font-family: sans-serif; */
 }
+.falltext--wrapper {
+  outline: 1px solid red;
+}
 
 .letter {
   display: inline-block;
