@@ -12,6 +12,19 @@
   will-change: transform;
 }
 
+.letter-stack {
+  position: relative;
+  display: inline-block;
+}
+
+.letter-ghost {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.3;
+  filter: blur(1px);
+}
+
 .replacement-message {
   opacity: 0;
 }

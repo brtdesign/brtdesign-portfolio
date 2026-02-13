@@ -3,10 +3,20 @@ function splitLetters(el) {
   const text = el.textContent;
   el.textContent = "";
   [...text].forEach((ch) => {
-    const span = document.createElement("span");
-    span.className = "letter";
-    span.textContent = ch === " " ? "\u00A0" : ch;
-    el.appendChild(span);
+    const wrapper = document.createElement("span");
+    wrapper.className = "letter-stack";
+
+    const ghost = document.createElement("span");
+    ghost.className = "letter-ghost";
+    ghost.textContent = ch === " " ? "\u00A0" : ch;
+
+    const live = document.createElement("span");
+    live.className = "letter";
+    live.textContent = ch === " " ? "\u00A0" : ch;
+
+    wrapper.appendChild(ghost);
+    wrapper.appendChild(live);
+    el.appendChild(wrapper);
   });
 }
 const header = document.querySelector("header");
