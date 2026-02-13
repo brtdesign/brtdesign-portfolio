@@ -1,24 +1,23 @@
-const lightboxes = document.querySelectorAll("[data-lightbox]");
-const triggers = document.querySelectorAll("[data-lightbox-target]");
+const AUTO_LIGHTBOX_ID = "image-row-auto";
+const AUTO_LIGHTBOX_ALT = "Expanded image";
 
-triggers.forEach((trigger) => {
-  trigger.addEventListener("click", () => {
-    const target = trigger.getAttribute("data-lightbox-target");
-    const dialog = document.querySelector(`[data-lightbox="${target}"]`);
-    if (dialog && typeof dialog.showModal === "function") {
-      dialog.showModal();
-      dialog.dispatchEvent(new Event("lightbox:open"));
-    }
-  });
-});
+const openLightbox = (dialog) => {
+  if (!dialog || typeof dialog.showModal !== "function") return;
+  dialog.showModal();
+  dialog.dispatchEvent(new Event("lightbox:open"));
+};
 
-lightboxes.forEach((dialog) => {
+const initLightboxDialog = (dialog) => {
+  if (!dialog || dialog.dataset.lightboxInit === "true") return;
+  dialog.dataset.lightboxInit = "true";
+
   const closeButton = dialog.querySelector(".lightbox__close");
   const toggleButton = dialog.querySelector(".lightbox__toggle");
   const inner = dialog.querySelector(".lightbox__inner");
   const actions = dialog.querySelector(".lightbox__actions");
   const imageWrap = dialog.querySelector(".lightbox__image");
   const image = dialog.querySelector(".lightbox__image img");
+
   if (closeButton) {
     closeButton.addEventListener("click", () => dialog.close());
   }
@@ -178,4 +177,75 @@ lightboxes.forEach((dialog) => {
       inner.classList.remove("is-dragging");
     });
   }
+};
+
+const ensureAutoLightbox = () => {
+  let dialog = document.querySelector(`[data-lightbox="${AUTO_LIGHTBOX_ID}"]`);
+  if (dialog) return dialog;
+
+  dialog = document.createElement("dialog");
+  dialog.className = "lightbox";
+  dialog.setAttribute("data-lightbox", AUTO_LIGHTBOX_ID);
+  dialog.setAttribute("aria-label", "Expanded image preview");
+  dialog.innerHTML = `
+    <div class="lightbox__actions">
+      <button class="lightbox__toggle" type="button" aria-pressed="false">Fit height</button>
+      <button class="lightbox__close" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="lightbox__inner">
+      <div class="lightbox__image">
+        <img src="" alt="${AUTO_LIGHTBOX_ALT}" draggable="false" />
+      </div>
+    </div>
+  `;
+  document.body.append(dialog);
+  return dialog;
+};
+
+const getLightboxTargetSrc = (image) => {
+  const customTarget = image.getAttribute("data-lightbox-src");
+  if (customTarget) return customTarget;
+  if (image.currentSrc) return image.currentSrc;
+  return image.getAttribute("src");
+};
+
+const isExplicitLightboxTriggerImage = (image) => {
+  return Boolean(image.closest("[data-lightbox-target]"));
+};
+
+const initImageRowLightbox = () => {
+  const rowImages = document.querySelectorAll(".image-row img");
+  if (rowImages.length === 0) return;
+
+  const autoLightbox = ensureAutoLightbox();
+  initLightboxDialog(autoLightbox);
+
+  const lightboxImage = autoLightbox.querySelector(".lightbox__image img");
+  if (!lightboxImage) return;
+
+  rowImages.forEach((image) => {
+    if (isExplicitLightboxTriggerImage(image)) return;
+
+    image.addEventListener("click", () => {
+      const targetSrc = getLightboxTargetSrc(image);
+      if (!targetSrc) return;
+      lightboxImage.src = targetSrc;
+      lightboxImage.alt = image.getAttribute("alt") || AUTO_LIGHTBOX_ALT;
+      openLightbox(autoLightbox);
+    });
+  });
+};
+
+const triggers = document.querySelectorAll("[data-lightbox-target]");
+triggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const target = trigger.getAttribute("data-lightbox-target");
+    const dialog = document.querySelector(`[data-lightbox="${target}"]`);
+    openLightbox(dialog);
+  });
 });
+
+const lightboxes = document.querySelectorAll("[data-lightbox]");
+lightboxes.forEach((dialog) => initLightboxDialog(dialog));
+
+initImageRowLightbox();
