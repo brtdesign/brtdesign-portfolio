@@ -90,6 +90,12 @@ function destroyLetters(el, message) {
             message.hidden = false;
             message.setAttribute("aria-hidden", "false");
             message.classList.add("is-visible");
+            window.dispatchEvent(new Event("letterCollapseComplete"));
+            activeTimers.push(
+              window.setTimeout(() => {
+                scrollToTargetSection();
+              }, autoScrollDelay),
+            );
           }
           if (scrollChevron) {
             activeTimers.push(
@@ -107,7 +113,19 @@ function destroyLetters(el, message) {
 const messageEl = document.getElementById("fallTextMessage");
 const replayTrigger = document.getElementById("replayTrigger");
 const scrollChevron = document.getElementById("scrollChevron");
+const autoScrollDelay = 5000;
 let activeTimers = [];
+
+const scrollToTargetSection = () => {
+  const targetBlock = document.getElementById("scroll-target");
+  if (!targetBlock) return;
+  const header = document.querySelector("header");
+  const headerHeight = header ? header.getBoundingClientRect().height : 0;
+  const start = window.pageYOffset;
+  const rect = targetBlock.getBoundingClientRect();
+  const targetY = start + rect.top - headerHeight - 12;
+  window.scrollTo({ top: targetY, behavior: "smooth" });
+};
 
 const startLetterCollapse = () => {
   const textEl = document.getElementById("fallText");
@@ -157,13 +175,6 @@ if (replayTrigger) {
 
 if (scrollChevron) {
   scrollChevron.addEventListener("click", () => {
-    const targetBlock = document.getElementById("scroll-target");
-    if (!targetBlock) return;
-    const header = document.querySelector("header");
-    const headerHeight = header ? header.getBoundingClientRect().height : 0;
-    const start = window.pageYOffset;
-    const rect = targetBlock.getBoundingClientRect();
-    const targetY = start + rect.top - headerHeight - 12;
-    window.scrollTo({ top: targetY, behavior: "smooth" });
+    scrollToTargetSection();
   });
 }

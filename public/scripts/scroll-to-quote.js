@@ -3,10 +3,42 @@ const trigger = document.querySelector("[data-scroll-quote-trigger]");
 
 if (target && trigger) {
   let triggered = false;
+  let scrollLocked = false;
+  let previousBodyOverflow = "";
 
   const isTriggerVisible = () => {
     const rect = trigger.getBoundingClientRect();
     return rect.top <= window.innerHeight && rect.bottom >= 0;
+  };
+
+  const blockScrollInput = (event) => {
+    if (!scrollLocked) return;
+    event.preventDefault();
+  };
+
+  const lockScroll = () => {
+    if (scrollLocked) return;
+    scrollLocked = true;
+    previousBodyOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("wheel", blockScrollInput, {
+      passive: false,
+      capture: true,
+    });
+    window.addEventListener("touchmove", blockScrollInput, {
+      passive: false,
+      capture: true,
+    });
+    window.addEventListener("keydown", blockScrollInput, true);
+  };
+
+  const unlockScroll = () => {
+    if (!scrollLocked) return;
+    scrollLocked = false;
+    document.body.style.overflow = previousBodyOverflow;
+    window.removeEventListener("wheel", blockScrollInput, true);
+    window.removeEventListener("touchmove", blockScrollInput, true);
+    window.removeEventListener("keydown", blockScrollInput, true);
   };
 
   const triggerScroll = () => {
@@ -15,6 +47,10 @@ if (target && trigger) {
     window.removeEventListener("wheel", onWheel);
     window.removeEventListener("touchmove", onTouchMove);
     window.removeEventListener("keydown", onKeyDown);
+    lockScroll();
+    window.addEventListener("letterCollapseComplete", unlockScroll, {
+      once: true,
+    });
     const start = window.pageYOffset;
     const rect = target.getBoundingClientRect();
     const targetY =
@@ -35,6 +71,8 @@ if (target && trigger) {
     requestAnimationFrame(step);
     if (typeof window.startLetterCollapse === "function") {
       window.startLetterCollapse();
+    } else {
+      unlockScroll();
     }
   };
 
