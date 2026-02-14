@@ -1,8 +1,19 @@
 const AUTO_LIGHTBOX_ID = "image-row-auto";
 const AUTO_LIGHTBOX_ALT = "Expanded image";
+const LIGHTBOX_DEFAULT_MODE_ATTR = "data-lightbox-default";
+const LIGHTBOX_MODE_FULL = "full";
+const LIGHTBOX_VIEWPORT_CAP = 0.92;
+const LIGHTBOX_MIN_WIDTH = 240;
+const LIGHTBOX_MIN_HEIGHT = 140;
 
-const openLightbox = (dialog) => {
+const openLightbox = (dialog, options = {}) => {
   if (!dialog || typeof dialog.showModal !== "function") return;
+  const mode = options.defaultMode || "";
+  if (mode) {
+    dialog.dataset.lightboxDefaultMode = mode;
+  } else {
+    delete dialog.dataset.lightboxDefaultMode;
+  }
   dialog.showModal();
   dialog.dispatchEvent(new Event("lightbox:open"));
 };
@@ -17,6 +28,106 @@ const initLightboxDialog = (dialog) => {
   const actions = dialog.querySelector(".lightbox__actions");
   const imageWrap = dialog.querySelector(".lightbox__image");
   const image = dialog.querySelector(".lightbox__image img");
+  let sizeUpdateToken = 0;
+
+  const updateDialogSize = () => {
+    if (!image) return;
+
+    const applySize = () => {
+      if (!image.naturalWidth || !image.naturalHeight) return;
+
+      const maxWidth = Math.floor(window.innerWidth * LIGHTBOX_VIEWPORT_CAP);
+      const maxHeight = Math.floor(window.innerHeight * LIGHTBOX_VIEWPORT_CAP);
+      let actionsHeight = 0;
+      if (actions) {
+        const styles = getComputedStyle(actions);
+        const marginBottom = parseFloat(styles.marginBottom) || 0;
+        actionsHeight = actions.offsetHeight + marginBottom;
+      }
+      const imageRect = image.getBoundingClientRect();
+      const renderedWidth =
+        imageRect.width > 0 ? imageRect.width : image.naturalWidth;
+      const renderedHeight =
+        imageRect.height > 0 ? imageRect.height : image.naturalHeight;
+      const dialogStyles = getComputedStyle(dialog);
+      const borderX =
+        (parseFloat(dialogStyles.borderLeftWidth) || 0) +
+        (parseFloat(dialogStyles.borderRightWidth) || 0);
+      const borderY =
+        (parseFloat(dialogStyles.borderTopWidth) || 0) +
+        (parseFloat(dialogStyles.borderBottomWidth) || 0);
+      const wrapStyles = imageWrap ? getComputedStyle(imageWrap) : null;
+      const wrapPadX = wrapStyles
+        ? (parseFloat(wrapStyles.paddingLeft) || 0) +
+          (parseFloat(wrapStyles.paddingRight) || 0)
+        : 0;
+      const wrapPadY = wrapStyles
+        ? (parseFloat(wrapStyles.paddingTop) || 0) +
+          (parseFloat(wrapStyles.paddingBottom) || 0)
+        : 0;
+      const dialogWidth = Math.max(
+        LIGHTBOX_MIN_WIDTH,
+        Math.min(maxWidth, Math.ceil(renderedWidth + wrapPadX + borderX)),
+      );
+      const dialogHeight = Math.max(
+        LIGHTBOX_MIN_HEIGHT,
+        Math.min(
+          maxHeight,
+          Math.ceil(renderedHeight + wrapPadY + actionsHeight + borderY),
+        ),
+      );
+
+      dialog.style.width = `${dialogWidth}px`;
+      dialog.style.height = `${dialogHeight}px`;
+    };
+
+    if (image.complete && image.naturalWidth && image.naturalHeight) {
+      applySize();
+      return;
+    }
+
+    image.addEventListener("load", applySize, { once: true });
+  };
+
+  const scheduleDialogSizeUpdate = () => {
+    requestAnimationFrame(() => {
+      updateDialogSize();
+    });
+  };
+
+  const resetDialogSize = () => {
+    dialog.style.removeProperty("width");
+    dialog.style.removeProperty("height");
+  };
+
+  const handleImageSourceChange = () => {
+    if (!image) return;
+    sizeUpdateToken += 1;
+    const token = sizeUpdateToken;
+    resetDialogSize();
+    image.style.removeProperty("max-height");
+
+    const finalize = () => {
+      if (token !== sizeUpdateToken) return;
+      if (inner && inner.classList.contains("is-fit")) {
+        updateFitHeight();
+      }
+      scheduleDialogSizeUpdate();
+    };
+
+    if (image.complete && image.naturalWidth && image.naturalHeight) {
+      finalize();
+      return;
+    }
+
+    const onLoad = () => finalize();
+    image.addEventListener("load", onLoad, { once: true });
+    image.addEventListener("error", onLoad, { once: true });
+
+    if (typeof image.decode === "function") {
+      image.decode().then(finalize).catch(() => {});
+    }
+  };
 
   if (closeButton) {
     closeButton.addEventListener("click", () => dialog.close());
@@ -50,12 +161,14 @@ const initLightboxDialog = (dialog) => {
 
   dialog.addEventListener("lightbox:open", () => {
     if (!inner) return;
-    inner.classList.add("is-fit");
+    const isDefaultFull = dialog.dataset.lightboxDefaultMode === LIGHTBOX_MODE_FULL;
+    inner.classList.toggle("is-fit", !isDefaultFull);
     if (toggleButton) {
-      toggleButton.setAttribute("aria-pressed", "true");
-      toggleButton.textContent = "Show full size";
+      const isFit = inner.classList.contains("is-fit");
+      toggleButton.setAttribute("aria-pressed", String(isFit));
+      toggleButton.textContent = isFit ? "Show full size" : "Fit height";
     }
-    updateFitHeight();
+    handleImageSourceChange();
   });
 
   if (toggleButton && inner) {
@@ -85,15 +198,22 @@ const initLightboxDialog = (dialog) => {
         };
         requestAnimationFrame(step);
       }
+      scheduleDialogSizeUpdate();
     });
   }
 
   if (inner) {
     if (typeof ResizeObserver !== "undefined") {
-      const observer = new ResizeObserver(() => updateFitHeight());
+      const observer = new ResizeObserver(() => {
+        updateFitHeight();
+        scheduleDialogSizeUpdate();
+      });
       observer.observe(inner);
     } else {
-      window.addEventListener("resize", updateFitHeight);
+      window.addEventListener("resize", () => {
+        updateFitHeight();
+        scheduleDialogSizeUpdate();
+      });
     }
   }
 
@@ -209,6 +329,20 @@ const getLightboxTargetSrc = (image) => {
   return image.getAttribute("src");
 };
 
+const getDefaultLightboxMode = (element) => {
+  if (!element) return "";
+  return (element.getAttribute(LIGHTBOX_DEFAULT_MODE_ATTR) || "")
+    .trim()
+    .toLowerCase();
+};
+
+const getDefaultLightboxModeForImage = (image) => {
+  const imageMode = getDefaultLightboxMode(image);
+  if (imageMode) return imageMode;
+  const row = image ? image.closest(".image-row") : null;
+  return getDefaultLightboxMode(row);
+};
+
 const isExplicitLightboxTriggerImage = (image) => {
   return Boolean(image.closest("[data-lightbox-target]"));
 };
@@ -231,7 +365,9 @@ const initImageRowLightbox = () => {
       if (!targetSrc) return;
       lightboxImage.src = targetSrc;
       lightboxImage.alt = image.getAttribute("alt") || AUTO_LIGHTBOX_ALT;
-      openLightbox(autoLightbox);
+      openLightbox(autoLightbox, {
+        defaultMode: getDefaultLightboxModeForImage(image),
+      });
     });
   });
 };
@@ -241,7 +377,9 @@ triggers.forEach((trigger) => {
   trigger.addEventListener("click", () => {
     const target = trigger.getAttribute("data-lightbox-target");
     const dialog = document.querySelector(`[data-lightbox="${target}"]`);
-    openLightbox(dialog);
+    openLightbox(dialog, {
+      defaultMode: getDefaultLightboxMode(trigger),
+    });
   });
 });
 

@@ -13,10 +13,13 @@
   background: white;
   max-width: 92vw;
   max-height: 92vh;
-  width: 92vw;
-  height: 92vh;
+  width: auto;
+  height: auto;
   scrollbar-width: none; /* Firefox */
   box-shadow: var(--shadow);
+  transition:
+    width 0.28s ease,
+    height 0.28s ease;
 }
 
 .lightbox::-webkit-scrollbar {
@@ -38,6 +41,7 @@
   user-select: none;
   touch-action: none;
   scrollbar-width: none; /* Firefox */
+  background-color: var(--ink);
 }
 
 .lightbox__inner::-webkit-scrollbar {
@@ -50,14 +54,14 @@
   place-items: center;
   height: 100%;
   box-sizing: border-box;
-  padding: 0 var(--space-2) var(--space-2);
+  /* padding: 0 var(--space-2) var(--space-2); */
 }
 
 .lightbox__inner.is-fit img {
   width: auto;
-  height: 100%;
-  max-height: none;
-  max-width: none;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
   object-fit: contain;
 }
 
