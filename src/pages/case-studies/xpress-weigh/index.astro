@@ -1,6 +1,33 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
 import "../../../styles/letter-collapse.css";
+import orig1Image from "../../../images/xpress-weigh/orig1.png";
+import orig2Image from "../../../images/xpress-weigh/orig2.png";
+import updated311Image from "../../../images/xpress-weigh/311-2.png";
+import ecosystemImage from "../../../images/xpress-weigh/ecosystem.png";
+import journeyMapPhotoImage from "../../../images/xpress-weigh/journeymap-photo.jpg";
+import journeyMapImage from "../../../images/xpress-weigh/journey-map.jpeg";
+import figma1Image from "../../../images/xpress-weigh/figma/1.png";
+import figma2Image from "../../../images/xpress-weigh/figma/2.png";
+import figma3Image from "../../../images/xpress-weigh/figma/3.png";
+import figma4Image from "../../../images/xpress-weigh/figma/4.png";
+import figma5Image from "../../../images/xpress-weigh/figma/5.png";
+import figma6Image from "../../../images/xpress-weigh/figma/6.png";
+import figma7Image from "../../../images/xpress-weigh/figma/7.png";
+import figma8Image from "../../../images/xpress-weigh/figma/8.png";
+import figma9Image from "../../../images/xpress-weigh/figma/9.png";
+import settings3Image from "../../../images/xpress-weigh/figma/settings3.png";
+import settings1Image from "../../../images/xpress-weigh/figma/settings1.png";
+import settings2Image from "../../../images/xpress-weigh/figma/settings2.png";
+import finalImage from "../../../images/xpress-weigh/figma/final.png";
+import updates3Image from "../../../images/xpress-weigh/figma/updates3.png";
+import updates1Image from "../../../images/xpress-weigh/figma/updates1.png";
+import updates2Image from "../../../images/xpress-weigh/figma/updates2.png";
+import figmaMake1Image from "../../../images/xpress-weigh/figma/figma-make1.png";
+import figmaMake2Image from "../../../images/xpress-weigh/figma/figma-make2.png";
+import figmaMake3Image from "../../../images/xpress-weigh/figma/figma-make3.png";
+import tabletImage from "../../../images/xpress-weigh/figma/tablet.png";
 ---
 
 <BaseLayout title="Xpress Weigh · Case Study">
@@ -117,8 +144,18 @@ import "../../../styles/letter-collapse.css";
     </p>
   </section>
   <div class="image-row image-row--full image-row--2">
-    <img src="/images/xpress-weigh/orig1.png" alt="Existing screen designs" />
-    <img src="/images/xpress-weigh/orig2.png" alt="Existing screen designs" />
+    <Image
+      src={orig1Image}
+      alt="Existing screen designs"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={orig2Image}
+      alt="Existing screen designs"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
   </div>
   <p class="image-row--caption">
     <em>Exisiting solution: </em>Two complex screens were a barrier to natural,
@@ -159,7 +196,12 @@ import "../../../styles/letter-collapse.css";
     </p>
   </section>
   <div class="image-row image-row--full">
-    <img src="/images/xpress-weigh/311-2.png" alt="Updated screen designs" />
+    <Image
+      src={updated311Image}
+      alt="Updated screen designs"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
   </div>
   <div class="image-row--caption">
     <ul>
@@ -211,7 +253,13 @@ import "../../../styles/letter-collapse.css";
     </p>
   </section>
   <div>
-    <img src="/images/xpress-weigh/ecosystem.png" />
+    <Image
+      src={ecosystemImage}
+      alt=""
+      style="height:auto;"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
   </div>
   <p class="image-row--caption">
     My Consultant ecosystem map indicates the scale and scope of my role in the
@@ -248,7 +296,12 @@ import "../../../styles/letter-collapse.css";
       data-lightbox-target="journey-map"
       aria-label="Open journey map full size"
     >
-      <img src="/images/xpress-weigh/journeymap-photo.jpg" alt="Journey map" />
+      <Image
+        src={journeyMapPhotoImage}
+        alt="Journey map"
+        widths={[480, 768, 1024, 1440, 1920]}
+        sizes="100vw"
+      />
     </button>
   </section>
   <dialog class="lightbox" data-lightbox="journey-map" aria-label="Journey map">
@@ -263,7 +316,7 @@ import "../../../styles/letter-collapse.css";
     <div class="lightbox__inner">
       <div class="lightbox__image">
         <img
-          src="/images/xpress-weigh/journey-map.jpeg"
+          src={journeyMapImage.src}
           alt="Journey map"
           draggable="false"
         />
@@ -348,9 +401,24 @@ import "../../../styles/letter-collapse.css";
   </section>
 
   <section class="image-row image-row--desaturated image-row--3">
-    <img src="/images/xpress-weigh/figma/1.png" alt="UI" />
-    <img src="/images/xpress-weigh/figma/2.png" alt="" />
-    <img src="/images/xpress-weigh/figma/3.png" alt="" />
+    <Image
+      src={figma1Image}
+      alt="UI"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={figma2Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={figma3Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
   </section>
   <p class="image-row--caption">
     The very first designs were stripped right back to basics, ensuring any
@@ -359,14 +427,44 @@ import "../../../styles/letter-collapse.css";
   </p>
 
   <section class="image-row image-row--desaturated image-row--3">
-    <img src="/images/xpress-weigh/figma/4.png" alt="UI" />
-    <img src="/images/xpress-weigh/figma/5.png" alt="" />
-    <img src="/images/xpress-weigh/figma/6.png" alt="" />
+    <Image
+      src={figma4Image}
+      alt="UI"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={figma5Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={figma6Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
   </section>
   <section class="image-row image-row--desaturated image-row--3">
-    <img src="/images/xpress-weigh/figma/7.png" alt="UI" />
-    <img src="/images/xpress-weigh/figma/8.png" alt="" />
-    <img src="/images/xpress-weigh/figma/9.png" alt="" />
+    <Image
+      src={figma7Image}
+      alt="UI"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={figma8Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={figma9Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
   </section>
   <p class="image-row--caption">
     Whilst complexity inevtably grew, it was through measured conversation and
@@ -374,9 +472,24 @@ import "../../../styles/letter-collapse.css";
   </p>
 
   <section class="image-row image-row--full-bleed image-row--3">
-    <img src="/images/xpress-weigh/figma/settings3.png" alt="" />
-    <img src="/images/xpress-weigh/figma/settings1.png" alt="UI" />
-    <img src="/images/xpress-weigh/figma/settings2.png" alt="" />
+    <Image
+      src={settings3Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={settings1Image}
+      alt="UI"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={settings2Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
   </section>
   <p class="image-row--caption">
     Figma variables and variable collections allowed me to create sophisitcated
@@ -384,7 +497,12 @@ import "../../../styles/letter-collapse.css";
     (metric/imperial).
   </p>
   <section class="image-row image-row image-row">
-    <img src="/images/xpress-weigh/figma/final.png" alt="UI" />
+    <Image
+      src={finalImage}
+      alt="UI"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
     <!-- <img src="/images/xpress-weigh/figma/8.png" alt="" />
     <img src="/images/xpress-weigh/figma/9.png" alt="" /> -->
   </section>
@@ -448,9 +566,24 @@ import "../../../styles/letter-collapse.css";
     </p>
   </section>
   <section class="image-row image-row--full-bleed image-row--3">
-    <img src="/images/xpress-weigh/figma/updates3.png" alt="" />
-    <img src="/images/xpress-weigh/figma/updates1.png" alt="" />
-    <img src="/images/xpress-weigh/figma/updates2.png" alt="UI" />
+    <Image
+      src={updates3Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={updates1Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={updates2Image}
+      alt="UI"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
   </section>
   <p class="image-row--caption">
     I designed a new index to improve scan and findability during live sessions,
@@ -469,9 +602,24 @@ import "../../../styles/letter-collapse.css";
   </section>
   <section class="image-row image-row--full-bleed image-row--3">
     <!-- <img src="/images/xpress-weigh/figma/figma-make0.png" alt="" /> -->
-    <img src="/images/xpress-weigh/figma/figma-make1.png" alt="" />
-    <img src="/images/xpress-weigh/figma/figma-make2.png" alt="" />
-    <img src="/images/xpress-weigh/figma/figma-make3.png" alt="" />
+    <Image
+      src={figmaMake1Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={figmaMake2Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={figmaMake3Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
   </section>
   <p class="image-row--caption">
     Rebuilding the prototype in Figma Make allowed for robust data set and
@@ -495,7 +643,12 @@ import "../../../styles/letter-collapse.css";
   </section>
   <section class="image-row">
     <!-- <img src="/images/xpress-weigh/figma/figma-make0.png" alt="" /> -->
-    <img src="/images/xpress-weigh/figma/tablet.png" alt="Tablet view" />
+    <Image
+      src={tabletImage}
+      alt="Tablet view"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
   </section>
   <p class="image-row--caption">
     Rebuilding the prototype in Figma Make allowed for robust data set and

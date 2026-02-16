@@ -1,5 +1,26 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import flowchartImage from "../../../images/cadence/flowchart.png";
+import screen1Image from "../../../images/cadence/screen1.png";
+import drawing1Image from "../../../images/cadence/drawing1.jpg";
+import drawing2Image from "../../../images/cadence/drawing2.jpg";
+import drawing5Image from "../../../images/cadence/drawing5.jpg";
+import figma1Image from "../../../images/cadence/figma-1.png";
+import figma2Image from "../../../images/cadence/figma-2.png";
+import figma3Image from "../../../images/cadence/figma-3.png";
+import figma4Image from "../../../images/cadence/figma-4.png";
+import figma5Image from "../../../images/cadence/figma-5.png";
+import figmaUi1Image from "../../../images/cadence/figma-ui1.jpg";
+import figmaUi2Image from "../../../images/cadence/figma-ui2.jpg";
+import developmentImage from "../../../images/cadence/development.jpg";
+import testingImage from "../../../images/cadence/testing.jpg";
+import final1Image from "../../../images/cadence/final1.png";
+import final2Image from "../../../images/cadence/final2.png";
+import final3Image from "../../../images/cadence/final3.png";
+import final4Image from "../../../images/cadence/final4.png";
+import final5Image from "../../../images/cadence/final5.png";
+import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
 ---
 
 <BaseLayout title="Cadence Fitness · Case Study">
@@ -150,10 +171,12 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     </div>
   </section>
   <section class="image-row image-row--full-bleed">
-    <img
+    <Image
       class="full-width-image"
-      src="/images/cadence/flowchart.png"
+      src={flowchartImage}
       alt="Flowchart"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
     />
   </section>
   <p class="image-row--caption">Core flows mapped in Miro.</p>
@@ -183,7 +206,13 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     </section>
 
     <div class="process-image">
-      <img src="/images/cadence/screen1.png" alt="App development" />
+      <Image
+        src={screen1Image}
+        alt="App development"
+        style="height:auto;"
+        widths={[480, 768, 1024, 1440, 1920]}
+        sizes="100vw"
+      />
     </div>
   </section>
 
@@ -191,14 +220,26 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
   <!-- <h2>Assets</h2> -->
   <h3>Concept development</h3>
   <section class="image-row image-row--desaturated image-row--3">
-    <img src="/images/cadence/drawing1.jpg" alt="Process sketch 1" />
-    <img
-      src="/images/cadence/drawing2.jpg"
+    <Image
+      src={drawing1Image}
+      alt="Process sketch 1"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={drawing2Image}
       alt="Process sketch 2"
       style=" width:120px;"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
     />
     <!-- <img src="/images/cadence/drawing3.jpg" alt="Process sketch 3" /> -->
-    <img src="/images/cadence/drawing5.jpg" alt="Process sketch 3" />
+    <Image
+      src={drawing5Image}
+      alt="Process sketch 3"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
   </section>
   <p class="image-row--caption">
     Early concepts were roughed out on paper.<br /> I designed a tagging system to
@@ -209,11 +250,36 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     class="image-row image-row--5 image-row--full-bleed"
     data-lightbox-default="full"
   >
-    <img src="/images/cadence/figma-1.png" alt="UX" />
-    <img src="/images/cadence/figma-2.png" alt="UX" />
-    <img src="/images/cadence/figma-3.png" alt="UX" />
-    <img src="/images/cadence/figma-4.png" alt="UX" />
-    <img src="/images/cadence/figma-5.png" alt="UX" />
+    <Image
+      src={figma1Image}
+      alt="UX"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={figma2Image}
+      alt="UX"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={figma3Image}
+      alt="UX"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={figma4Image}
+      alt="UX"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={figma5Image}
+      alt="UX"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
   </div>
   <p class="image-row--caption">
     &hellip;and developed the idea as part of the inital wireframes in Figma.
@@ -221,15 +287,35 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 
   <section class="image-row image-row--full-bleed image-row--2">
     <!-- <div class="image-row image-row--full" style="height:320px"> -->
-    <img src="/images/cadence/figma-ui1.jpg" alt="UX" />
-    <img src="/images/cadence/figma-ui2.jpg" alt="UX" />
+    <Image
+      src={figmaUi1Image}
+      alt="UX"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={figmaUi2Image}
+      alt="UX"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
     <!-- </div> -->
   </section>
 
   <p class="image-row--caption">Early-flow interactive prototypes.</p>
   <section class="image-row image-row--full-bleed image-row--2">
-    <img src="/images/cadence/development.jpg" alt="App development" />
-    <img src="/images/cadence/testing.jpg" alt="App testing" />
+    <Image
+      src={developmentImage}
+      alt="App development"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={testingImage}
+      alt="App testing"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
   </section>
   <p class="image-row--caption">
     Storing data on the device and using AI-augmented development allowed me to
@@ -237,21 +323,49 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
   </p>
 
   <div class="image-row image-row--5 image-row--full-bleed">
-    <img src="/images/cadence/final1.png" alt="UX" />
-    <img src="/images/cadence/final2.png" alt="UX" />
-    <img src="/images/cadence/final3.png" alt="UX" />
-    <img src="/images/cadence/final4.png" alt="UX" />
-    <img src="/images/cadence/final5.png" alt="UX" />
+    <Image
+      src={final1Image}
+      alt="UX"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={final2Image}
+      alt="UX"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={final3Image}
+      alt="UX"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={final4Image}
+      alt="UX"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={final5Image}
+      alt="UX"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
   </div>
   <p class="image-row--caption">
     Screens from the beta release - in Google Play Store closed testing (as of
     February 2026)
   </p>
 
-  <img
+  <Image
     class="centered-logo"
-    src="/images/cadence/cadence-logo.png"
+    src={cadenceLogoImage}
     alt="Cadence logo"
+    width={220}
+    height={66}
+    sizes="220px"
   />
   <section class="card">
     <h2>Reflection <span class="flourish-ampersand">&</span> next steps</h2>
