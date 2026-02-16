@@ -41,6 +41,7 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
     <ul class="meta-list meta-list--casestudy meta-list--pills">
       <li>Self-initiated</li>
       <li>2026</li>
+      <li>~7 min read</li>
     </ul>
 
     <div class="hero-wrapper">
@@ -53,8 +54,9 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
           </strong>
         </p>
         <p>
-          This project allowed me to develop my use of AI-augmented prototyping
-          and development as I worked to solve a real personal pain point.
+          I built Cadence to explore a personal problem end-to-end, and to
+          deliberately test how AI-augmented prototyping and development can
+          shorten the path from concept to a usable product.
         </p>
       </section>
       <section class="card card--role card--compact card--transparent">
@@ -133,34 +135,73 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
         than last time?<span class="flourish-quote">&rdquo;</span>
       </h2>
       <p>
-        Regular gym-goers often want to track progress consistently, but
-        variations in machine callibration, setup, and personal settings — even
-        on the same exercise — make like-for-like comparison unreliable. Without
-        context, numbers alone don’t tell the full story.
+        For many regular gym-goers, consistent progression is the goal. Yet
+        small variations in machine calibration, setup, range of motion, or rest
+        can meaningfully affect workload. While most tracking tools capture load
+        and reps, contextual factors are often inconsistently recorded, making
+        like-for-like comparison difficult.
+      </p>
+
+      <p>
+        As a result, numbers alone don&apos;t always provide a reliable picture
+        of progress.
       </p>
       <p>
-        Additionally, many existing gym trackers add friction rather than
-        clarity. Basic logging is often buried inside bloated feature sets,
-        making it harder to understand real progress.
+        In addition, some gym tracking tools prioritise feature breadth —
+        programmes, social features, gamification — which can introduce friction
+        into what is typically a quick, in-the-moment task.
+      </p>
+      <p>
+        Cadence began with a focused question: <br /><strong>
+          What would a workout tracking tool look like if contextual clarity and
+          speed were treated as primary constraints?
+        </strong>
       </p>
       <h3>Validation</h3>
+      <p>
+        To test whether this problem extended beyond my own experience, I spoke
+        with personal trainers and regular gym users across a range of training
+        styles.
+      </p>
+      <p>
+        A short survey shared within fitness-focused communities explored how
+        people currently track sessions, what they record consistently, and
+        where comparisons break down.
+      </p>
+      <p>While approaches varied, two themes emerged:</p>
       <ul>
-        <li>Input from personal trainers and regular gym users.</li>
+        <li>Context is often remembered but not systematically recorded.</li>
         <li>
-          A short survey shared within fitness-focused social communities.
+          Logging speed is valued; additional input fields are tolerated only if
+          they clearly improve insight.
         </li>
       </ul>
+
+      <p>
+        These conversations reinforced the decision to prioritise contextual
+        integrity and efficiency over feature breadth.
+      </p>
+
       <hr class="divider" />
       <h3>Project goals</h3>
-      <ul>
-        <li>Flexible & efficient logging</li>
-        <li>Like-for-like, <strong>contextual comparison</strong></li>
-        <li>In-the-moment progress indicators</li>
-        <li>Focused - no fluff</li>
-        <li>Offline first</li>
-        <li>Cost effective</li>
-        <li>Immediate value</li>
-      </ul>
+      <p>
+        From the outset, the project was shaped by a small set of constraints:
+      </p><ul>
+        <li>Flexible, efficient logging</li>
+        <li>Reliable like-for-like comparison</li><li>
+          In-the-moment progress indicators
+        </li>
+        <li>Focused scope — no peripheral features</li><li>
+          Offline-first architecture
+        </li>
+        <li>Low infrastructure complexity</li><li>
+          Immediate, practical value
+        </li>
+      </ul><p>
+        These goals acted as guardrails for the first release. Any addition had
+        to support faster logging or clearer comparison; broader features were
+        intentionally deferred until the core behaviour proved valuable.
+      </p>
     </div>
     <div>
       <img src="/case-studies/cadence/exercises.png" alt="Exercise" />
@@ -185,23 +226,30 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
       <h2>Process</h2>
 
       <p>
-        <strong
-          >I followed a deliberately lightweight, iterative process focused on
-          learning through use rather than documentation.</strong
-        >
-      </p><p>
-        High-level flows were first mapped in Miro to validate the core logging
-        and review journeys. These flows were then translated into Figma, where
-        interaction details were prototyped, refined, and simplified through
-        repeated passes.
+        I followed a deliberately lightweight, iterative process focused on
+        testing assumptions in use before investing in refinement or
+        documentation.
+      </p>
+
+      <p>
+        High-level flows were mapped in Miro to clarify the core logging and
+        review journeys before any interface decisions were made. These were
+        translated into Figma prototypes, where interaction details were refined
+        through repeated passes to reduce friction and cognitive load.
+      </p>
+
+      <p>
+        An offline-first architecture meant all data lived on the device. This
+        allowed me to build an installable proof of concept early and test it in
+        real gym sessions — both personally and with a small group of users.
+        Observing how the product behaved under real workout conditions exposed
+        edge cases and usability gaps that would have been difficult to identify
+        in static prototypes.
       </p>
       <p>
-        An offline-first architecture means all data lives on the device. This
-        allowed me to quickly build an installable proof of concept and test it
-        in real gym sessions — both personally and with a small group of
-        friends. Observation and feedback from real workouts directly informed
-        each iteration, keeping the work grounded in practical, in-the-moment
-        use rather than theoretical scenarios.
+        Building was used as a learning mechanism: each iteration aimed to
+        reduce uncertainty around data structure, interaction speed, and
+        contextual clarity before pursuing visual polish.
       </p>
     </section>
 
@@ -216,10 +264,35 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
     </div>
   </section>
 
-  <!-- <section class="card content-block card--transparent"> -->
-  <!-- <h2>Assets</h2> -->
-  <h3>Concept development</h3>
-  <section class="image-row image-row--desaturated image-row--3">
+  <section class="card content-block t">
+    <h2>Concept development</h2>
+    <p>
+      I began with paper sketches to clarify the underlying structure before
+      committing to interface detail.
+    </p>
+
+    <p>
+      A central decision I made was to introduce a flexible tagging system
+      capable of capturing meaningful variation within an exercise — equipment,
+      setup differences, rest, and training method — without fragmenting the
+      core exercise history. My aim was to preserve comparability while allowing
+      nuance.
+    </p>
+
+    <p>
+      This tagging model shaped both the data structure and the interface.
+      Rather than creating multiple rigid exercise variants, I designed the
+      system so context could be layered dynamically — enabling richer
+      comparison without increasing logging friction.
+    </p>
+
+    <p>
+      I used interactive prototypes to refine how context was added, surfaced,
+      and reviewed within a session, ensuring the structure supported fast input
+      as well as meaningful reflection.
+    </p>
+  </section>
+  <div class="image-row image-row--desaturated image-row--3">
     <Image
       src={drawing1Image}
       alt="Process sketch 1"
@@ -240,7 +313,7 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
       widths={[480, 768, 1024, 1440, 1920]}
       sizes="100vw"
     />
-  </section>
+  </div>
   <p class="image-row--caption">
     Early concepts were roughed out on paper.<br /> I designed a tagging system to
     capture the nuance of any given exercise&hellip;
@@ -303,6 +376,35 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
   </section>
 
   <p class="image-row--caption">Early-flow interactive prototypes.</p>
+
+  <section class="card content-block">
+    <h2>Build</h2>
+
+    <p>Delivery speed was an explicit constraint.</p>
+
+    <p>
+      After defining the interaction model, I implemented it quickly and
+      iterated in the live build where early assumptions didn’t hold up under
+      real workout conditions. Code became an extension of the design process
+      rather than a separate phase.
+    </p>
+
+    <p>
+      OpenAI’s Codex accelerated implementation — generating scaffolding and
+      state logic from defined interaction rules — so I could move quickly from
+      design decisions to testable installs.
+    </p>
+    <p>
+      The architecture stayed lean: offline-first, local storage, and a tagging
+      model that layers context onto stable exercises without fragmenting
+      history.
+    </p>
+
+    <p>
+      Each iteration was tested in real gym sessions and adjusted where logging
+      slowed or clarity dropped.
+    </p>
+  </section>
   <section class="image-row image-row--full-bleed image-row--2">
     <Image
       src={developmentImage}
@@ -322,6 +424,28 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
     rapidly iterate and test in real conditions with real users.
   </p>
 
+  <section class="card context-block">
+    <h2>Beta testing</h2>
+    <p>At the time of writing, Cadence is in closed beta via Google Play.</p>
+
+    <p>
+      The focus is behavioural validation rather than feature expansion —
+      testing whether contextual logging is sustained over time and whether the
+      added inputs feel justified in real gym conditions.
+    </p>
+
+    <p>
+      Early feedback has highlighted different expectations around starting a
+      workout: some users prefer to pre-template sessions, others begin logging
+      immediately. The MVP supports both, but the entry paths need clearer
+      signposting.
+    </p>
+
+    <p>
+      The beta is being used to observe real usage patterns before committing to
+      broader release or infrastructure decisions.
+    </p>
+  </section>
   <div class="image-row image-row--5 image-row--full-bleed">
     <Image
       src={final1Image}
@@ -370,36 +494,40 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
   <section class="card">
     <h2>Reflection <span class="flourish-ampersand">&</span> next steps</h2>
     <p>
-      <strong>
-        Building on established prototyping practice, this project explored how
-        tools such as ChatGPT Codex can meaningfully accelerate the path from
-        idea to working product.
-      </strong>
+      Cadence began as a focused product exploration, but became equally a test
+      of process.
     </p>
 
     <p>
-      Interaction design and flow definition were familiar territory, but the
-      work reinforced how early design decisions directly shape code structure,
-      data integrity, and long-term flexibility.
+      I used ChatGPT and Claude as architectural sounding boards to
+      pressure-test the tagging model and explore edge cases before committing
+      to code. For implementation, I used Codex to translate design decisions
+      into working logic, allowing me to validate behaviour under real
+      conditions while the product was still lightweight.
+    </p>
+    <p>
+      It reinforced that early design decisions are architectural decisions:
+      interaction models directly shape data integrity and future adaptability.
     </p>
 
     <p>
-      The key learning was the value of treating prototypes as structural
-      artefacts, not just interaction proofs. In future work, I would involve
-      technical constraints earlier and use prototyping to actively de-risk
-      architecture as well as UX.
+      Treating prototypes as structural artefacts — not just interaction
+      demonstrations — proved particularly valuable. Building early exposed edge
+      cases and modelling gaps that static design work would likely have missed.
+    </p>
+    <p>
+      As the beta continues, the priority is learning from real usage patterns
+      before expanding scope. Early signals suggest onboarding needs refinement,
+      particularly in helping users reach meaningful value within the first 30
+      seconds. Any future features will be evaluated against the original
+      constraints: contextual clarity, logging speed, and structural coherence.
     </p>
 
     <p>
-      From a training perspective, I have found seeing the accurate context - <em
-        >exactly what I did last time</em
-      > - has been a spur to work a little harder.
+      This project reflects a deliberate commitment to building as a way of
+      learning — using real products to deepen both craft and systems thinking.
     </p>
-    <p>
-      With a wider release, the focus shifts to learning from real usage and
-      evolving the product through measured iteration rather than feature
-      expansion.
-    </p>
+
     <!-- </section> -->
   </section>
 </BaseLayout>

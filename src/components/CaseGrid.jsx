@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const CASES = [
   {
     slug: "cadence",
@@ -34,47 +32,18 @@ const CASES = [
 ];
 
 export default function CaseGrid() {
-  const [active, setActive] = useState(CASES[0].slug);
-  const selected = CASES.find((item) => item.slug === active);
-
   return (
-    <div className="grid">
-      <div className="card">
-        <p className="chip">Active Case</p>
-        <h3 style={{ marginTop: 16 }}>{selected.title}</h3>
-        <p style={{ color: "var(--muted)" }}>{selected.summary}</p>
-        <div className="tag-list">
-          {selected.focus.map((tag) => (
-            <span key={tag} className="tag">
-              {tag}
-            </span>
-          ))}
+    <div className="split">
+      {CASES.map((item) => (
+        <div key={item.slug} className="card">
+          <h2>{item.title}</h2>
+          <p>{item.summary}</p>
+          <p>{item.focus.join(" · ")}</p>
+          <a className="button primary" href={`/case-studies/${item.slug}`}>
+            View &gt;
+          </a>
         </div>
-        <a className="button primary" href={`/case-studies/${selected.slug}`}>
-          View case study
-        </a>
-      </div>
-      <div className="card">
-        <p className="chip">Select a case</p>
-        <div className="timeline" style={{ marginTop: 16 }}>
-          {CASES.map((item) => (
-            <button
-              key={item.slug}
-              type="button"
-              onClick={() => setActive(item.slug)}
-              className="timeline-item"
-              style={{
-                textAlign: "left",
-                cursor: "pointer",
-                borderColor: active === item.slug ? "var(--accent)" : undefined,
-              }}
-            >
-              <strong>{item.title}</strong>
-              <span style={{ color: "var(--muted)" }}>{item.year}</span>
-            </button>
-          ))}
-        </div>
-      </div>
+      ))}
     </div>
   );
 }

@@ -74,7 +74,7 @@ h6 {
   font-weight: 900;
   font-size: clamp(var(--text-xl), 5vw, var(--text-3xl));
   line-height: 1.05;
-  margin: var(--space-2) 0 var(--space-2);
+  margin: var(--space-10) 0 var(--space-2);
   letter-spacing: -0.04em;
   color: var(--muted);
 }
