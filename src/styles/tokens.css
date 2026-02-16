@@ -80,4 +80,7 @@
   --text-xl: calc(var(--text-base) * 2.25);
   --text-2xl: calc(var(--text-base) * 3.375);
   --text-3xl: calc(var(--text-base) * 5.0625);
+  --text-4xl: calc(var(--text-base) * 7.59375);
+  --text-5xl: calc(var(--text-base) * 11.390625);
+  --text-6xl: calc(var(--text-base) * 17.0859375);
 }

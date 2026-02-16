@@ -43,6 +43,13 @@ img {
   margin-top: var(--space-10);
 }
 
+.full-bleed--text__standout-quote {
+  height: 80vh;
+  display: flex;
+  align-items: center; /* vertical */
+  justify-content: center; /* horizontal (optional) */
+}
+
 /** this is the fallign text in XW */
 .full-bleed--quote-solo {
   position: relative;
@@ -55,6 +62,7 @@ img {
 
 .scroll-quote-trigger {
   height: 1px;
+  margin-top: 50vh; /* make the auto scroll feel conscious*/
 }
 
 /* Centered logo */

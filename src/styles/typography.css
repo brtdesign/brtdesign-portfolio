@@ -111,18 +111,29 @@ h6 {
   color: white;
   font-style: normal;
   text-align: center;
-
   margin: 0 auto;
 
   /* set font sie at the parent level so we can use a % to adapt it */
-  font-size: clamp(var(--text-xl), 5vw, var(--text-3xl));
+  font-size: clamp(var(--text-2xl), 7vw, var(--text-5xl));
 
   letter-spacing: 2px;
   line-height: 1;
 }
 
+.full-bleed--text__standout-quote cite {
+  text-align: right;
+  width: 75%;
+  font-size: 20%;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: white;
+  display: block;
+  margin-top: var(--space-6);
+}
+
 .blockquote--small {
-  font-size: 40%;
+  font-size: 30%;
   font-weight: 200;
 }
 
@@ -144,14 +155,6 @@ h6 {
   .offset-right {
     padding-right: 180px;
   }
-}
-
-.full-bleed--text cite {
-  text-align: right;
-  width: 75%;
-  color: white;
-  display: block;
-  margin-top: var(--space-4);
 }
 
 .flourish-period {
