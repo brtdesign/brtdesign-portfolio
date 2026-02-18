@@ -1,125 +1,158 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import CaseGrid from "../components/CaseGrid.jsx";
-import { Image } from "astro:assets";
-import homeXwImage from "../images/xpress-weigh/home-xw.png";
-import homeCadenceImage from "../images/cadence/home-cadence.png";
+const authList = [
+  {
+    saltB64: "hlcpS8dUqTz2VhZun/9qJA==",
+    expectedB64: "11910HDiNACBvwOOEN0IdUD7Aq0CW4dd4rtMLflksGg=",
+    iters: 210000,
+  },
+  // Add more password entries here:
+  {
+    saltB64: "Awc80DFPJuatLBJHLy38cQ==",
+    expectedB64: "Hct0ws4h5wBTsIIv9+fFaqXuB/xc8cVyH+9qMCERcvU=",
+    iters: 210000,
+  },
+];
 ---
 
-<BaseLayout title="Ben Taylor · Experience Design Portfolio">
-  <section class="homepage-intro">
-    <h1 class="hero-title">
-      <span class="hero-soft">Strategic thinking. Practical design.</span>
-      Thoughtful design for complex problems <span class="flourish-ampersand"
-        >&amp;</span
-      > fast-moving teams<span class="flourish-period">.</span>
-    </h1>
-    <p class="hero-lead">
-      I lead across strategy and detailed design, aligning business goals with
-      user needs through research, technical fluency and cross-functional
-      collaboration.
-      <!-- partnership. <div
-        style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px;"
-      >
-        <a class="button primary" href="/case-studies">View case studies</a>
-        <a class="button" href="/contact">Let&amp;s talk</a>
-      </div> -->
-    </p>
-  </section>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Protected</title>
+    <style>
+      body {
+        font-family: system-ui;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 24px;
+      }
+      .card {
+        max-width: 420px;
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 20px;
+      }
+      input,
+      button {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+      button {
+        margin-top: 12px;
+        cursor: pointer;
+      }
+      .err {
+        color: #b00020;
+        margin-top: 10px;
+        min-height: 1.2em;
+      }
+    </style>
+  </head>
 
-  <section class="selected-work">
-    <p class="selected-work--prehead">Selected work</p>
-    <div class="split">
-      <div class="card">
-        <h2>
-          Redesigning a legacy member-support tool within a 50-year-old
-          operating model.
-        </h2>
-        <ul class="meta-list meta-list--pills">
-          <li>Slimming World</li>
-          <li>2025</li>
-        </ul>
-        <div class="homepage-casestudy--image">
-          <Image
-            src={homeXwImage}
-            alt="Xpress Weigh case study"
-            style="height:auto; width:100%; display:block;"
-            widths={[480, 768]}
-            sizes="100vw"
-          />
-        </div>
-        <p>
-          A multi-phase transformation of a live group system used weekly by
-          thousands of Consultants, supporting hundreds of thousands of members.
-        </p>
-
-        <p>
-          Working with board-level stakeholders, I redefined what belonged on
-          screen during high-tempo sessions — balancing usability, governance
-          and organisational constraints.
-        </p>
-
-        <p>
-          I led the end-to-end design of a fully specified solution, validated
-          and ready for engineering, establishing clear build scope and reducing
-          delivery risk across the wider platform.
-        </p>
-        <a class="button primary" href="/case-studies/xpress-weigh"
-          >View case study</a
-        >
-      </div>
-      <div class="card">
-        <h2>
-          Building a context-aware strength training app from concept to Android
-          Store release.
-        </h2>
-        <ul class="meta-list meta-list--pills">
-          <li>Self-initiated</li>
-          <li>2026</li>
-        </ul>
-        <div class="homepage-casestudy--image">
-          <Image
-            src={homeCadenceImage}
-            alt="Cadence case study"
-            style="height:auto; width:100%; display:block;"
-            widths={[480, 768]}
-            sizes="100vw"
-          />
-        </div>
-        <p>
-          A self-initiated product exploring AI-augmented development as a
-          practical way to shorten the path from idea to working software.
-        </p>
-
-        <p>
-          I conceived, designed and built it end-to-end — applying AI across
-          prototyping, modelling and implementation — and validated decisions
-          through real-world use to reach a functioning beta.
-        </p>
-        <a class="button primary" href="/case-studies/cadence"
-          >View case study</a
-        >
-        <!-- <div class="timeline">
-            <div class="timeline-item">
-              <strong>Discover</strong>
-              <span>Workshops, research, and product audits.</span>
-            </div>
-            <div class="timeline-item">
-              <strong>Shape</strong>
-              <span>Flows, systems, and rapid prototyping.</span>
-            </div>
-            <div class="timeline-item">
-              <strong>Launch</strong>
-              <span>Implementation support and QA.</span>
-            </div>
-          </div> -->
-      </div>
+  <body>
+    <div class="card">
+      <h1 style="margin:0 0 12px">Enter password</h1>
+      <input id="pw" type="password" autocomplete="current-password" />
+      <button id="go">Continue</button>
+      <div class="err" id="err"></div>
     </div>
-  </section>
 
-  <!-- <section>
-      <h2>Featured case studies</h2>
-      <p class="hero-lead">A quick pulse check on four recent engagements.</p>
-      <CaseGrid client:load />
-    </section> -->
-</BaseLayout>
+    <script define:vars={{ authList }}>
+      const KEY = "auth_ok_v1";
+      const AUTH_LIST = authList;
+
+      const nextPath =
+        new URLSearchParams(location.search).get("next") || "/home";
+
+      function b64ToBytes(b64) {
+        const bin = atob(b64);
+        const out = new Uint8Array(bin.length);
+        for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+        return out;
+      }
+
+      function bytesToB64(bytes) {
+        let bin = "";
+        for (const b of bytes) bin += String.fromCharCode(b);
+        return btoa(bin);
+      }
+
+      async function derive(pw, saltB64, iters) {
+        const enc = new TextEncoder();
+        const keyMaterial = await crypto.subtle.importKey(
+          "raw",
+          enc.encode(pw),
+          "PBKDF2",
+          false,
+          ["deriveBits"],
+        );
+
+        const salt = b64ToBytes(saltB64);
+
+        const bits = await crypto.subtle.deriveBits(
+          { name: "PBKDF2", hash: "SHA-256", salt, iterations: iters },
+          keyMaterial,
+          256,
+        );
+
+        return bytesToB64(new Uint8Array(bits));
+      }
+
+      (function init() {
+        if (sessionStorage.getItem(KEY) === "1") {
+          location.replace(nextPath);
+          return;
+        }
+
+        const pw = document.getElementById("pw");
+        const err = document.getElementById("err");
+        const go = document.getElementById("go");
+
+        let fails = 0;
+
+        async function submit() {
+          err.textContent = "";
+          const val = pw.value || "";
+          if (!val) return;
+
+          if (fails > 0) {
+            await new Promise((r) => setTimeout(r, Math.min(900, fails * 200)));
+          }
+
+          const derivedList = await Promise.all(
+            AUTH_LIST.map((a) => derive(val, a.saltB64, a.iters)),
+          );
+
+          const ok = derivedList.some(
+            (derived, i) => derived === AUTH_LIST[i].expectedB64,
+          );
+
+          if (ok) {
+            sessionStorage.setItem(KEY, "1");
+            location.replace(nextPath);
+          } else {
+            fails++;
+            err.textContent = "Wrong password.";
+            pw.value = "";
+            pw.focus();
+          }
+        }
+
+        go.addEventListener("click", submit);
+        pw.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") submit();
+        });
+
+        pw.focus();
+      })();
+    </script>
+  </body>
+</html>

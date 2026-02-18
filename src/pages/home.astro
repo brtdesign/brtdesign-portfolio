@@ -1,0 +1,125 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CaseGrid from "../components/CaseGrid.jsx";
+import { Image } from "astro:assets";
+import homeXwImage from "../images/xpress-weigh/home-xw.png";
+import homeCadenceImage from "../images/cadence/home-cadence.png";
+---
+
+<BaseLayout title="Ben Taylor · Experience Design Portfolio">
+  <section class="homepage-intro">
+    <h1 class="hero-title">
+      <span class="hero-soft">Strategic thinking. Practical design.</span>
+      Thoughtful design for complex problems <span class="flourish-ampersand"
+        >&amp;</span
+      > fast-moving teams<span class="flourish-period">.</span>
+    </h1>
+    <p class="hero-lead">
+      I lead across strategy and detailed design, aligning business goals with
+      user needs through research, technical fluency and cross-functional
+      collaboration.
+      <!-- partnership. <div
+        style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px;"
+      >
+        <a class="button primary" href="/case-studies">View case studies</a>
+        <a class="button" href="/contact">Let&amp;s talk</a>
+      </div> -->
+    </p>
+  </section>
+
+  <section class="selected-work">
+    <p class="selected-work--prehead">Selected work</p>
+    <div class="split">
+      <div class="card">
+        <h2>
+          Redesigning a legacy member-support tool within a 50-year-old
+          operating model.
+        </h2>
+        <ul class="meta-list meta-list--pills">
+          <li>Slimming World</li>
+          <li>2025</li>
+        </ul>
+        <div class="homepage-casestudy--image">
+          <Image
+            src={homeXwImage}
+            alt="Xpress Weigh case study"
+            style="height:auto; width:100%; display:block;"
+            widths={[480, 768]}
+            sizes="100vw"
+          />
+        </div>
+        <p>
+          A multi-phase transformation of a live group system used weekly by
+          thousands of Consultants, supporting hundreds of thousands of members.
+        </p>
+
+        <p>
+          Working with board-level stakeholders, I redefined what belonged on
+          screen during high-tempo sessions — balancing usability, governance
+          and organisational constraints.
+        </p>
+
+        <p>
+          I led the end-to-end design of a fully specified solution, validated
+          and ready for engineering, establishing clear build scope and reducing
+          delivery risk across the wider platform.
+        </p>
+        <a class="button primary" href="/case-studies/xpress-weigh"
+          >View case study</a
+        >
+      </div>
+      <div class="card">
+        <h2>
+          Building a context-aware strength training app from concept to Android
+          Store release.
+        </h2>
+        <ul class="meta-list meta-list--pills">
+          <li>Self-initiated</li>
+          <li>2026</li>
+        </ul>
+        <div class="homepage-casestudy--image">
+          <Image
+            src={homeCadenceImage}
+            alt="Cadence case study"
+            style="height:auto; width:100%; display:block;"
+            widths={[480, 768]}
+            sizes="100vw"
+          />
+        </div>
+        <p>
+          A self-initiated product exploring AI-augmented development as a
+          practical way to shorten the path from idea to working software.
+        </p>
+
+        <p>
+          I conceived, designed and built it end-to-end — applying AI across
+          prototyping, modelling and implementation — and validated decisions
+          through real-world use to reach a functioning beta.
+        </p>
+        <a class="button primary" href="/case-studies/cadence"
+          >View case study</a
+        >
+        <!-- <div class="timeline">
+            <div class="timeline-item">
+              <strong>Discover</strong>
+              <span>Workshops, research, and product audits.</span>
+            </div>
+            <div class="timeline-item">
+              <strong>Shape</strong>
+              <span>Flows, systems, and rapid prototyping.</span>
+            </div>
+            <div class="timeline-item">
+              <strong>Launch</strong>
+              <span>Implementation support and QA.</span>
+            </div>
+          </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- <section>
+      <h2>Featured case studies</h2>
+      <p class="hero-lead">A quick pulse check on four recent engagements.</p>
+      <CaseGrid client:load />
+    </section> -->
+</BaseLayout>
