@@ -15,7 +15,9 @@ const { title = "brtdesign" } = Astro.props;
   <body>
     <header class="nav">
       <div class="nav-inner">
-        <a href="/" class="chip">brt design</a>
+        <a href="/" class="logo"
+          >brtdesign<span style="opacity:0.5">.co.uk</span></a
+        >
         <nav class="nav-links">
           <!-- <a href="/case-studies">Case Studies</a>
           <a href="/about">About</a> -->
@@ -29,20 +31,22 @@ const { title = "brtdesign" } = Astro.props;
       </div>
     </main>
     <footer class="footer">
-      <div class="container split">
-        <div>
-          <strong>Based in London.</strong>
-          <p>Designing product experiences that feel inevitable.</p>
-        </div>
-        <div>
-          <div class="tag-list">
-            <span class="tag">Product Design</span>
-            <span class="tag">Web Systems</span>
-            <span class="tag">Brand Direction</span>
-            <span class="tag">Prototyping</span>
-          </div>
-        </div>
-      </div>
+      <ul>
+        <li>Ben Taylor — UX designer</li>
+        <!-- <p>Based in London</p>
+          <p>Open to senior product roles</p> -->
+        <li>
+          <a href="mailto:ben@brtdesign.co.uk">ben@brtdesign.co.uk</a>
+        </li>
+
+        <li>
+          <a
+            href="https://www.linkedin.com/in/brtdesign/"
+            target="_blank"
+            rel="noopener">LinkedIn</a
+          >
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

@@ -258,8 +258,21 @@ section {
 .footer {
   padding: var(--space-5) 6vw var(--space-8);
   border-top: 1px solid var(--border);
+  text-align: center;
 }
 
+.footer ul {
+  list-style: none;
+  font-size: var(--text-md);
+  font-weight: bold;
+}
+.footer li {
+  margin-bottom: var(--space-1);
+}
+
+.footer a {
+  text-decoration: none;
+}
 /* Tag/pill list layout */
 .tag-list {
   display: flex;
@@ -320,6 +333,20 @@ section {
 
 .selected-work {
   margin-top: calc(var(--space-10) * 1.6);
+}
+
+.selected-work .split {
+  align-items: stretch;
+}
+
+.selected-work .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.selected-work .card > .button {
+  margin-top: auto;
 }
 
 .selected-work img {
