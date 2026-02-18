@@ -81,9 +81,15 @@ h6 {
   font-weight: 900;
   font-size: clamp(var(--text-xl), 5vw, var(--text-3xl));
   line-height: 1.05;
-  margin: var(--space-10) 0 var(--space-2);
+  margin: var(--space-4) 0 var(--space-2);
   letter-spacing: -0.04em;
   color: var(--muted);
+}
+
+@media screen and (min-width: 900px) {
+  .hero-title {
+    margin: var(--space-10) 0 var(--space-2);
+  }
 }
 
 /* Softer intro line for hero headlines */

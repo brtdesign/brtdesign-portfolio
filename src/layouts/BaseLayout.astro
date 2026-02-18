@@ -23,7 +23,8 @@ const { title = "brtdesign" } = Astro.props;
     <script is:inline>
       (function () {
         const KEY = "auth_ok_v1";
-        const isAuthed = sessionStorage.getItem(KEY) === "1";
+        const token = sessionStorage.getItem(KEY);
+        const isAuthed = !!token && token.length > 20;
 
         if (isAuthed) {
           document.documentElement.style.visibility = "visible";

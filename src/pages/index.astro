@@ -136,7 +136,8 @@ const authList = [
           );
 
           if (ok) {
-            sessionStorage.setItem(KEY, "1");
+            sessionStorage.setItem(KEY, derivedList[0]);
+
             location.replace(nextPath);
           } else {
             fails++;
