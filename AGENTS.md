@@ -46,3 +46,19 @@ When receiving a task:
 - Ask for clarification.
 - Do not assume.
 - Do not invent missing requirements.
+
+# Client-side access gate
+
+All routes use a client-side password gate. Unauthenticated users are redirected to /, and protected pages remain hidden until a valid session token is present.
+
+Passwords are validated in src/pages/index.astro using PBKDF2 (SHA-256) with per-password salts and high iterations. No plaintext passwords are stored.
+
+On success, a derived token is saved in sessionStorage with a 30-minute expiry.
+
+To add a password:
+
+Run tools/make-hash.mjs locally.
+
+Add the generated { saltB64, expectedB64, iters } entry to authList in index.astro.
+
+Deterrence only — not server-side security.
