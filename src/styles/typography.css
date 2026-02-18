@@ -89,7 +89,7 @@ h6 {
 /* Softer intro line for hero headlines */
 .hero-soft {
   display: block;
-  font-size: var(--text-lg);
+  font-size: clamp(var(--text-md), 5vw, var(--text-lg));
   font-weight: 600;
   color: var(--muted);
   letter-spacing: -0.02em;
