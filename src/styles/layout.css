@@ -370,6 +370,16 @@ section {
   justify-content: center;
 }
 
+.contact-list {
+  list-style: none;
+}
+
+.contact-list a {
+  text-decoration: none;
+  padding: var(--space-1);
+  display: inline-block;
+}
+
 .divider {
   margin: var(--space-6) 0;
 }
