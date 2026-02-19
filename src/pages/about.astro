@@ -3,62 +3,43 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="About · Ben Taylor">
-  <section>
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="/home">Home</a>
-      <span aria-hidden="true">/</span>
-      <span aria-current="page">About</span>
-    </nav>
-    <h1 class="hero-title">
-      A design partner for teams navigating complexity.
-    </h1>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/home">Home</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">About</span>
+  </nav>
+  <section class="page-intro">
+    <h1 class="hero-title">About me</h1>
     <p class="hero-lead">
-      I help early-stage and scaling teams build products that feel cohesive,
-      credible, and human. My work spans product design, brand systems, and
-      front-end collaboration.
+      <strong>
+        I’m a lead UX designer with over 20 years’ experience designing and
+        building complex systems and digital products.</strong
+      >
     </p>
   </section>
 
-  <section class="split">
-    <div class="card">
-      <h2>Principles</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <strong>Clarity over noise</strong>
-          <span>Every screen should have a job and a reason.</span>
-        </div>
-        <div class="timeline-item">
-          <strong>Systems over heroics</strong>
-          <span>I build reusable patterns that scale with teams.</span>
-        </div>
-        <div class="timeline-item">
-          <strong>Momentum over perfection</strong>
-          <span>Prototypes that lead to confident product decisions.</span>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <h2>Capabilities</h2>
-      <div class="tag-list">
-        <span class="tag">Product Strategy</span>
-        <span class="tag">UX Research</span>
-        <span class="tag">Design Systems</span>
-        <span class="tag">Visual Identity</span>
-        <span class="tag">Front-end Collaboration</span>
-        <span class="tag">User Testing</span>
-      </div>
-      <p style="margin-top: 16px;">
-        I collaborate with engineering to keep design intent intact. My outputs
-        are lean, documented, and ready to ship.
-      </p>
-    </div>
-  </section>
-
-  <section class="card">
-    <h2>Team</h2>
+  <section class="card" style="margin-top: var(--space-3);">
     <p>
-      I run a solo practice and bring in trusted collaborators when needed,
-      keeping leadership hands-on.
+      I work across discovery, definition and delivery, using structured design
+      thinking to bring clarity to complex problems. My approach combines
+      research, systems thinking and iteration — shaping information
+      architecture, flows and interaction patterns that hold together at scale
+      and stand up in real use.
+    </p>
+
+    <p>
+      Having extensive experience building front ends gives me a practical
+      understanding of how products are made and helps me collaborate
+      confidently with engineering teams. While I’m not a developer today, that
+      technical grounding informs how I design and how I communicate across
+      disciplines.
+    </p>
+
+    <p>
+      Alongside hands-on design, I lead and support teams — managing designers,
+      mentoring at different stages and helping establish thoughtful, consistent
+      ways of working. I’m comfortable operating with senior stakeholders while
+      keeping teams focused on meaningful, well-reasoned decisions.
     </p>
   </section>
 </BaseLayout>

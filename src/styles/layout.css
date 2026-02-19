@@ -433,7 +433,8 @@ button.timeline-item {
 }
 
 @media screen and (max-width: 899px) {
-  .homepage-intro {
+  .page-intro,
+  .breadcrumb {
     padding-left: var(--space-2);
     padding-right: var(--space-2);
   }
