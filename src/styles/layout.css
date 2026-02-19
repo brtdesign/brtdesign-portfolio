@@ -352,8 +352,7 @@ section {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .selected-work--prehead {
-  display: none;
-  font-weight: bold;
+  text-align: center;
   font-size: var(--text-md);
   font-weight: bold;
   margin-bottom: var(--space-2);
