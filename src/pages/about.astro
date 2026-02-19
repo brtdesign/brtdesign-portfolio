@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import aboutImage from "../images/about.png";
 ---
 
 <BaseLayout title="About · Ben Taylor">
@@ -19,6 +20,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <section class="card" style="margin-top: var(--space-3);">
+    <img class="about-image" src={aboutImage.src} alt="Ben Taylor" />
+
     <p>
       I work across discovery, definition and delivery, using structured design
       thinking to bring clarity to complex problems. My approach combines
@@ -28,24 +31,32 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </p>
 
     <p>
-      Having extensive experience building front ends gives me a practical
-      understanding of how products are made and helps me collaborate
-      confidently with engineering teams. While I’m not a developer today, that
-      technical grounding informs how I design and how I communicate across
-      disciplines.
+      A background building front ends gives me a practical understanding of how
+      products are made. That technical grounding informs how I design and how I
+      communicate — letting me work with engineering teams with confidence, and
+      bridge the gap between design intent and implementation.
     </p>
 
     <p>
-      Alongside hands-on design, I lead and support teams — managing designers,
-      mentoring at different stages and helping establish thoughtful, consistent
-      ways of working. I’m comfortable operating with senior stakeholders while
-      keeping teams focused on meaningful, well-reasoned decisions.
+      Alongside hands-on design work, I lead and support teams — managing
+      designers, mentoring across experience levels and helping establish ways
+      of working that are consistent without being rigid. I'm comfortable
+      working across tech, product and senior stakeholders while keeping teams
+      focused on what actually matters.
     </p>
-
     <p class="hero-lead">
       <strong>
-        I’m currently available for permanent or contract roles.
+        I'm currently open to permanent and contract opportunities.
       </strong>
     </p>
   </section>
 </BaseLayout>
+
+<style>
+  .about-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: var(--space-3);
+  }
+</style>
