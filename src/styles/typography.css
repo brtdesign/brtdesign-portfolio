@@ -310,7 +310,7 @@ blockquote {
 
 .card--role .role-list,
 .card--role h2 {
-  font-size: var(--text-ml);
+  font-size: clamp(var(--text-sm), 1.2vw + 0.8rem, var(--text-ml));
 }
 
 @media screen and (min-width: 900px) {

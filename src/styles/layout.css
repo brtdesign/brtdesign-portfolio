@@ -263,6 +263,7 @@ section {
   list-style: none;
   font-size: var(--text-md);
   font-weight: bold;
+  padding: 0;
 }
 .footer li {
   margin-bottom: var(--space-1);

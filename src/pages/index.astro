@@ -16,6 +16,18 @@ const authList = [
 
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJVMW525PJ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-NJVMW525PJ");
+    </script>
     <meta charset="utf-8" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="googlebot" content="noindex, nofollow" />
@@ -39,6 +51,7 @@ const authList = [
       }
       input,
       button {
+        box-sizing: border-box;
         width: 100%;
         padding: 12px;
         border-radius: 10px;
