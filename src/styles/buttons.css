@@ -21,6 +21,13 @@
   border-color: transparent;
 }
 
+/* Inverted solid button variant */
+.button.primary.inverted {
+  background: #f7f2ea;
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
 /* Button hover lift */
 .button:hover {
   transform: translateY(-2px);
