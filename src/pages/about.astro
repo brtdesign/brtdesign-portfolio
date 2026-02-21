@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
 import aboutImage from "../images/about.png";
 ---
 
@@ -10,17 +11,13 @@ import aboutImage from "../images/about.png";
     <span aria-current="page">About</span>
   </nav>
   <section class="page-intro">
-    <h1 class="hero-title">About</h1>
-    <p class="hero-lead">
-      <strong>
-        I’m a lead UX designer with over 20 years’ experience designing and
-        building complex systems and digital products.</strong
-      >
-    </p>
+    <h1 class="hero-title">
+      Senior UX designer with 20+ years of shaping systems and digital products.
+    </h1>
   </section>
 
   <section class="card" style="margin-top: var(--space-3);">
-    <img class="about-image" src={aboutImage.src} alt="Ben Taylor" />
+    <Image class="about-image" src={aboutImage} alt="Ben Taylor" />
     <p>
       I'm a designer who cares about solving meaningful problems and making
       things feel simple. I thrive in ambiguity and enjoy bringing structure to
