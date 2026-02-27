@@ -1,84 +1,391 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import flowchartImage from "../../../images/tag-your-bag/Flowchart.png";
+import ox1Image from "../../../images/tag-your-bag/ox_1.jpg";
+import oxfamScreen1Image from "../../../images/tag-your-bag/oxfam-screen-1.jpg";
+import oxfamScreen2Image from "../../../images/tag-your-bag/oxfam-screen-2.jpg";
+import oxfamScreen3Image from "../../../images/tag-your-bag/oxfam-screen-3.jpg";
+import tybScreen1Image from "../../../images/tag-your-bag/screens/tyb-1.png";
+import tybScreen2Image from "../../../images/tag-your-bag/screens/cash-1.png";
+import tybScreen3Image from "../../../images/tag-your-bag/screens/cash-3.png";
+import tybScreen4Image from "../../../images/tag-your-bag/screens/ox_2.png";
+import tybScreen5Image from "../../../images/tag-your-bag/screens/tyb-5.png";
+import tybScreen6Image from "../../../images/tag-your-bag/screens/thanks.png";
+import tybScreen7Image from "../../../images/tag-your-bag/screens/timeout.png";
+import tybScreen8Image from "../../../images/tag-your-bag/screens/unwrapped-2.png";
+import tybScreen9Image from "../../../images/tag-your-bag/screens/unwrapped-4.png";
 ---
 
 <BaseLayout title="Tag Your Bag · Case Study">
-  <section>
+  <section class="introduction">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/home">Home</a>
       <span aria-hidden="true">/</span>
       <span aria-current="page">Tag Your Bag</span>
     </nav>
     <h1 class="hero-title">
-      An onboarding flow that keeps operations teams moving.
+      Digitising Gift-aid registration across Oxfam's high-street stores<span
+        class="flourish-period">.</span
+      >
     </h1>
-    <p class="hero-lead">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris suscipit,
-      magna sed cursus laoreet, sapien lorem faucibus nisl, vitae porta nisi
-      magna sed velit.
-    </p>
-    <ul class="meta-list meta-list--casestudy">
-      <li>Oxfam</li>
-      <li>2018</li>
+    <ul class="meta-list meta-list--casestudy meta-list--pills">
+      <li>Oxfam <span style="text-transform:none">(via PXTech)</span></li>
     </ul>
-  </section>
+    <div class="hero-wrapper">
+      <section class="hero-lead">
+        <p>
+          <strong>
+            Redesigning a fragile service interaction that was costing Oxfam
+            significant revenue each year.</strong
+          >
+        </p>
 
-  <section class="card">
-    <h2>Overview</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-      feugiat nisl vitae arcu vehicula, vitae vulputate justo consequat. Integer
-      vel metus at turpis sollicitudin tincidunt.
-    </p>
-    <div class="tag-list">
-      <span class="tag">Role: Lorem ipsum</span>
-      <span class="tag">Timeframe: Lorem ipsum</span>
-      <span class="tag">Tools: Lorem ipsum</span>
+        <p>
+          Oxfam asked PXTech to explore whether redundant in-store POS hardware
+          could be repurposed as self-service Gift Aid registration kiosks.
+        </p>
+      </section>
+
+      <section class="card card--role card--compact card--transparent">
+        <h2>Role</h2>
+        <ul class="role-list">
+          <li>Stakeholder liaison</li>
+          <li>Process and flow design</li>
+          <li>Interface and on-brand visual design</li>
+          <li>Front-end implementation</li>
+          <li>In-situ usability testing and validation</li>
+        </ul>
+
+        <ul class="tools-list">
+          <li>
+            <img
+              class="tools-list__icon"
+              src="/images/tools/sketch.png"
+              alt="Sketch"
+            />
+          </li>
+          <li>
+            <img
+              class="tools-list__icon"
+              src="/images/tools/jira.png"
+              alt="Jira"
+            />
+          </li>
+          <li>
+            <img
+              class="tools-list__icon"
+              src="/images/tools/photoshop.png"
+              alt="Photoshop"
+            />
+          </li>
+          <li>
+            <img
+              class="tools-list__icon"
+              src="/images/tools/html.jpg"
+              alt="HTML CSS"
+            />
+          </li>
+        </ul>
+      </section>
     </div>
   </section>
-
-  <section class="card">
+  <section class="card content-block">
     <h2>Problem</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere,
-      augue id gravida aliquam, nibh neque commodo purus, at pharetra metus nibh
-      in ipsum.
+      Oxfam estimated it was missing out on around £1m per year due to
+      incomplete or illegible Gift Aid forms.
+    </p>
+    <p>
+      The existing process relied on handwritten forms that were later manually
+      processed and transcribed. This created three core issues:
+    </p>
+    <ul>
+      <li>Lost revenue through incomplete or invalid registrations</li>
+      <li>High administrative overhead</li>
+      <li>Risk of non-compliance with legal requirements</li>
+    </ul>
+    <p>
+      At the same time, Oxfam had recently upgraded POS terminals across ~650 UK
+      stores. The question was whether the old touchscreen units could be
+      repurposed as self-service Gift Aid kiosks.
+    </p>
+    <p>
+      The hardware proof of concept was in place. What was missing was a
+      structured experience that people could navigate confidently and
+      consistently.
     </p>
   </section>
 
-  <section class="card">
+  <section class="card content-block">
     <h2>Approach</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
-      Mauris luctus, orci sed vulputate congue, lorem nulla volutpat libero, nec
-      porta nisl justo a metus.
+      When I joined the project, the content and legal copy were sitting in
+      spreadsheets. The proposed flow felt fragmented and overly complex.
+    </p>
+    <p>
+      Stakeholders initially leaned toward collecting additional information
+      “just in case.” I made the case that every extra field could reduce
+      completion rates and increase drop-off — directly undermining the revenue
+      recovery goal.
+    </p>
+    <p>
+      While working closely with stakeholders at Oxfam’s head office, I reframed
+      the approach around a simple principle: <strong>
+        collect only what is essential.
+      </strong>
+    </p>
+
+    <h3>Key decisions</h3>
+    <ul>
+      <li>Move eligibility and donation-type questions to the start</li>
+      <li>Reduce required fields to the legal minimum</li>
+      <li>Group contact details into clear, logical sections</li>
+      <li>
+        Structure the flow semantically rather than mirroring the spreadsheet
+      </li>
+    </ul>
+
+    <p>
+      Success also depended on buy-in from store volunteers, many of whom were
+      non-technical and cautious about change.
+    </p>
+    <p>
+      I requested that one of the 20 trial stores be local to our office,
+      allowing me to spend time in-store observing, testing and building trust
+      with staff and volunteers.
     </p>
   </section>
 
-  <section class="card">
-    <h2>Design</h2>
+  <section class="image-row">
+    <Image
+      class="full-width-image"
+      src={flowchartImage}
+      alt="Tag Your Bag service flowchart"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+  </section>
+  <p class="image-row--caption">
+    An accessible, 'stakeholder friendly' flowchart helped me get buy-in for a
+    simplified linear approach.
+  </p>
+
+  <section class="card content-block">
+    <h2>Build</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in
-      ipsum ac justo scelerisque convallis a a risus. Aenean malesuada eros sit
-      amet est luctus, non commodo nisi sagittis.
+      With the flow agreed and legal requirements clarified, I designed firstly
+      in Sketch, and then increasingly in the browser.
+    </p>
+
+    <h3>Constraints</h3>
+    <ul>
+      <li>Low-resolution touchscreen hardware</li>
+      <li>On-screen keyboard reducing usable content area to ~1024 × 500</li>
+      <li>Shared in-store WiFi with unstable connectivity</li>
+    </ul>
+
+    <h3>Design decisions</h3>
+    <ul>
+      <li>Larger form fields and scaled typography for legibility</li>
+      <li>Clear step emphasis to reinforce progress</li>
+      <li>Strong visual hierarchy optimised for touch interaction</li>
+      <li>Branded but simplified colour palette</li>
+      <li>
+        Carefully chosen start and end imagery for reassurance and clarity
+      </li>
+    </ul>
+
+    <p>
+      I created a webfont variation of the brand typeface and iterated layouts
+      live in-browser to work within the tight screen constraints.
+    </p>
+    <p>
+      As testing revealed connectivity issues across stores, we introduced
+      clearer error messaging and built greater resilience into the experience
+      so staff could recover quickly when WiFi dropped.
+    </p>
+  </section>
+  <section class="image-row">
+    <Image
+      src={ox1Image}
+      alt="Tag Your Bag kiosk screen"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+  </section>
+  <p class="image-row--caption">
+    Usability testing happened in store with real donors and shop staff.
+  </p>
+  <section class="card content-block">
+    <h2>Testing</h2>
+    <p>Testing happened in context, with real donors and volunteers.</p>
+    <p>
+      Initial volunteer reactions were cautious. Rather than defend the design,
+      I focused on explaining the purpose of the project — recovering lost
+      charity income — and demonstrating how the kiosk reduced manual admin.
+    </p>
+    <p>That shift in framing helped adoption.</p>
+
+    <h3>Findings</h3>
+    <ul>
+      <li>
+        Volunteer confidence was fragile; unclear structure increased
+        hesitation.
+      </li>
+      <li>Users needed clearer signalling of progress and completion.</li>
+      <li>The Nectar integration point created uncertainty as to purpose.</li>
+      <li>
+        Store WiFi instability posed a risk to completion and operational
+        confidence.
+      </li>
+    </ul>
+
+    <p>
+      Being physically present in-store allowed me to observe hesitation,
+      workarounds and environmental constraints in real time.
+    </p>
+
+    <h3>Response</h3>
+    <p>
+      I refined the flow to prioritise eligibility upfront, reduced supporting
+      copy to essential guidance, and strengthened visual step progression to
+      reinforce completion.
+    </p>
+
+    <p>
+      I introduced clearer Nectar branding at the integration point and
+      simplified language around data use to improve trust.
+    </p>
+
+    <p>
+      Working with engineering, I built in connectivity safeguards and clearer
+      recovery messaging to mitigate network instability.
+    </p>
+
+    <p>
+      The revised design was validated through further live testing before full
+      rollout.
     </p>
   </section>
 
-  <section class="card">
-    <h2>Outcome</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel mi
-      sit amet dolor interdum tincidunt. Integer ac ex sed justo laoreet
-      sagittis.
-    </p>
+  <section class="image-row image-row--3">
+    <Image
+      src={tybScreen4Image}
+      alt="Tag Your Bag screen"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={tybScreen1Image}
+      alt="Tag Your Bag screen"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={tybScreen8Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
   </section>
 
-  <section class="card">
-    <h2>Reflection</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel leo in
-      nisi vehicula fermentum. Suspendisse potenti. Phasellus et magna at risus
-      bibendum interdum.
-    </p>
+  <section class="image-row image-row--3">
+    <Image
+      src={tybScreen9Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+
+    <Image
+      src={tybScreen2Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={tybScreen3Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
   </section>
+  <section class="image-row image-row--3">
+    <Image
+      src={tybScreen5Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={tybScreen7Image}
+      alt="Tag Your Bag screen"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+
+    <Image
+      src={tybScreen6Image}
+      alt=""
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+  </section>
+  <p class="image-row--caption">
+    Sample kiosk interface screens from the Tag Your Bag and cash donations
+    flows.
+  </p>
+
+  <section class="card content-block">
+    <h2>Impact</h2>
+    <p>
+      The trial proved viable and demonstrated a clear uplift in data quality.
+      Following full rollout across approximately 650 UK stores, invalid Gift
+      Aid registrations reduced by around 50%, contributing to the retention of
+      an <strong>estimated £500k in previously lost annual income</strong>.
+    </p>
+
+    <p>
+      The kiosks went on to become a white-label solution available to charities
+      nationwide.
+    </p>
+
+    <!-- <p>
+        The project reinforced that reducing data collection increases clarity
+        and completion, structural simplification matters more than visual
+        polish, volunteer confidence is as important as donor usability, and
+        real-world constraints such as unstable connectivity materially shape
+        product success.
+      </p> -->
+  </section>
+
+  <div class="image-row image-row--full image-row--3">
+    <Image
+      src={oxfamScreen1Image}
+      alt="Tag Your Bag kiosk screen 1"
+      style="height:auto; width:100%; display:block;"
+      widths={[480, 768, 1024]}
+      sizes="(max-width: 900px) 100vw, 50vw"
+    />
+    <Image
+      src={oxfamScreen3Image}
+      alt="Tag Your Bag kiosk screen 2"
+      style="height:auto; width:100%; display:block;"
+      widths={[480, 768, 1024]}
+      sizes="(max-width: 900px) 100vw, 50vw"
+    />
+    <Image
+      src={oxfamScreen2Image}
+      alt="Tag Your Bag kiosk screen 2"
+      style="height:auto; width:100%; display:block;"
+      widths={[480, 768, 1024]}
+      sizes="(max-width: 900px) 100vw, 50vw"
+    />
+  </div>
+  <p class="image-row--caption">
+    Kiosk spotted in an Oxfam store ~3 years after I completed the project.
+    While the UI has evolved in line with branding, the principles I defined
+    remain intact.
+  </p>
 </BaseLayout>

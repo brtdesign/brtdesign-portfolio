@@ -102,6 +102,7 @@ section {
 .split {
   display: grid;
   gap: var(--space-4);
+  margin-bottom: var(--space-4);
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   align-items: start;
 }
@@ -362,12 +363,21 @@ section {
 .tools-list {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-4);
+
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: var(--space-8);
+  margin-top: var(--space-4);
+}
+
+.tools-list li {
+  flex: 0 1 50%;
+  padding: 0;
+  margin-bottom: var(--space-2);
   justify-content: center;
+}
+.tools-list img {
+  max-width: 96px;
 }
 
 .contact-list {

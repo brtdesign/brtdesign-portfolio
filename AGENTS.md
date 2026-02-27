@@ -62,3 +62,10 @@ Run tools/make-hash.mjs locally.
 Add the generated { saltB64, expectedB64, iters } entry to authList in index.astro.
 
 Deterrence only — not server-side security.
+
+# From the repo root, run:
+
+cd brtdesign-portfolio
+npm install
+npm run dev
+Then open the local URL Astro prints (typically http://localhost:4321).

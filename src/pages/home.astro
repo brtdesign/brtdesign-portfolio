@@ -4,6 +4,7 @@ import CaseGrid from "../components/CaseGrid.jsx";
 import { Image } from "astro:assets";
 import homeXwImage from "../images/xpress-weigh/home-xw.png";
 import homeCadenceImage from "../images/cadence/home-cadence.png";
+import homeOxfamImage from "../images/tag-your-bag/home.png";
 ---
 
 <BaseLayout title="Ben Taylor · Experience Design Portfolio">
@@ -19,12 +20,6 @@ import homeCadenceImage from "../images/cadence/home-cadence.png";
       clarity to complex problems. I work closely with stakeholders, engineers,
       and users to understand what really matters, and I design solutions that
       are practical, thoughtful, and genuinely useful.
-      <!-- partnership. <div
-        style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px;"
-      >
-        <a class="button primary" href="/case-studies">View case studies</a>
-        <a class="button" href="/contact">Let&amp;s talk</a>
-      </div> -->
     </p>
     <div class="hero-cta-row">
       <a class="button primary inverted" href="/about">About me</a>
@@ -56,21 +51,11 @@ import homeCadenceImage from "../images/cadence/home-cadence.png";
           thousands of Consultants, supporting hundreds of thousands of members.
         </p>
 
-        <!-- <p>
-          Working with board-level stakeholders, I redefined what belonged on
-          screen during high-tempo sessions — balancing usability, governance
-          and organisational constraints.
-        </p>
-
-        <p>
-          I led the end-to-end design of a fully specified solution, validated
-          and ready for engineering, establishing clear build scope and reducing
-          delivery risk across the wider platform.
-        </p> -->
         <a class="button primary" href="/case-studies/xpress-weigh"
           >View case study</a
         >
       </div>
+
       <div class="card">
         <h2>
           Building a context-aware strength training app from concept to Android
@@ -94,37 +79,41 @@ import homeCadenceImage from "../images/cadence/home-cadence.png";
           practical way to shorten the path from idea to working software.
         </p>
 
-        <!-- <p>
-          I conceived, designed and built it end-to-end — applying AI across
-          prototyping, modelling and implementation — and validated decisions
-          through real-world use to reach a functioning beta.
-        </p> -->
         <a class="button primary" href="/case-studies/cadence"
           >View case study</a
         >
-        <!-- <div class="timeline">
-            <div class="timeline-item">
-              <strong>Discover</strong>
-              <span>Workshops, research, and product audits.</span>
-            </div>
-            <div class="timeline-item">
-              <strong>Shape</strong>
-              <span>Flows, systems, and rapid prototyping.</span>
-            </div>
-            <div class="timeline-item">
-              <strong>Launch</strong>
-              <span>Implementation support and QA.</span>
-            </div>
-          </div> -->
+      </div>
+    </div>
+    <div class="split">
+      <div class="card">
+        <h2>Driving Gift-aid revenue across Oxfam stores</h2>
+        <ul class="meta-list meta-list--pills">
+          <li>Oxfam <span style="text-transform:none">(via PXTech)</span></li>
+          <!-- <li>2026</li> -->
+        </ul>
+        <div class="homepage-casestudy--image">
+          <Image
+            src={homeOxfamImage}
+            alt="Cadence case study"
+            style="height:auto; width:100%; display:block;"
+            widths={[480, 768]}
+            sizes="100vw"
+          />
+        </div>
+        <p>
+          Reducing invalid Gift Aid registrations by ~50%, protecting ~£500k in
+          annual charity income.
+        </p>
+
+        <a class="button primary" href="/case-studies/tag-your-bag"
+          >View case study</a
+        >
+      </div>
+      <div class="card card--empty" style="opacity:0.5">
+        <h2>Coming soon&hellip;</h2>
       </div>
     </div>
   </section>
-
-  <!-- <section>
-      <h2>Featured case studies</h2>
-      <p class="hero-lead">A quick pulse check on four recent engagements.</p>
-      <CaseGrid client:load />
-    </section> -->
 </BaseLayout>
 
 <style>
