@@ -1,4 +1,4 @@
 node_modules
 /dist
-tools/
+/tools/
 AGENTS.md
