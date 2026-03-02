@@ -1,0 +1,189 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import onlineEnrolImage from "../../../images/future-state/online-enrol.png";
+import ppt004Image from "../../../images/future-state/ppt/XpressWeigh-vision.004.png";
+import ppt005Image from "../../../images/future-state/ppt/XpressWeigh-vision.005.png";
+import ppt006Image from "../../../images/future-state/ppt/XpressWeigh-vision.006.png";
+import ppt008Image from "../../../images/future-state/ppt/XpressWeigh-vision.008.png";
+import ppt009Image from "../../../images/future-state/ppt/XpressWeigh-vision.009.png";
+import ppt011Image from "../../../images/future-state/ppt/XpressWeigh-vision.011.png";
+import ppt013Image from "../../../images/future-state/ppt/XpressWeigh-vision.013.png";
+import ppt015Image from "../../../images/future-state/ppt/XpressWeigh-vision.015.png";
+import ppt018Image from "../../../images/future-state/ppt/XpressWeigh-vision.018.png";
+import ppt021Image from "../../../images/future-state/ppt/XpressWeigh-vision.021.png";
+import ppt026Image from "../../../images/future-state/ppt/XpressWeigh-vision.026.png";
+import ppt029Image from "../../../images/future-state/ppt/XpressWeigh-vision.029.png";
+---
+
+<BaseLayout title="Future State · Case Study">
+  <section>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/home">Home</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Future State</span>
+    </nav>
+
+    <h1 class="hero-title">
+      Future State journey mapping as a tool to make <span
+        class="flourish-period">.</span
+      >
+    </h1>
+
+    <ul class="meta-list meta-list--casestudy meta-list--pills">
+      <li></li>
+    </ul>
+
+    <div class="hero-wrapper">
+      <section class="hero-lead">
+        <p>
+          <strong>
+            As Slimming World embarked on full digital transformaion, I used
+            journey maps to shape the conversations aroudn what the future state
+            should be.
+          </strong>
+        </p>
+      </section>
+
+      <section class="card card--role card--compact card--transparent">
+        <h2>Role</h2>
+        <ul class="role-list"></ul>
+      </section>
+    </div>
+
+    <ul class="tools-list"></ul>
+    <h1 class="phase-title"><span>Previously</span></h1>
+
+    <p>
+      Around 18 months before transformation was formally announced, I presented
+      a service-led ecosystem vision outlining how more connected systems could
+      reshape interactions across the model.
+    </p>
+    <div class="image-row image-row--full image-row--6">
+      <Image src={ppt004Image} alt="Future state vision slide 1" />
+      <Image src={ppt005Image} alt="Future state vision slide 2" />
+      <Image src={ppt006Image} alt="Future state vision slide 3" />
+      <Image src={ppt008Image} alt="Future state vision slide 4" />
+      <Image src={ppt009Image} alt="Future state vision slide 5" />
+      <Image src={ppt011Image} alt="Future state vision slide 6" />
+    </div>
+    <div class="image-row image-row--full image-row--6">
+      <Image src={ppt013Image} alt="Future state vision slide 7" />
+      <Image src={ppt015Image} alt="Future state vision slide 8" />
+      <Image src={ppt018Image} alt="Future state vision slide 9" />
+      <Image src={ppt021Image} alt="Future state vision slide 10" />
+      <Image src={ppt026Image} alt="Future state vision slide 11" />
+      <Image src={ppt029Image} alt="Future state vision slide 12" />
+    </div>
+    <p class="image-row--caption">
+      Long before transformation began, I had mapped and presented one vision of
+      the future to then then MD. A few sample slides shown.
+    </p>
+
+    <section class="card content-block">
+      <h2>Problem</h2>
+
+      <p>
+        When transformation was formally announced, there was broad agreement
+        that systems needed to become more connected, but little clarity on what
+        that meant in practice. Proposals such as digital membership cards,
+        online enrolment and online payments made sense individually, and there
+        was a clear push toward greater member self-service. However, the
+        service consequences weren’t being modelled end to end. Without a shared
+        view of how these changes would affect member–consultant interaction —
+        particularly in a model built on human connection — there was a risk of
+        solving isolated problems while shifting complexity elsewhere.
+      </p>
+    </section>
+
+    <section class="card content-block">
+      <h2>Modelling sign-up as a connected system</h2>
+
+      <p>I began with online enrolment as a standalone map.</p>
+
+      <p>
+        Moving enrolment online appears straightforward, but in this model it
+        fundamentally alters how and when the relationship between member and
+        consultant begins. I mapped the end-to-end flow from initial intent
+        through to first in-group interaction, modelling how data, ownership and
+        visibility would transfer across systems.
+      </p>
+
+      <p>
+        Online enrolment also exposed a structural tension within the franchise
+        model.
+      </p>
+
+      <p>
+        When a member signs up to a Consultant’s group through the company
+        website, who owns that relationship and its data? The central
+        organisation facilitates enrolment, but the ongoing service is delivered
+        by the Consultant.
+      </p>
+
+      <p>
+        The map did not resolve these questions, but it brought them to the
+        surface. By modelling the flow end to end, it made visible where
+        responsibility, visibility and control were ambiguous. This created a
+        clearer foundation for subsequent discussion, particularly as digital
+        enrolment, membership cards and payments were explored in more detail.
+      </p>
+    </section>
+
+    <section class="image-row image-row--full-bleed">
+      <p class="image-overlay">Tap to view full map</p>
+      <button
+        class="lightbox-trigger"
+        type="button"
+        data-lightbox-target="online-enrol-map"
+        aria-label="Open online enrolment map full size"
+      >
+        <Image
+          src={onlineEnrolImage}
+          alt="Online enrolment journey map"
+          widths={[480, 768, 1024, 1440, 1920]}
+          sizes="200vw"
+        />
+      </button>
+    </section>
+    <dialog
+      class="lightbox"
+      data-lightbox="online-enrol-map"
+      aria-label="Online enrolment map"
+    >
+      <div class="lightbox__actions">
+        <button class="lightbox__toggle" type="button" aria-pressed="false">
+          Fit height
+        </button>
+        <button class="lightbox__close" type="button" aria-label="Close">
+          ×
+        </button>
+      </div>
+      <div class="lightbox__inner">
+        <div class="lightbox__image">
+          <img
+            src={onlineEnrolImage.src}
+            alt="Online enrolment journey map"
+            draggable="false"
+          />
+        </div>
+      </div>
+    </dialog>
+    <p class="image-row--caption">
+      Online enrolment map used to model the end-to-end member sign-up journey.
+    </p>
+
+    <section class="card content-block">
+      <h2>Build</h2>
+    </section>
+
+    <section class="card content-block">
+      <h2>Testing</h2>
+    </section>
+
+    <section class="card content-block">
+      <h2>Impact</h2>
+    </section>
+  </section>
+</BaseLayout>
+<script type="module" src="/scripts/lightbox.js"></script>
