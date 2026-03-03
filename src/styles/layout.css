@@ -363,7 +363,7 @@ section {
 .tools-list {
   display: flex;
   flex-wrap: wrap;
-
+justify-content: flex-start;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -378,6 +378,7 @@ section {
 }
 .tools-list img {
   max-width: 96px;
+
 }
 
 .contact-list {
