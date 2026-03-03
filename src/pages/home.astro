@@ -5,6 +5,7 @@ import { Image } from "astro:assets";
 import homeXwImage from "../images/xpress-weigh/home-xw.png";
 import homeCadenceImage from "../images/cadence/home-cadence.png";
 import homeOxfamImage from "../images/tag-your-bag/home.png";
+import homeFutureStateImage from "../images/future-state/homepage.png";
 ---
 
 <BaseLayout title="Ben Taylor · Experience Design Portfolio">
@@ -110,18 +111,37 @@ import homeOxfamImage from "../images/tag-your-bag/home.png";
           >View case study</a
         >
       </div>
-      <a class="card card-link card--empty" style="opacity:0.5" href="/case-studies/future-state">
-        <h2>Future State</h2>
-        <p>Bring clarity and alignment to ambiguous or poorly defined ambition.</p>
-        <span class="button primary">View case study</span>
-      </a>
+      <div class="card">
+        <h2>
+         Designing joined-up journeys across actors and touchpoints
+        </h2>
+        <ul class="meta-list meta-list--pills">
+          <li>Slimming World</li>
+          <li>2024</li>
+        </ul>
+        <div class="homepage-casestudy--image">
+          <Image
+            src={homeFutureStateImage}
+            alt="Future state case study"
+            style="height:auto; width:100%; display:block;"
+            widths={[480, 768]}
+            sizes="100vw"
+          />
+        </div>
+        <p>
+          Bringing clarity and alignment to loosely defined transformation ambition.
+        </p>
+        <a href="/case-studies/future-state" class="button primary">
+          View case study
+        </a>
+      </div>
     </div>
   </section>
-</BaseLayout>
 
-<style>
-  .hero-cta-row {
-    margin-top: var(--space-3);
-    padding-left: var(--space-1);
-  }
-</style>
+  <style>
+    .hero-cta-row {
+      margin-top: var(--space-3);
+      padding-left: var(--space-1);
+    }
+  </style>
+</BaseLayout>

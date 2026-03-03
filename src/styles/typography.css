@@ -198,6 +198,12 @@ h6 {
   background: var(--muted);
 }
 
+/* Hack to use as a divider */
+span.phase-title { 
+  display: block;
+  padding-bottom: var(--space-8);
+  margin-top: 0;
+}
 .phase-title span {
   position: relative;
   z-index: 1;
