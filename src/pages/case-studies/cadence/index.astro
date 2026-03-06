@@ -15,6 +15,7 @@ import figmaUi1Image from "../../../images/cadence/figma-ui1.jpg";
 import figmaUi2Image from "../../../images/cadence/figma-ui2.jpg";
 import developmentImage from "../../../images/cadence/development.jpg";
 import testingImage from "../../../images/cadence/testing.jpg";
+import iaMap from "../../../images/cadence/IA-map.jpg";
 import final1Image from "../../../images/cadence/final1.png";
 import final2Image from "../../../images/cadence/final2.png";
 import final3Image from "../../../images/cadence/final3.png";
@@ -201,16 +202,26 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
       </p>
     </div>
   </section>
-  <section class="image-row image-row--full-bleed">
-    <Image
-      class="full-width-image"
+
+
+
+    <section class="image-row ">
+    <!-- <Image
       src={flowchartImage}
-      alt="Flowchart"
+      alt="App development"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    /> -->
+    <Image
+      src={iaMap}
+      alt="Information architecture map"
       widths={[480, 768, 1024, 1440, 1920]}
       sizes="100vw"
     />
   </section>
-  <p class="image-row--caption">Core flows mapped in Miro.</p>
+
+  
+  <p class="image-row--caption">IA and core interactions mapped in Miro.</p>
   <section class="card-split card-split--2-3">
     <section class="card">
       <h2>Process</h2>
@@ -257,7 +268,7 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
   <section class="card content-block t">
     <h2>Concept development</h2>
     <p>
-      I began with paper sketches to clarify the underlying structure before
+      I began with the information architecture and basic sketches to clarify the underlying structure before
       committing to interface detail.
     </p>
 
