@@ -19,7 +19,7 @@
 
         location.replace("/?next=" + next);
       })();
-    </script><link rel="stylesheet" href="/_astro/about.DJiyCiOy.css"><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","G-NJVMW525PJ");
+    </script><link rel="stylesheet" href="/_astro/about.DWikStPW.css"><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","G-NJVMW525PJ");
 </script></head> <body> <header class="nav"> <div class="nav-inner"> <a href="/home" class="logo">brtdesign<span style="opacity:0.5">.co.uk</span></a> <nav class="nav-links"> <a href="/about">About</a> <a href="/contact">Contact</a> </nav> </div> </header> <main> <div class="container">  <section class="introduction"> <nav class="breadcrumb" aria-label="Breadcrumb"> <a href="/home">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Cadence Fitness</span> </nav> <h1 class="hero-title">
 Workout logging that tracks <span style="whitespace:no-wrap; display:inline-block">the full picture<span class="flourish-period">.</span></span> </h1> <ul class="meta-list meta-list--casestudy meta-list--pills"> <li>Self-initiated</li> <li>2026</li> <!-- <li>~7 min read</li> --> </ul> <div class="hero-wrapper"> <section class="hero-lead"> <p> <strong>
 A strength training app that captures the context behind each set —
@@ -27,7 +27,7 @@ A strength training app that captures the context behind each set —
             down logging.
 </strong> </p> <p>
 I built Cadence to explore a personal problem end-to-end, and to
-          deliberately test how AI-augmented prototyping and development can
+          deliberately test how Figma <abbr title="Model Context Protocol">MCP</abbr> and AI-augmented development can
           shorten the path from concept to a usable product.
 </p> </section> <section class="card card--role card--compact card--transparent"> <h2>Role</h2> <ul class="role-list"> <li>Research</li> <li>Design</li> <li>Content</li> <li>Development</li> <li>
 Testing <br><em class="small">(moderated + unmoderated)</em> </li> </ul> <ul class="tools-list"> <li> <img class="tools-list__icon" src="/images/tools/figma.png" alt="Figma"> </li> <li> <img class="tools-list__icon" src="/images/tools/miro.png" alt="Miro"> </li> <li> <img class="tools-list__icon" src="/images/tools/codex.png" alt="Codex"> </li> <li> <img class="tools-list__icon" src="/images/tools/trello.png" alt="Trello"> </li> <li> <img class="tools-list__icon" src="/images/tools/vscode.png" alt="VS Code"> </li> <li> <img class="tools-list__icon" src="/images/tools/react.png" alt="React"> </li> </ul> </section> </div> </section> <section class="card card-split card-split--2-3 content-block"> <div> <h2 class="small">Problem:</h2> <h2> <span class="flourish-quote">&ldquo;</span>Why does this feel harder
@@ -76,29 +76,14 @@ These goals acted as guardrails for the first release. Any addition had
         intentionally deferred until the core behaviour proved valuable.
 </p> </div> <div> <img src="/case-studies/cadence/exercises.png" alt="Exercise"> <p class="caption">
 Equipment calibration and settings can significantly impact exercise
-        work rate across sessions. <br><strong>Image: ChatGPT</strong> </p> </div> </section> <section class="image-row image-row--full-bleed"> <img src="/_astro/flowchart.Sfs9QI3N_2jbaAB.webp" srcset="/_astro/flowchart.Sfs9QI3N_ZbX5KU.webp 480w, /_astro/flowchart.Sfs9QI3N_Z2bsPv1.webp 768w, /_astro/flowchart.Sfs9QI3N_ZfLRqv.webp 1024w, /_astro/flowchart.Sfs9QI3N_Z14HSyO.webp 1440w, /_astro/flowchart.Sfs9QI3N_ZXy7y5.webp 1920w" class="full-width-image" alt="Flowchart" sizes="100vw" width="3840" height="1324" loading="lazy" decoding="async"> </section> <p class="image-row--caption">Core flows mapped in Miro.</p> <section class="card-split card-split--2-3"> <section class="card"> <h2>Process</h2> <p>
-I followed a deliberately lightweight, iterative process focused on
-        testing assumptions in use before investing in refinement or
-        documentation.
-</p> <p>
-High-level flows were mapped in Miro to clarify the core logging and
-        review journeys before any interface decisions were made. These were
-        translated into Figma prototypes, where interaction details were refined
-        through repeated passes to reduce friction and cognitive load.
-</p> <p>
-An offline-first architecture meant all data lived on the device. This
-        allowed me to build an installable proof of concept early and test it in
-        real gym sessions — both personally and with a small group of users.
-        Observing how the product behaved under real workout conditions exposed
-        edge cases and usability gaps that would have been difficult to identify
-        in static prototypes.
-</p> <p>
-Building was used as a learning mechanism: each iteration aimed to
-        reduce uncertainty around data structure, interaction speed, and
-        contextual clarity before pursuing visual polish.
-</p> </section> <div class="process-image"> <img src="/_astro/screen1.I1FfOOb2_Z22Bgpk.webp" srcset="/_astro/screen1.I1FfOOb2_Z2sla0V.webp 480w, /_astro/screen1.I1FfOOb2_Cle3T.webp 768w, /_astro/screen1.I1FfOOb2_BgYo4.webp 1024w, /_astro/screen1.I1FfOOb2_Z22Bgpk.webp 1440w, /_astro/screen1.I1FfOOb2_Z22Bgpk.webp 1920w" alt="App development" style="height:auto;" sizes="100vw" width="1080" height="2169" loading="lazy" decoding="async"> </div> </section> <section class="card content-block t"> <h2>Concept development</h2> <p>
-I began with paper sketches to clarify the underlying structure before
-      committing to interface detail.
+        work rate across sessions. <br><strong>Image: ChatGPT</strong> </p> </div> </section> <section class="image-row image-row--full-bleed"> <!-- <Image
+      src={flowchartImage}
+      alt="App development"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    /> --> <img src="/_astro/IA-map.BU2cZluf_1BsLcw.webp" srcset="/_astro/IA-map.BU2cZluf_1buX7N.webp 480w, /_astro/IA-map.BU2cZluf_ZMYLBi.webp 768w, /_astro/IA-map.BU2cZluf_1YnVOn.webp 1024w, /_astro/IA-map.BU2cZluf_1arUG4.webp 1440w, /_astro/IA-map.BU2cZluf_1gBGGN.webp 1920w" alt="Information architecture map" sizes="100vw" width="3211" height="1245" loading="lazy" decoding="async"> </section> <p class="image-row--caption">IA and core interactions mapped in Miro.</p> <section class="card content-block "> <h2>Concept development</h2> <p>
+I began with the information architecture and basic sketches to clarify
+      the underlying structure before committing to interface detail.
 </p> <p>
 A central decision I made was to introduce a flexible tagging system
       capable of capturing meaningful variation within an exercise — equipment,
@@ -114,12 +99,36 @@ This tagging model shaped both the data structure and the interface.
 I used interactive prototypes to refine how context was added, surfaced,
       and reviewed within a session, ensuring the structure supported fast input
       as well as meaningful reflection.
-</p> </section> <div class="image-row image-row--desaturated image-row--3"> <img src="/_astro/drawing1.Ca8RqLYG_Z2i3LWa.webp" srcset="/_astro/drawing1.Ca8RqLYG_1eEH9P.webp 480w, /_astro/drawing1.Ca8RqLYG_ZJP2zg.webp 768w, /_astro/drawing1.Ca8RqLYG_Z1tQiWx.webp 1024w, /_astro/drawing1.Ca8RqLYG_Z2iMk5Q.webp 1440w, /_astro/drawing1.Ca8RqLYG_Z2i3LWa.webp 1920w" alt="Process sketch 1" sizes="100vw" width="1846" height="951" loading="lazy" decoding="async"> <img src="/_astro/drawing2.x5IpKmpW_1DvcS6.webp" srcset="/_astro/drawing2.x5IpKmpW_Z4mwfg.webp 480w, /_astro/drawing2.x5IpKmpW_1DvcS6.webp 768w, /_astro/drawing2.x5IpKmpW_1DvcS6.webp 1024w, /_astro/drawing2.x5IpKmpW_1DvcS6.webp 1440w, /_astro/drawing2.x5IpKmpW_1DvcS6.webp 1920w" alt="Process sketch 2" style=" width:120px;" sizes="100vw" width="620" height="956" loading="lazy" decoding="async"> <!-- <img src="/images/cadence/drawing3.jpg" alt="Process sketch 3" /> --> <img src="/_astro/drawing5.BmjykayR_1pUSYu.webp" srcset="/_astro/drawing5.BmjykayR_ZbvXLa.webp 480w, /_astro/drawing5.BmjykayR_Z2b1Ivg.webp 768w, /_astro/drawing5.BmjykayR_Z20jy8.webp 1024w, /_astro/drawing5.BmjykayR_1pUSYu.webp 1440w, /_astro/drawing5.BmjykayR_1pUSYu.webp 1920w" alt="Process sketch 3" sizes="100vw" width="1223" height="688" loading="lazy" decoding="async"> </div> <p class="image-row--caption">
-Early concepts were roughed out on paper.<br> I designed a tagging system to
-    capture the nuance of any given exercise&hellip;
-</p> <div class="image-row image-row--5 image-row--full-bleed" data-lightbox-default="full"> <img src="/_astro/figma-1.DStzqE9a_ZJgfQR.webp" srcset="/_astro/figma-1.DStzqE9a_ZJgfQR.webp 480w, /_astro/figma-1.DStzqE9a_ZJgfQR.webp 768w, /_astro/figma-1.DStzqE9a_ZJgfQR.webp 1024w, /_astro/figma-1.DStzqE9a_ZJgfQR.webp 1440w, /_astro/figma-1.DStzqE9a_ZJgfQR.webp 1920w" alt="UX" sizes="100vw" width="384" height="832" loading="lazy" decoding="async"> <img src="/_astro/figma-2.BefmsZmB_Z1pnVV2.webp" srcset="/_astro/figma-2.BefmsZmB_Z1pnVV2.webp 480w, /_astro/figma-2.BefmsZmB_Z1pnVV2.webp 768w, /_astro/figma-2.BefmsZmB_Z1pnVV2.webp 1024w, /_astro/figma-2.BefmsZmB_Z1pnVV2.webp 1440w, /_astro/figma-2.BefmsZmB_Z1pnVV2.webp 1920w" alt="UX" sizes="100vw" width="384" height="832" loading="lazy" decoding="async"> <img src="/_astro/figma-3.B6v1il-J_2bX3hj.webp" srcset="/_astro/figma-3.B6v1il-J_2bX3hj.webp 480w, /_astro/figma-3.B6v1il-J_2bX3hj.webp 768w, /_astro/figma-3.B6v1il-J_2bX3hj.webp 1024w, /_astro/figma-3.B6v1il-J_2bX3hj.webp 1440w, /_astro/figma-3.B6v1il-J_2bX3hj.webp 1920w" alt="UX" sizes="100vw" width="384" height="832" loading="lazy" decoding="async"> <img src="/_astro/figma-4.Dt0r8uUr_Z19of26.webp" srcset="/_astro/figma-4.Dt0r8uUr_Z19of26.webp 480w, /_astro/figma-4.Dt0r8uUr_Z19of26.webp 768w, /_astro/figma-4.Dt0r8uUr_Z19of26.webp 1024w, /_astro/figma-4.Dt0r8uUr_Z19of26.webp 1440w, /_astro/figma-4.Dt0r8uUr_Z19of26.webp 1920w" alt="UX" sizes="100vw" width="384" height="832" loading="lazy" decoding="async"> <img src="/_astro/figma-5.BXHxJ5or_1Jj9A6.webp" srcset="/_astro/figma-5.BXHxJ5or_1Jj9A6.webp 480w, /_astro/figma-5.BXHxJ5or_1Jj9A6.webp 768w, /_astro/figma-5.BXHxJ5or_1Jj9A6.webp 1024w, /_astro/figma-5.BXHxJ5or_1Jj9A6.webp 1440w, /_astro/figma-5.BXHxJ5or_1Jj9A6.webp 1920w" alt="UX" sizes="100vw" width="384" height="832" loading="lazy" decoding="async"> </div> <p class="image-row--caption">
-&hellip;and developed the idea as part of the inital wireframes in Figma.
-</p> <section class="image-row image-row--full-bleed image-row--2"> <!-- <div class="image-row image-row--full" style="height:320px"> --> <img src="/_astro/figma-ui1.QzqY8yD1_21HkjE.webp" srcset="/_astro/figma-ui1.QzqY8yD1_Z15OiS3.webp 480w, /_astro/figma-ui1.QzqY8yD1_1YR5bM.webp 768w, /_astro/figma-ui1.QzqY8yD1_2mRjQ2.webp 1024w, /_astro/figma-ui1.QzqY8yD1_1xViHI.webp 1440w, /_astro/figma-ui1.QzqY8yD1_1E64Is.webp 1920w" alt="UX" sizes="100vw" width="3734" height="2214" loading="lazy" decoding="async"> <img src="/_astro/figma-ui2.rTC9gMFl_15MpOI.webp" srcset="/_astro/figma-ui2.rTC9gMFl_Zg6vB5.webp 480w, /_astro/figma-ui2.rTC9gMFl_Z2fBglb.webp 768w, /_astro/figma-ui2.rTC9gMFl_Z2m40qA.webp 1024w, /_astro/figma-ui2.rTC9gMFl_1Tc7f2.webp 1440w, /_astro/figma-ui2.rTC9gMFl_20lSfL.webp 1920w" alt="UX" sizes="100vw" width="3734" height="2214" loading="lazy" decoding="async"> <!-- </div> --> </section> <p class="image-row--caption">Early-flow interactive prototypes.</p> <section class="card content-block"> <h2>Build</h2> <p>Delivery speed was an explicit constraint.</p> <p>
+</p> </section> <div class="image-row image-row--5 image-row--full-bleed" data-lightbox-default="full"> <img src="/_astro/figma-1.DStzqE9a_ZJgfQR.webp" srcset="/_astro/figma-1.DStzqE9a_ZJgfQR.webp 480w, /_astro/figma-1.DStzqE9a_ZJgfQR.webp 768w, /_astro/figma-1.DStzqE9a_ZJgfQR.webp 1024w, /_astro/figma-1.DStzqE9a_ZJgfQR.webp 1440w, /_astro/figma-1.DStzqE9a_ZJgfQR.webp 1920w" alt="UX" sizes="100vw" width="384" height="832" loading="lazy" decoding="async"> <img src="/_astro/figma-2.BefmsZmB_Z1pnVV2.webp" srcset="/_astro/figma-2.BefmsZmB_Z1pnVV2.webp 480w, /_astro/figma-2.BefmsZmB_Z1pnVV2.webp 768w, /_astro/figma-2.BefmsZmB_Z1pnVV2.webp 1024w, /_astro/figma-2.BefmsZmB_Z1pnVV2.webp 1440w, /_astro/figma-2.BefmsZmB_Z1pnVV2.webp 1920w" alt="UX" sizes="100vw" width="384" height="832" loading="lazy" decoding="async"> <img src="/_astro/figma-3.B6v1il-J_2bX3hj.webp" srcset="/_astro/figma-3.B6v1il-J_2bX3hj.webp 480w, /_astro/figma-3.B6v1il-J_2bX3hj.webp 768w, /_astro/figma-3.B6v1il-J_2bX3hj.webp 1024w, /_astro/figma-3.B6v1il-J_2bX3hj.webp 1440w, /_astro/figma-3.B6v1il-J_2bX3hj.webp 1920w" alt="UX" sizes="100vw" width="384" height="832" loading="lazy" decoding="async"> <img src="/_astro/figma-4.Dt0r8uUr_Z19of26.webp" srcset="/_astro/figma-4.Dt0r8uUr_Z19of26.webp 480w, /_astro/figma-4.Dt0r8uUr_Z19of26.webp 768w, /_astro/figma-4.Dt0r8uUr_Z19of26.webp 1024w, /_astro/figma-4.Dt0r8uUr_Z19of26.webp 1440w, /_astro/figma-4.Dt0r8uUr_Z19of26.webp 1920w" alt="UX" sizes="100vw" width="384" height="832" loading="lazy" decoding="async"> <img src="/_astro/figma-5.BXHxJ5or_1Jj9A6.webp" srcset="/_astro/figma-5.BXHxJ5or_1Jj9A6.webp 480w, /_astro/figma-5.BXHxJ5or_1Jj9A6.webp 768w, /_astro/figma-5.BXHxJ5or_1Jj9A6.webp 1024w, /_astro/figma-5.BXHxJ5or_1Jj9A6.webp 1440w, /_astro/figma-5.BXHxJ5or_1Jj9A6.webp 1920w" alt="UX" sizes="100vw" width="384" height="832" loading="lazy" decoding="async"> </div> <p class="image-row--caption">
+I designed a tagging system to
+    capture the nuance of any given exercise and developed the idea as part of the inital wireframes in Figma.
+</p> <section class="card-split card-split--2-3"> <section class="card"> <h2>Process</h2> <p>
+I followed a deliberately lightweight, iterative process focused on
+        testing assumptions in use before investing in refinement or
+        documentation.
+</p> <p>
+High-level flows and information architecture were mapped in Miro to
+        clarify the core logging and review journeys before interface decisions
+        were made. These were then translated into Figma prototypes, where
+        interaction details were refined through repeated passes to reduce
+        friction and cognitive load.
+</p> <p>
+I used <strong>Figma MCP</strong> to interrogate Figma files directly from Codex in the
+        development environment, making it easier to reference components, patterns and design
+        intent during implementation and reducing translation overhead between
+        design and build.
+</p> <p>
+An offline-first architecture meant all data lived on the device. This
+        allowed me to build an installable proof of concept early and test it in
+        real gym sessions — both personally and with a small group of users.
+        Observing how the product behaved under real workout conditions exposed
+        edge cases and usability gaps that would have been difficult to identify
+        in static prototypes.
+</p> <p>
+Building was used as a learning mechanism: each iteration aimed to
+        reduce uncertainty around data structure, interaction speed, and
+        contextual clarity before pursuing visual polish.
+</p> </section> <div class="process-image"> <img src="/_astro/screen1.I1FfOOb2_Z22Bgpk.webp" srcset="/_astro/screen1.I1FfOOb2_Z2sla0V.webp 480w, /_astro/screen1.I1FfOOb2_Cle3T.webp 768w, /_astro/screen1.I1FfOOb2_BgYo4.webp 1024w, /_astro/screen1.I1FfOOb2_Z22Bgpk.webp 1440w, /_astro/screen1.I1FfOOb2_Z22Bgpk.webp 1920w" alt="App development" style="height:auto;" sizes="100vw" width="1080" height="2169" loading="lazy" decoding="async"> </div> </section>  <section class="image-row image-row--full-bleed image-row--2"> <!-- <div class="image-row image-row--full" style="height:320px"> --> <img src="/_astro/figma-ui1.QzqY8yD1_21HkjE.webp" srcset="/_astro/figma-ui1.QzqY8yD1_Z15OiS3.webp 480w, /_astro/figma-ui1.QzqY8yD1_1YR5bM.webp 768w, /_astro/figma-ui1.QzqY8yD1_2mRjQ2.webp 1024w, /_astro/figma-ui1.QzqY8yD1_1xViHI.webp 1440w, /_astro/figma-ui1.QzqY8yD1_1E64Is.webp 1920w" alt="UX" sizes="100vw" width="3734" height="2214" loading="lazy" decoding="async"> <img src="/_astro/figma-ui2.rTC9gMFl_15MpOI.webp" srcset="/_astro/figma-ui2.rTC9gMFl_Zg6vB5.webp 480w, /_astro/figma-ui2.rTC9gMFl_Z2fBglb.webp 768w, /_astro/figma-ui2.rTC9gMFl_Z2m40qA.webp 1024w, /_astro/figma-ui2.rTC9gMFl_1Tc7f2.webp 1440w, /_astro/figma-ui2.rTC9gMFl_20lSfL.webp 1920w" alt="UX" sizes="100vw" width="3734" height="2214" loading="lazy" decoding="async"> <!-- </div> --> </section> <p class="image-row--caption">Interactive prototypes were developed in Figma. I used Figma MCP to allow reading the UI directly wihtn the development enviroment.</p> <section class="card content-block"> <h2>Build</h2> <p>Delivery speed was an explicit constraint.</p> <p>
 After defining the interaction model, I implemented it quickly and
       iterated in the live build where early assumptions didn’t hold up under
       real workout conditions. Code became an extension of the design process
@@ -138,7 +147,7 @@ Each iteration was tested in real gym sessions and adjusted where logging
 </p> </section> <section class="image-row image-row--full-bleed image-row--2"> <img src="/_astro/development.qapE1con_Z23t6TH.webp" srcset="/_astro/development.qapE1con_51dyp.webp 480w, /_astro/development.qapE1con_Z1TtwaG.webp 768w, /_astro/development.qapE1con_Z23t6TH.webp 1024w, /_astro/development.qapE1con_Z23t6TH.webp 1440w, /_astro/development.qapE1con_Z23t6TH.webp 1920w" alt="App development" sizes="100vw" width="1000" height="750" loading="lazy" decoding="async"> <img src="/_astro/testing.COz64jl1_ZRlVwP.webp" srcset="/_astro/testing.COz64jl1_Z2gCqc.webp 480w, /_astro/testing.COz64jl1_Z21Lnai.webp 768w, /_astro/testing.COz64jl1_ZRlVwP.webp 1024w, /_astro/testing.COz64jl1_ZRlVwP.webp 1440w, /_astro/testing.COz64jl1_ZRlVwP.webp 1920w" alt="App testing" sizes="100vw" width="1000" height="750" loading="lazy" decoding="async"> </section> <p class="image-row--caption">
 Storing data on the device and using AI-augmented development allowed me to
     rapidly iterate and test in real conditions with real users.
-</p> <section class="card context-block"> <h2>Beta testing</h2> <p>At the time of writing, Cadence is in closed beta via Google Play.</p> <p>
+</p> <section class="image-row image-row--full-bleed image-row--2"> <img src="/_astro/style-guide1.C7Syfwqq_Z1vFhM9.webp" srcset="/_astro/style-guide1.C7Syfwqq_Z1okhkp.webp 480w, /_astro/style-guide1.C7Syfwqq_1Gm6Jq.webp 768w, /_astro/style-guide1.C7Syfwqq_Z1VEJed.webp 1024w, /_astro/style-guide1.C7Syfwqq_Z1vFhM9.webp 1440w, /_astro/style-guide1.C7Syfwqq_Z1vFhM9.webp 1920w" alt="Cadence style guide 1" sizes="100vw" width="1076" height="740" loading="lazy" decoding="async"> <img src="/_astro/style-guide2.D8j2_pXP_Zemkh5.webp" srcset="/_astro/style-guide2.D8j2_pXP_Z2bz06Q.webp 480w, /_astro/style-guide2.D8j2_pXP_T7nWY.webp 768w, /_astro/style-guide2.D8j2_pXP_Z129gfg.webp 1024w, /_astro/style-guide2.D8j2_pXP_Zemkh5.webp 1440w, /_astro/style-guide2.D8j2_pXP_Zemkh5.webp 1920w" alt="Cadence style guide 2" sizes="100vw" width="1076" height="740" loading="lazy" decoding="async"> </section> <p class="image-row--caption">Visual style guides for the Cadence beta.</p> <section class="card context-block"> <h2>Beta testing</h2> <p>At the time of writing, Cadence is in closed beta via Google Play.</p> <p>
 The focus is behavioural validation rather than feature expansion —
       testing whether contextual logging is sustained over time and whether the
       added inputs feel justified in real gym conditions.

@@ -15,6 +15,8 @@ import figmaUi1Image from "../../../images/cadence/figma-ui1.jpg";
 import figmaUi2Image from "../../../images/cadence/figma-ui2.jpg";
 import developmentImage from "../../../images/cadence/development.jpg";
 import testingImage from "../../../images/cadence/testing.jpg";
+import styleGuide1Image from "../../../images/cadence/style-guide1.png";
+import styleGuide2Image from "../../../images/cadence/style-guide2.png";
 import iaMap from "../../../images/cadence/IA-map.jpg";
 import final1Image from "../../../images/cadence/final1.png";
 import final2Image from "../../../images/cadence/final2.png";
@@ -54,8 +56,10 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
         </p>
         <p>
           I built Cadence to explore a personal problem end-to-end, and to
-          deliberately test how AI-augmented prototyping and development can
-          shorten the path from concept to a usable product.
+          deliberately test how Figma <abbr title="Model Context Protocol"
+            >MCP</abbr
+          > and AI-augmented development can shorten the path from concept to a usable
+          product.
         </p>
       </section>
       <section class="card card--role card--compact card--transparent">
@@ -203,9 +207,7 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
     </div>
   </section>
 
-
-
-    <section class="image-row image-row--full-bleed">
+  <section class="image-row image-row--full-bleed">
     <!-- <Image
       src={flowchartImage}
       alt="App development"
@@ -219,57 +221,12 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
       sizes="100vw"
     />
   </section>
-
-  
   <p class="image-row--caption">IA and core interactions mapped in Miro.</p>
-  <section class="card-split card-split--2-3">
-    <section class="card">
-      <h2>Process</h2>
-
-      <p>
-        I followed a deliberately lightweight, iterative process focused on
-        testing assumptions in use before investing in refinement or
-        documentation.
-      </p>
-
-      <p>
-        High-level flows were mapped in Miro to clarify the core logging and
-        review journeys before any interface decisions were made. These were
-        translated into Figma prototypes, where interaction details were refined
-        through repeated passes to reduce friction and cognitive load.
-      </p>
-
-      <p>
-        An offline-first architecture meant all data lived on the device. This
-        allowed me to build an installable proof of concept early and test it in
-        real gym sessions — both personally and with a small group of users.
-        Observing how the product behaved under real workout conditions exposed
-        edge cases and usability gaps that would have been difficult to identify
-        in static prototypes.
-      </p>
-      <p>
-        Building was used as a learning mechanism: each iteration aimed to
-        reduce uncertainty around data structure, interaction speed, and
-        contextual clarity before pursuing visual polish.
-      </p>
-    </section>
-
-    <div class="process-image">
-      <Image
-        src={screen1Image}
-        alt="App development"
-        style="height:auto;"
-        widths={[480, 768, 1024, 1440, 1920]}
-        sizes="100vw"
-      />
-    </div>
-  </section>
-
-  <section class="card content-block t">
+  <section class="card content-block">
     <h2>Concept development</h2>
     <p>
-      I began with the information architecture and basic sketches to clarify the underlying structure before
-      committing to interface detail.
+      I began with the information architecture and basic sketches to clarify
+      the underlying structure before committing to interface detail.
     </p>
 
     <p>
@@ -293,33 +250,6 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
       as well as meaningful reflection.
     </p>
   </section>
-  <div class="image-row image-row--desaturated image-row--3">
-    <Image
-      src={drawing1Image}
-      alt="Process sketch 1"
-      widths={[480, 768, 1024, 1440, 1920]}
-      sizes="100vw"
-    />
-    <Image
-      src={drawing2Image}
-      alt="Process sketch 2"
-      style=" width:120px;"
-      widths={[480, 768, 1024, 1440, 1920]}
-      sizes="100vw"
-    />
-    <!-- <img src="/images/cadence/drawing3.jpg" alt="Process sketch 3" /> -->
-    <Image
-      src={drawing5Image}
-      alt="Process sketch 3"
-      widths={[480, 768, 1024, 1440, 1920]}
-      sizes="100vw"
-    />
-  </div>
-  <p class="image-row--caption">
-    Early concepts were roughed out on paper.<br /> I designed a tagging system to
-    capture the nuance of any given exercise&hellip;
-  </p>
-
   <div
     class="image-row image-row--5 image-row--full-bleed"
     data-lightbox-default="full"
@@ -356,8 +286,83 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
     />
   </div>
   <p class="image-row--caption">
-    &hellip;and developed the idea as part of the inital wireframes in Figma.
+    I designed a tagging system to capture the nuance of any given exercise and
+    developed the idea as part of the inital wireframes in Figma.
   </p>
+  <section class="card-split card-split--2-3">
+    <section class="card">
+      <h2>Process</h2>
+
+      <p>
+        I followed a deliberately lightweight, iterative process focused on
+        testing assumptions in use before investing in refinement or
+        documentation.
+      </p>
+
+      <p>
+        High-level flows and information architecture were mapped in Miro to
+        clarify the core logging and review journeys before interface decisions
+        were made. These were then translated into Figma prototypes, where
+        interaction details were refined through repeated passes to reduce
+        friction and cognitive load.
+      </p>
+
+      <p>
+        I used <strong>Figma MCP</strong> to interrogate Figma files directly from
+        Codex in the development environment, making it easier to reference components,
+        patterns and design intent during implementation and reducing translation
+        overhead between design and build.
+      </p>
+
+      <p>
+        An offline-first architecture meant all data lived on the device. This
+        allowed me to build an installable proof of concept early and test it in
+        real gym sessions — both personally and with a small group of users.
+        Observing how the product behaved under real workout conditions exposed
+        edge cases and usability gaps that would have been difficult to identify
+        in static prototypes.
+      </p>
+
+      <p>
+        Building was used as a learning mechanism: each iteration aimed to
+        reduce uncertainty around data structure, interaction speed, and
+        contextual clarity before pursuing visual polish.
+      </p>
+    </section>
+
+    <div class="process-image">
+      <Image
+        src={screen1Image}
+        alt="App development"
+        style="height:auto;"
+        widths={[480, 768, 1024, 1440, 1920]}
+        sizes="100vw"
+      />
+    </div>
+  </section>
+  <!-- 
+  <div class="image-row image-row--desaturated image-row--3">
+    <Image
+      src={drawing1Image}
+      alt="Process sketch 1"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={drawing2Image}
+      alt="Process sketch 2"
+      style=" width:120px;"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+
+    <Image
+      src={drawing5Image}
+      alt="Process sketch 3"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+  </div> -->
 
   <section class="image-row image-row--full-bleed image-row--2">
     <!-- <div class="image-row image-row--full" style="height:320px"> -->
@@ -376,7 +381,10 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
     <!-- </div> -->
   </section>
 
-  <p class="image-row--caption">Early-flow interactive prototypes.</p>
+  <p class="image-row--caption">
+    Interactive prototypes were developed in Figma. I used Figma MCP to allow
+    interrogating the UI directly wihtin the development environment.
+  </p>
 
   <section class="card content-block">
     <h2>Build</h2>
@@ -391,9 +399,7 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
     </p>
 
     <p>
-      OpenAI’s Codex accelerated implementation — generating scaffolding and
-      state logic from defined interaction rules — so I could move quickly from
-      design decisions to testable installs.
+     OpenAI’s Codex accelerated implementation — generating scaffolding and state logic from defined interaction rules — so I could move quickly from design decisions to testable installs. To make that process more reliable, I created custom Codex skills that supported a structured propose, architect, sanity-check and QA workflow, while also generating Maestro tests as features were developed.
     </p>
     <p>
       The architecture stayed lean: offline-first, local storage, and a tagging
@@ -423,6 +429,24 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
   <p class="image-row--caption">
     Storing data on the device and using AI-augmented development allowed me to
     rapidly iterate and test in real conditions with real users.
+  </p>
+
+  <section class="image-row image-row--full-bleed image-row--2">
+    <Image
+      src={styleGuide2Image}
+      alt="Cadence style guide 2"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={styleGuide1Image}
+      alt="Cadence style guide 1"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+  </section>
+  <p class="image-row--caption">
+   I created a live design system tool that renders real React Native components on the web, exposing tokens, usage across the product and implementation detail.
   </p>
 
   <section class="card context-block">
