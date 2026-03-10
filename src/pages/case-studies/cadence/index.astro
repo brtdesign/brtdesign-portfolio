@@ -392,17 +392,19 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
     <p>Delivery speed was an explicit constraint.</p>
 
     <p>
-      After defining the interaction model, I implemented it quickly and
-      iterated in the live build where early assumptions didn’t hold up under
-      real workout conditions. Code became an extension of the design process
-      rather than a separate phase.
+After defining the interaction model, I implemented it quickly and iterated in the live build where early assumptions did not hold up under real workout conditions. Code became an extension of the design process rather than a separate phase. In parallel, I established a lightweight design system to keep patterns, tokens and component behaviour consistent as the product evolved.
     </p>
 
     <p>
-     OpenAI’s Codex accelerated implementation — generating scaffolding and state logic from defined interaction rules — so I could move quickly from design decisions to testable installs. To make that process more reliable, I created custom Codex skills that supported a structured propose, architect, sanity-check and QA workflow, while also generating Maestro tests as features were developed.
+      OpenAI’s Codex accelerated implementation — generating scaffolding and
+      state logic from defined interaction rules — so I could move quickly from
+      design decisions to testable installs. To make that process more reliable,
+      I created custom Codex skills that supported a structured propose,
+      architect, sanity-check and QA workflow, while also generating Maestro
+      tests as features were developed.
     </p>
     <p>
-      The architecture stayed lean: offline-first, local storage, and a tagging
+    The architecture stayed lean: offline-first, local storage, and a tagging 
       model that layers context onto stable exercises without fragmenting
       history.
     </p>
@@ -412,24 +414,7 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
       slowed or clarity dropped.
     </p>
   </section>
-  <section class="image-row image-row--full-bleed image-row--2">
-    <Image
-      src={developmentImage}
-      alt="App development"
-      widths={[480, 768, 1024, 1440, 1920]}
-      sizes="100vw"
-    />
-    <Image
-      src={testingImage}
-      alt="App testing"
-      widths={[480, 768, 1024, 1440, 1920]}
-      sizes="100vw"
-    />
-  </section>
-  <p class="image-row--caption">
-    Storing data on the device and using AI-augmented development allowed me to
-    rapidly iterate and test in real conditions with real users.
-  </p>
+
 
   <section class="image-row image-row--full-bleed image-row--2">
     <Image
@@ -446,7 +431,28 @@ import cadenceLogoImage from "../../../images/cadence/cadence-logo.png";
     />
   </section>
   <p class="image-row--caption">
-   I created a live design system tool that renders real React Native components on the web, exposing tokens, usage across the product and implementation detail.
+    I created a live design system tool that renders real React Native
+    components on the web, exposing tokens, usage across the product and
+    implementation detail.
+  </p>
+
+    <section class="image-row image-row--full-bleed image-row--2">
+    <Image
+      src={developmentImage}
+      alt="App development"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+    <Image
+      src={testingImage}
+      alt="App testing"
+      widths={[480, 768, 1024, 1440, 1920]}
+      sizes="100vw"
+    />
+  </section>
+  <p class="image-row--caption">
+    Storing data on the device and using AI-augmented development allowed me to
+    rapidly iterate and test in real conditions with real users.
   </p>
 
   <section class="card context-block">
